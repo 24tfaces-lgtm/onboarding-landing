@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HR База знаний — Onboarding (Страница 2)</title>
+  <meta name="color-scheme" content="light dark" />
+  <link rel="stylesheet" href="style-2.css" />
+</head>
+<body class="onb2">
+  <!-- Градиентный индикатор прогресса -->
+  <div id="top-progress" aria-hidden="true"><span></span></div>
+
+  <!-- Хедер -->
+  <header class="container header" id="top">
+    <div class="brand">
+      <button id="menuToggle" class="btn btn-ghost" aria-label="Открыть меню">☰</button>
+      <h1>HR База знаний — Onboarding</h1>
+      <span class="badge">Страница 2</span>
+    </div>
+    <div class="actions">
+      <a class="btn" href="index.html" aria-label="К первой странице">← К первой странице</a>
+      <button id="openSearch" class="btn" aria-haspopup="dialog" aria-controls="searchModal">🔎 <span class="hide-sm">Поиск (⌘/Ctrl+K)</span></button>
+    </div>
+  </header>
+
+  <!-- Основная сетка -->
+  <main class="container layout">
+    <!-- Сайдбар -->
+    <aside id="sidebar" class="sidebar" aria-label="Навигация по разделам">
+      <nav id="toc" class="toc"></nav>
+    </aside>
+
+    <!-- Контент: все секции здесь, но показываем только выбранную -->
+    <section id="content" class="content" aria-live="polite">
+      <section id="welcome" class="card section">
+        <header class="section-head">
+          <h2>Приветствие</h2>
+          <button class="btn btn-ghost to-top" aria-label="Наверх">↑</button>
+        </header>
+        <div class="grid"></div>
+      </section>
+
+      <section id="first-steps" class="card section">
+        <header class="section-head">
+          <h2>Первые шаги</h2>
+          <button class="btn btn-ghost to-top" aria-label="Наверх">↑</button>
+        </header>
+        <div class="grid"></div>
+      </section>
+
+      <section id="workplace" class="card section">
+        <header class="section-head">
+          <h2>Рабочее место и доступы</h2>
+          <button class="btn btn-ghost to-top" aria-label="Наверх">↑</button>
+        </header>
+        <div class="grid"></div>
+      </section>
+
+      <section id="communication" class="card section">
+        <header class="section-head">
+          <h2>Контакты и правила связи</h2>
+          <button class="btn btn-ghost to-top" aria-label="Наверх">↑</button>
+        </header>
+        <div class="grid"></div>
+      </section>
+
+      <section id="faq" class="card section">
+        <header class="section-head">
+          <h2>Частые вопросы</h2>
+          <button class="btn btn-ghost to-top" aria-label="Наверх">↑</button>
+        </header>
+        <div class="grid"></div>
+      </section>
+    </section>
+  </main>
+
+  <!-- Быстрый поиск -->
+  <div id="searchModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="searchLabel">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card card elevated">
+      <div class="modal-input">
+        <span id="searchLabel" class="muted">🔎</span>
+        <input id="searchInput" type="search" placeholder="Поиск по текущему разделу…" />
+      </div>
+      <div id="searchResults" class="results" role="listbox"></div>
+    </div>
+  </div>
+
+  <!-- Кнопка наверх -->
+  <button id="backToTop" class="back-to-top" aria-label="Наверх">↑</button>
+
+  <footer class="container footer card">
+    <div>
+      <strong>Предложения по улучшению?</strong>
+      <div class="muted">Создайте issue в репозитории или напишите в общий чат.</div>
+    </div>
+    <a class="btn" href="index.html">← К первой странице</a>
+  </footer>
+
+  <script src="script-2.js"></script>
+</body>
+</html>

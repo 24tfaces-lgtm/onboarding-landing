@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Welcome Pack — Презентация компании</title>
+  <meta name="color-scheme" content="light"/>
+  <link rel="stylesheet" href="style-welcome.css"/>
+</head>
+<body class="wp2">
+  <header class="wp2-container wp2-header">
+    <div class="wp2-brand">
+      <a class="wp2-btn wp2-ghost" href="onboarding-2.html">← Назад</a>
+      <h1>Welcome Pack — Презентация компании</h1>
+    </div>
+    <div class="wp2-actions">
+      <button class="wp2-btn" id="wp2FS" title="Полноэкранный режим">⤢</button>
+    </div>
+  </header>
+
+  <main class="wp2-container wp2-layout">
+    <section class="wp2-player" id="wp2Player" aria-live="polite">
+      <div class="wp2-stage">
+        <img id="wp2Slide" alt="Слайд презентации"/>
+        <div class="wp2-caption">
+          <div class="wp2-title" id="wp2Title"></div>
+          <div class="wp2-sub" id="wp2Sub"></div>
+        </div>
+      </div>
+
+      <div class="wp2-controls">
+        <button class="wp2-btn" id="wp2Prev" title="Назад (←)">←</button>
+        <div class="wp2-counter"><span id="wp2Index">1</span> / <span id="wp2Total">0</span></div>
+        <button class="wp2-btn" id="wp2Next" title="Вперёд (→)">→</button>
+        <div class="wp2-spacer"></div>
+        <button class="wp2-btn" id="wp2Play" title="Автопрокрутка (Space)">▶</button>
+        <div class="wp2-progress"><span id="wp2ProgBar"></span></div>
+      </div>
+
+      <div class="wp2-thumbs" id="wp2Thumbs" role="list"></div>
+    </section>
+  </main>
+
+  <footer class="wp2-container wp2-footer">
+    <div class="wp2-muted">Подсказки: стрелки ←/→, Space — пуск/стоп, F — полноэкранный режим, Esc — выход.</div>
+  </footer>
+
+  <script src="welcome-pack.js"></script>
+</body>
+</html>

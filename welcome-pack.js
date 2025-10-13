@@ -2,12 +2,29 @@
 // Замените пути src на реальные URL ваших слайдов в GitHub (PNG/JPG/SVG).
 // Например: "https://24tfaces-lgtm.github.io/onboarding-landing/slides/01.jpg"
 const SLIDES = [
-  { src: "slides/01.jpg", title: "О нас", sub: "Кто мы и чем занимаемся" },
-  { src: "slides/02.jpg", title: "Продукты", sub: "Ключевые направления" },
-  { src: "slides/03.jpg", title: "Команда", sub: "Культура и ценности" },
-  { src: "slides/04.jpg", title: "Клиенты", sub: "Кому мы помогаем" },
-  { src: "slides/05.jpg", title: "Результаты", sub: "Факты и достижения" },
-  { src: "slides/06.jpg", title: "Контакты", sub: "Как с нами связаться" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/1.jpg",  title: "Слайд 1",  sub: "" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/2.jpg",  title: "Слайд 2",  sub: "" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/3.jpg",  title: "Слайд 3",  sub: "" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/4.jpg",  title: "Слайд 4",  sub: "" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/5.jpg",  title: "Слайд 5",  sub: "" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/6.jpg",  title: "Слайд 6",  sub: "" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/7.jpg",  title: "Слайд 7",  sub: "" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/8.jpg",  title: "Слайд 8",  sub: "" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/9.jpg",  title: "Слайд 9",  sub: "" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/10.jpg", title: "Слайд 10", sub: "" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/11.jpg", title: "Слайд 11", sub: "" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/12.jpg", title: "Слайд 12", sub: "" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/13.jpg", title: "Слайд 13", sub: "" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/14.jpg", title: "Слайд 14", sub: "" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/15.jpg", title: "Слайд 15", sub: "" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/16.jpg", title: "Слайд 16", sub: "" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/17.jpg", title: "Слайд 17", sub: "" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/18.jpg", title: "Слайд 18", sub: "" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/19.jpg", title: "Слайд 19", sub: "" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/20.jpg", title: "Слайд 20", sub: "" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/21.jpg", title: "Слайд 21", sub: "" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/22.jpg", title: "Слайд 22", sub: "" },
+  { src: "https://raw.githubusercontent.com/24tfaces-lgtm/onboarding-landing/main/23.jpg", title: "Слайд 23", sub: "" },
 ];
 
 const el = (id) => document.getElementById(id);

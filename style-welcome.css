@@ -85,3 +85,6 @@
 
 .wp2-footer{opacity:.8}
 .wp2-muted{color:#6b7280}
+/* скрыть миниатюры под плеером */
+.wp2 .wp2-thumbs{ display:none !important; }
+

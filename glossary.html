@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Глоссарий — ZebraCall</title>
+  <meta name="color-scheme" content="light"/>
+  <link rel="stylesheet" href="style-glossary.css?v=2"/>
+</head>
+<body class="gl">
+  <div id="gl-progress" aria-hidden="true"><span></span></div>
+
+  <!-- FAB Back -->
+  <button class="gl-fab-back" id="glFabBack" title="Назад" aria-label="Назад">←</button>
+
+  <!-- Sticky Header -->
+  <header class="gl-container gl-header">
+    <div class="gl-brand">
+      <a class="gl-btn gl-ghost" href="onboarding-2.html">← Назад</a>
+      <h1>Глоссарий ZebraCall</h1>
+    </div>
+
+    <div class="gl-toolbar">
+      <div class="gl-search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 18a8 8 0 1 1 5.3-14.1A8 8 0 0 1 10 18Zm11 3-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="glSearch" type="search" placeholder="Поиск: апрув, ПП, автоответчик…" autocomplete="off"/>
+        <button id="glClear" class="gl-chip" type="button">Очистить</button>
+      </div>
+      <div class="gl-az" id="glAZ" aria-label="Фильтр по букве"></div>
+    </div>
+  </header>
+
+  <main class="gl-container gl-body">
+    <div id="glStickyLetter" class="gl-sticky-letter" hidden>А</div>
+    <section id="glResults" class="gl-groups"></section>
+    <div id="glEmpty" class="gl-empty card" hidden>Ничего не найдено. Измени запрос или букву.</div>
+  </main>
+
+  <footer class="gl-container gl-footer">
+    <div class="muted">Не хватает термина? Напиши HR — добавим.</div>
+    <a class="gl-btn" href="#top">↑ Наверх</a>
+  </footer>
+
+  <script src="glossary.js?v=2" defer></script>
+</body>
+</html>

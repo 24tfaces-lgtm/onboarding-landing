@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Курьерская доставка — шпаргалка оператора</title>
+  <link rel="stylesheet" href="courier-style.css">
+  <script defer src="courier.js"></script>
+</head>
+<body>
+  <header class="hero hero--compact">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Курьерская доставка / Почта</h1>
+      <p>Начни вводить населённый пункт — подсказка появится автоматически.</p>
+      <p class="note">Если пункта нет в списке — оформляй почту.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <label for="cityInput" class="label">Где живёт клиент?</label>
+      <div class="search-row">
+        <input id="cityInput" type="text" placeholder="Например: Актау, Сайрам, Талдыбулак..." list="cityList" autocomplete="off" />
+        <datalist id="cityList"></datalist>
+      </div>
+      <div id="result" class="result muted">Введите город/посёлок...</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 ZebraCall · Шпаргалка оператора</p>
+  </footer>
+</body>
+</html>

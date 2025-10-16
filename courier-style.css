@@ -1,0 +1,16 @@
+:root{
+  --brand:#0077ff;--brand2:#00b8ff;--ink:#141a2d;--bg:#f4f6ff;--card:#fff;
+}
+body{font-family:'Inter',system-ui,sans-serif;margin:0;padding:0;background:var(--bg);color:var(--ink);}
+.hero{background:linear-gradient(120deg,var(--brand),var(--brand2));color:#fff;text-align:center;padding:40px 20px;}
+.hero--compact{padding:30px 20px;}
+.hero h1{margin:0 0 10px;font-size:2rem;}
+.container{max-width:700px;margin:0 auto;padding:20px;}
+.panel{background:var(--card);border-radius:14px;padding:20px;box-shadow:0 6px 20px rgba(0,0,0,.05);}
+.search-row{display:flex;gap:8px;}
+#cityInput{flex:1;padding:10px 14px;border:1.5px solid #cdd7ff;border-radius:10px;font-size:16px;}
+.result{margin-top:14px;padding:14px;border-radius:10px;}
+.result.ok{background:#e7fff0;color:#0a5f34;}
+.result.fail{background:#ffe7e7;color:#831d1d;}
+.result.muted{background:#f7f8ff;color:#666;}
+.site-footer{text-align:center;padding:14px;color:#666;font-size:.9rem;}

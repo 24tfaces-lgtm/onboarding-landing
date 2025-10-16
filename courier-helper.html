@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Курьерская доставка — шпаргалка оператора</title>
-  <link rel="stylesheet" href="courier-style.css">
+  <link rel="stylesheet" href="style-courier.css" />
   <script defer src="courier.js"></script>
 </head>
 <body>
@@ -12,19 +13,31 @@
     <div class="overlay"></div>
     <div class="hero-content">
       <h1>Курьерская доставка / Почта</h1>
-      <p>Начни вводить населённый пункт — подсказка появится автоматически.</p>
-      <p class="note">Если пункта нет в списке — оформляй почту.</p>
+      <p>Начни вводить населённый пункт — выбери из автоподсказки и нажми «Проверить доставку».</p>
+      <p class="note">Если пункта нет в списке КД — <strong>оформляй ПОЧТУ</strong>.</p>
+      <div class="hero-buttons">
+        <a href="#tool" class="btn light">Перейти к проверке</a>
+      </div>
     </div>
   </header>
 
-  <main class="container">
+  <main id="tool" class="container">
     <section class="panel">
       <label for="cityInput" class="label">Где живёт клиент?</label>
       <div class="search-row">
-        <input id="cityInput" type="text" placeholder="Например: Актау, Сайрам, Талдыбулак..." list="cityList" autocomplete="off" />
+        <input id="cityInput" type="text" placeholder="Например: Алматы, Сайрам, Талдыбулак…" list="cityList" autocomplete="off" />
         <datalist id="cityList"></datalist>
+        <button id="checkBtn" class="btn primary" type="button" title="Проверить доставку">Проверить доставку</button>
+        <button id="clearBtn" class="btn icon" title="Очистить" type="button">✕</button>
       </div>
-      <div id="result" class="result muted">Введите город/посёлок...</div>
+      <div id="result" class="result muted">Введите город/посёлок…</div>
+    </section>
+
+    <section class="panel">
+      <details>
+        <summary>Посмотреть текущий список КД (courier-cities.txt)</summary>
+        <pre id="currentList" class="code"></pre>
+      </details>
     </section>
   </main>
 
@@ -33,3 +46,4 @@
   </footer>
 </body>
 </html>
+

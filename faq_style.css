@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root{
+  --brand:#0077ff;
+  --brand-2:#00b8ff;
+  --text:#222;
+  --muted:#555;
+  --bg:#f4f4f8;
+  --card:#fff;
+  --shadow:0 6px 20px rgba(0,0,0,.08);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.6;
+}
+
+/* HERO */
+.hero{
+  position:relative;min-height:40vh;display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:64px 20px;background:linear-gradient(120deg,var(--brand),var(--brand-2));color:#fff;
+}
+.overlay{position:absolute;inset:0;opacity:.08}
+.hero-content{position:relative;z-index:1;max-width:900px}
+.hero h1{font-size:clamp(28px,4vw,40px);margin:0 0 .4rem}
+.hero p{opacity:.95;margin:0 auto 1rem;max-width:700px}
+.hero-buttons{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:12px;text-decoration:none;font-weight:600;transition:.2s ease;border:2px solid transparent}
+.btn.light{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.3)}
+.btn.secondary{background:#eef2ff;color:#1e1b4b;border-color:#dbe2ff}
+.btn:hover{transform:translateY(-2px);opacity:.96}
+
+/* FAQ */
+.faq{max-width:900px;margin:40px auto;padding:0 20px}
+.faq-item{background:var(--card);border-radius:12px;box-shadow:var(--shadow);margin-bottom:12px;overflow:hidden}
+.faq-item>summary{
+  list-style:none;cursor:pointer;padding:16px 20px;background:#f7f9ff;font-weight:700;color:#1e1b4b;position:relative
+}
+.faq-item>summary::-webkit-details-marker{display:none}
+.faq-item>summary::after{content:"▾";position:absolute;right:16px;top:16px;opacity:.6;transition:.2s}
+.faq-item[open]>summary::after{transform:rotate(180deg)}
+.faq-answer{padding:16px 20px;color:#333}
+.faq-answer ul{margin:6px 0 0 18px}
+
+/* FOOTER */
+.site-footer{background:#222;color:#fff;text-align:center;padding:18px;font-size:.95rem}

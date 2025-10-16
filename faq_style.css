@@ -29,6 +29,8 @@ body{
 .hero h1{font-size:clamp(28px,4vw,40px);margin:0 0 .4rem}
 .hero p{opacity:.95;margin:0 auto 1rem;max-width:700px}
 .hero-buttons{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:12px}
+
+/* BUTTONS */
 .btn{display:inline-block;padding:12px 22px;border-radius:12px;text-decoration:none;font-weight:600;transition:.2s ease;border:2px solid transparent}
 .btn.light{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.3)}
 .btn.secondary{background:#eef2ff;color:#1e1b4b;border-color:#dbe2ff}
@@ -41,7 +43,7 @@ body{
   list-style:none;cursor:pointer;padding:16px 20px;background:#f7f9ff;font-weight:700;color:#1e1b4b;position:relative
 }
 .faq-item>summary::-webkit-details-marker{display:none}
-.faq-item>summary::after{content:"▾";position:absolute;right:16px;top:16px;opacity:.6;transition:.2s}
+.faq-item>summary::after{content:"в–ѕ";position:absolute;right:16px;top:16px;opacity:.6;transition:.2s}
 .faq-item[open]>summary::after{transform:rotate(180deg)}
 .faq-answer{padding:16px 20px;color:#333}
 .faq-answer ul{margin:6px 0 0 18px}

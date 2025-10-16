@@ -27,7 +27,7 @@ async function loadCities(){
   const frag = document.createDocumentFragment();
   entries.forEach(e => { const o=document.createElement('option'); o.value=e; frag.appendChild(o); });
   dataList.innerHTML = ''; dataList.appendChild(frag);
-  currentList.textContent = entries.join(', ');
+  if(currentList) currentList.textContent = entries.join(', ');
 }
 
 function verdict(ok, label){
@@ -51,6 +51,11 @@ function check(query){
 
 cityInput.addEventListener('input', e => { /* live preview */ check(e.target.value); });
 checkBtn.addEventListener('click', () => check(cityInput.value));
-clearBtn.addEventListener('click', () => { cityInput.value=''; result.className='result muted'; result.textContent='Введите город/посёлок…'; });
+clearBtn.addEventListener('click', () => {
+  cityInput.value='';
+  result.className='result muted';
+  result.textContent='Введите город/посёлок…';
+  cityInput.focus();
+});
 
 loadCities();

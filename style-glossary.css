@@ -34,14 +34,8 @@ body{
 .btn.secondary{background:#eef2ff;color:#1e1b4b;border-color:#dbe2ff}
 .btn:hover{transform:translateY(-2px);opacity:.96}
 
-/* SECTION TITLE */
-.section-title{
-  max-width:900px;margin:24px auto 12px;padding:0 20px;
-  color:#1e1b4b;font-size:1.1rem;opacity:.9
-}
-
-/* ACCORDION (reuse faq styles) */
-.faq{max-width:900px;margin:12px auto 40px;padding:0 20px}
+/* ACCORDION (РєР°Рє РІ FAQ) */
+.faq{max-width:900px;margin:40px auto;padding:0 20px}
 .faq-item{background:var(--card);border-radius:12px;box-shadow:var(--shadow);margin-bottom:12px;overflow:hidden}
 .faq-item>summary{
   list-style:none;cursor:pointer;padding:16px 20px;background:#f7f9ff;font-weight:700;color:#1e1b4b;position:relative

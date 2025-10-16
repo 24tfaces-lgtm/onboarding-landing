@@ -24,15 +24,16 @@ body{
   position:relative;min-height:40vh;display:flex;align-items:center;justify-content:center;
   text-align:center;padding:64px 20px;background:linear-gradient(120deg,var(--brand),var(--brand-2));color:#fff;
 }
+/* COMPACT like FAQ */
+.hero.hero--compact{min-height:28vh; padding:36px 16px;}
+.hero h1{font-size:clamp(22px,3.2vw,30px); margin-bottom:6px;}
+.hero p{font-size:clamp(14px,1.6vw,16px);}
+.hero-buttons{margin-top:8px;}
+
 .overlay{position:absolute;inset:0;opacity:.08}
 .hero-content{position:relative;z-index:1;max-width:900px}
-.hero h1{font-size:clamp(28px,4vw,40px);margin:0 0 .4rem}
-.hero p{opacity:.95;margin:0 auto 1rem;max-width:700px}
-.hero-buttons{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:12px}
 .btn{display:inline-block;padding:12px 22px;border-radius:12px;text-decoration:none;font-weight:600;transition:.2s ease;border:2px solid transparent}
 .btn.light{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.3)}
-.btn.secondary{background:#eef2ff;color:#1e1b4b;border-color:#dbe2ff}
-.btn:hover{transform:translateY(-2px);opacity:.96}
 
 /* ACCORDION (РєР°Рє РІ FAQ) */
 .faq{max-width:900px;margin:40px auto;padding:0 20px}

@@ -1,4 +1,4 @@
-// Открытие по хэшу, аналогично FAQ
+// Открытие терминов по хэшу: glossary.htmll#term-pp
 const openByHash = () => {
   const id = location.hash.replace('#','');
   if (!id) return;

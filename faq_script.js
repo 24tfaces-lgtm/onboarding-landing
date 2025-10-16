@@ -1,4 +1,4 @@
-// Открывать вопрос по хэшу из URL (например, faq.html#q-fines)
+// Открывать вопрос по хэшу из URL (например, faq_page.html#q-fines)
 const openByHash = () => {
   const id = location.hash.replace('#','');
   if (!id) return;

@@ -13,10 +13,11 @@ body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-seri
 .hero h1{margin:0 0 6px;font-size:clamp(26px,3.4vw,38px)}
 .hero p{margin:0 auto 10px;opacity:.95;max-width:780px}
 .hero-buttons{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.btn{appearance:none;border:0;border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer;background:#eef3ff;color:#1c2d5a;transition:.2s ease;border:2px solid transparent}
+.btn{appearance:none;border:0;border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer;background:#eef3ff;color:#1c2d5a;transition:.2s ease;border:2px solid transparent;display:inline-flex;align-items:center;gap:8px}
 .btn.light{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.3)}
 .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff}
-.btn.icon{min-width:44px}
+.btn.icon{min-width:44px;justify-content:center}
+.btn-with-icon .btn-ic{width:18px;height:18px;fill:#fff;opacity:.95}
 .container{max-width:900px;margin:0 auto;padding:24px 16px}
 .panel{background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:16px;margin:14px 0}
 .label{font-weight:700;display:block;margin-bottom:6px}

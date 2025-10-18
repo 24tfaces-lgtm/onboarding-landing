@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ZebraCall · Курьерская / Почта — шпаргалка</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+<style>
+:root{--brand:#0077ff;--brand2:#00b8ff;--ink:#1a2442;--muted:#667085;--ok:#1a9c5b;--warn:#c23b22;--bg:#f6f8ff;--card:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.wrapper{max-width:920px;margin:28px auto;padding:16px}
+.card{background:var(--card);border-radius:16px;box-shadow:0 10px 28px rgba(20,30,70,.08);padding:16px;margin:12px 0}
+.h1{font-weight:800;font-size:22px;margin:0 0 6px}
+.sub{color:var(--muted);font-size:14px;margin:0 0 10px}
+.row{display:grid;grid-template-columns:1fr auto auto;gap:8px;margin-top:8px}
+input[type=text]{padding:12px 14px;border:1.5px solid #dfe5ff;border-radius:12px;font-size:16px}
+.btn{border:0;border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff}
+.btn.ghost{background:#eef3ff;color:#1a2442}
+.btn.icon{min-width:44px;justify-content:center}
+.result{margin-top:10px;padding:12px;border-radius:12px;background:#f7f8ff;border:1px dashed #dfe5ff}
+.result.ok{background:#f2fbf6;border-color:#c9f1da;color:#0b6c3a}
+.result.mail{background:#fffef2;border-color:#ffefb7;color:#6b5200}
+.result.fail{background:#fff5f3;border-color:#ffd8d1;color:#7a291d}
+.small{font-size:12px;color:var(--muted)}
+hr.sep{border:0;border-top:1px solid #e9ecff;margin:14px 0}
+.flex{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+kbd{background:#f0f3ff;border:1px solid #dfe5ff;border-bottom-width:2px;border-radius:6px;padding:2px 6px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;border:1px solid #e3eaff;background:#f5f8ff;color:#1c2d5a;font-size:12px}
+pre.code{background:#0b122b;color:#d6e4ff;padding:12px;border-radius:12px;overflow:auto;max-height:260px}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <div class="card">
+    <div class="h1">Курьерская доставка / Почта</div>
+    <p class="sub">Введи населённый пункт — система определит способ доставки. 
+      <span class="badge">КД — из списка courier-cities.txt</span> 
+      <span class="badge">Почта — из Excel/CSV (с индексами)</span>
+    </p>
+    <div class="row">
+      <input id="q" type="text" placeholder="Алматы, Сайрам, Талдыбулак…" list="hints" autocomplete="off"/>
+      <datalist id="hints"></datalist>
+      <button id="check" class="btn primary" type="button" title="Проверить">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M10.9 2a9 9 0 1 1-6.36 2.64A9 9 0 0 1 10.9 2zm0 2a7 7 0 1 0 7 7 7.01 7.01 0 0 0-7-7zm3.54 4.46 1.41 1.41-5.3 5.31-3.18-3.18 1.41-1.41 1.77 1.77 3.89-3.9z"/></svg>
+        Проверить
+      </button>
+      <button id="clear" class="btn icon ghost" type="button" title="Очистить">✕</button>
+    </div>
+    <div id="out" class="result">Введите город/посёлок…</div>
+    <p class="small">Логика: сначала ищем в базе <b>КД</b>. Если не найдено — ищем в базе <b>Почта</b>. Если нет нигде — оформляй почту.</p>
+  </div>
+
+  <div class="card">
+    <div class="flex">
+      <strong>База КД</strong> <span class="small">/ courier-cities.txt из репозитория</span>
+      <button id="loadKD" class="btn ghost" type="button">Подгрузить courier-cities.txt</button>
+    </div>
+    <hr class="sep"/>
+    <details>
+      <summary>Просмотреть текущую базу КД</summary>
+      <pre id="kdView" class="code"></pre>
+    </details>
+  </div>
+
+  <div class="card">
+    <div class="flex">
+      <strong>База Почты</strong> <span class="small">/ импорт Excel/CSV со вкладками-городами</span>
+      <input id="file" type="file" accept=".xlsx,.xls,.xltx,.csv" />
+      <span class="small">Колонки: <kbd>Населенный пункт</kbd> и <kbd>Индекс</kbd> (регистр не важен). Если у листа один индекс — применяется ко всем строкам с пустым индексом.</span>
+    </div>
+    <hr class="sep"/>
+    <details>
+      <summary>Просмотреть текущую базу Почты</summary>
+      <pre id="postView" class="code"></pre>
+    </details>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+const norm = s => (s||"").toLowerCase().replace(/[ё]/g,"е").replace(/[“”\"']/g,"").replace(/\s+/g," ").trim();
+
+const out = $("#out");
+const input = $("#q");
+const hints = $("#hints");
+const kdView = $("#kdView");
+const postView = $("#postView");
+
+let kdRaw = [];
+let kdSet = new Set;
+
+async function loadKDfromTxt(){
+  try{
+    const base = new URL(window.location.href);
+    base.hash = ""; base.search = "";
+    base.pathname = base.pathname.replace(/[^\/]+$/,"courier-cities.txt");
+    const resp = await fetch(base.toString(), {cache:"no-store"});
+    if(!resp.ok) throw 0;
+    const text = await resp.text();
+    kdRaw = text.split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
+    kdSet = new Set(kdRaw.map(norm));
+    kdView.textContent = kdRaw.join(", ");
+    rebuildHints();
+    console.log("КД загружено:", kdRaw.length);
+  }catch(e){
+    alert("Не удалось загрузить courier-cities.txt. Убедись, что файл лежит рядом с HTML.");
+  }
+}
+$("#loadKD").addEventListener("click", loadKDfromTxt);
+
+let postMap = new Map(); // key: normalized, val: {label,index,city}
+
+function addPostEntry(npLabel, index, sheetName){
+  const key = norm(npLabel);
+  if(!key) return;
+  const val = { label: String(npLabel||"").trim(), index: String(index||"").trim(), city: sheetName||"" };
+  postMap.set(key, val);
+}
+
+function rebuildHints(){
+  hints.innerHTML = "";
+  const frag = document.createDocumentFragment();
+  const combined = new Set();
+  kdRaw.slice(0,500).forEach(s => combined.add(s));
+  Array.from(postMap.values()).slice(0,500).forEach(o => combined.add(o.label + (o.index ? ` (инд. ${o.index})` : "")));
+  Array.from(combined).forEach(v=>{
+    const opt = document.createElement("option");
+    opt.value = v;
+    frag.appendChild(opt);
+  });
+  hints.appendChild(frag);
+}
+
+function renderPostPreview(){
+  const arr = Array.from(postMap.values()).map(o => `${o.label} — ${o.index}${o.city? " ("+o.city+")":""}`);
+  postView.textContent = arr.join(", ");
+}
+
+$("#file").addEventListener("change", async (e) => {
+  const f = e.target.files[0]; if(!f) return;
+  try{
+    const buf = await f.arrayBuffer();
+    const wb = XLSX.read(buf, {type:"array"});
+    postMap = new Map();
+
+    wb.SheetNames.forEach(sheetName => {
+      const ws = wb.Sheets[sheetName];
+      if(!ws) return;
+      const json = XLSX.utils.sheet_to_json(ws, {defval:""});
+      if(!json.length) return;
+
+      const cols = Object.keys(json[0]).reduce((acc, k) => { acc[k.toLowerCase()] = k; return acc; }, {});
+      const npKey = Object.keys(cols).find(k => k.includes("насел") || k.includes("пункт")) || Object.keys(cols).find(k=>k.includes("нас"));
+      const idxKey = Object.keys(cols).find(k => k.includes("индекс"));
+      const npCol = npKey ? cols[npKey] : null;
+      const idxCol = idxKey ? cols[idxKey] : null;
+      if(!npCol){ return; }
+
+      let singleIndex = "";
+      if(idxCol){
+        const uniq = new Set(json.map(r => String(r[idxCol]||"").trim()).filter(v=>v));
+        if(uniq.size === 1){ singleIndex = Array.from(uniq)[0]; }
+      }
+
+      json.forEach(row => {
+        const np = String(row[npCol]||"").trim();
+        if(!np) return;
+        let idx = idxCol ? String(row[idxCol]||"").trim() : "";
+        if(!idx && singleIndex) idx = singleIndex;
+        addPostEntry(np, idx, sheetName);
+      });
+    });
+
+    renderPostPreview();
+    rebuildHints();
+    console.log("Почтовых пунктов:", postMap.size);
+  }catch(err){
+    console.error(err);
+    alert("Не удалось прочитать файл. Убедись, что это .xlsx/.xls/.xltx или .csv с колонками «Населённый пункт» и «Индекс».");
+  }
+});
+
+function check(query){
+  const qn = norm(query);
+  if(!qn){ showMuted(); return; }
+
+  if(kdSet.has(qn)){
+    out.className = "result ok";
+    out.textContent = `✅ Курьерская доставка: ${query}`;
+    return;
+  }
+
+  const exact = postMap.get(qn);
+  if(exact){
+    out.className = "result mail";
+    out.textContent = `📬 Почтовая доставка. Индекс: ${exact.index || "—"}${exact.city? " · " + exact.city:""}`;
+    return;
+  }
+
+  const found = Array.from(postMap.entries()).find(([k,v]) => k.includes(qn));
+  if(found){
+    const v = found[1];
+    out.className = "result mail";
+    out.textContent = `📬 Почтовая доставка. Индекс: ${v.index || "—"}${v.city? " · " + v.city:""}`;
+    return;
+  }
+
+  out.className = "result fail";
+  out.textContent = "✉️ Не найдено в базах — оформляй ПОЧТУ.";
+}
+
+function showMuted(){
+  out.className = "result";
+  out.textContent = "Введите город/посёлок…";
+}
+
+$("#check").addEventListener("click", () => check(input.value));
+$("#clear").addEventListener("click", () => { input.value=""; showMuted(); input.focus(); });
+input.addEventListener("input", e => check(e.target.value));
+</script>
+</body>
+</html>

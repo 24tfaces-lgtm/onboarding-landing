@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ZebraCall — Добро пожаловать в команду</title>
+<meta name="theme-color" content="#111111">
+<style>
+  :root{
+    --bg:#fafafa;
+    --card:#ffffff;
+    --ink:#0b0d0f;
+    --muted:#6b7280;
+    --line:#ececf0;
+    --accent:#111111;
+    --accent2:#ffffff;
+    --btn-r:14px;
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font:16px/1.45 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    color:var(--ink);
+    background:
+      radial-gradient(1200px 600px at 80% -10%, #fff 0%, #f7f7f7 55%, #f3f3f3 100%),
+      var(--bg);
+  }
+  .wrap{max-width:1120px;margin:0 auto;padding:28px 18px 88px}
+
+  /* HERO */
+  .hero{position:relative;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:40px 28px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.06);}
+  .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;}
+  .title{font-weight:900;letter-spacing:-.5px;font-size:clamp(28px,4.2vw,56px);line-height:1.02;margin:0 0 14px;}
+  .subtitle{color:var(--muted);font-size:15px;margin:0 0 20px}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+
+  /* Buttons — единый размер и выравнивание */
+  .btn{
+    --bgc:#fff; --c:var(--ink); --bd:rgba(0,0,0,.14);
+    appearance:none; display:inline-flex; align-items:center; justify-content:center; gap:.55rem;
+    padding:.8rem 1.05rem; min-height:44px; min-width:196px;
+    border:1px solid var(--bd); border-radius:var(--btn-r);
+    background:var(--bgc); color:var(--c);
+    font-weight:800; font-size:14px; text-decoration:none; white-space:nowrap;
+    box-shadow:0 1px 0 rgba(0,0,0,.03);
+    transition:transform .12s ease, box-shadow .14s ease, border-color .14s ease, background .14s ease;
+  }
+  .btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(0,0,0,.08)}
+  .btn:active{transform:translateY(0);box-shadow:0 6px 14px rgba(0,0,0,.08)}
+  .btn--open{--bgc:linear-gradient(180deg,#111,#000);--c:#fff;--bd:#000}
+  .btn--sm{min-height:44px;min-width:196px;padding:.62rem .9rem;font-size:13px;border-radius:12px}
+  .ic{width:1.15em;height:1.15em;display:inline-block}
+
+  /* Зебра изображение */
+  .zebra{max-width:440px;width:100%;margin:auto;filter:drop-shadow(0 8px 22px rgba(0,0,0,.1));}
+
+  /* GRID */
+  .grid{margin-top:28px;display:grid;grid-template-columns:repeat(12,1fr);gap:18px;}
+  .card{grid-column:span 12;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:0 10px 28px rgba(0,0,0,.05);transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;}
+  .card:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,.08);border-color:#e0e2e8}
+  .card-head{display:flex;align-items:center;gap:14px;margin:2px 0 10px}
+  .card h3{margin:0;font-size:20px;letter-spacing:-.2px}
+
+  /* Zebra-style headings (ч/б) */
+  .zebra-style h3{font-weight:900;color:var(--ink);}
+  .zebra-style::after{
+    content:""; display:block; width:72px; height:7px; margin-top:8px; border-radius:7px;
+    background:repeating-linear-gradient(45deg,var(--ink) 0 6px, var(--accent2) 6px 12px);
+    box-shadow:0 1px 0 rgba(0,0,0,.05) inset;
+  }
+
+  .muted{color:var(--muted)}
+  .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+  .actions .btn{align-self:stretch}
+
+  @media (min-width:760px){.card{grid-column:span 6}} 
+  @media (min-width:1080px){.card{grid-column:span 4}} 
+  @media (max-width:880px){.hero-grid{grid-template-columns:1fr}.zebra{max-width:300px;margin:16px auto 0}.hero{padding:28px 18px}}
+  footer{margin:32px 0 0;color:#9aa1aa;font-size:13px;text-align:center}
+
+  /* FAB HR */
+  .fab{position:fixed;right:20px;bottom:20px;z-index:99;background:linear-gradient(180deg,#111,#000);color:#fff;border-radius:999px;border:1px solid #000;box-shadow:0 20px 40px rgba(0,0,0,.22);display:inline-flex;align-items:center;gap:10px;padding:12px 16px;font-weight:800;text-decoration:none;transition:transform .15s ease, box-shadow .15s ease;}
+  .fab:hover{transform:translateY(-2px);box-shadow:0 28px 60px rgba(0,0,0,.28)}
+  .fab .badge{background:#fff;color:#111;padding:2px 8px;border-radius:999px;font-size:12px;border:1px solid #eee;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <h1 class="title">Добро пожаловать<br>в команду ZebraCall</h1>
+        <p class="subtitle">Ты — часть сильной команды. Ниже — быстрые ссылки, которые помогут стартовать.</p>
+        <div class="cta-row">
+          <a class="btn btn--open" href="#links">Начать знакомство</a>
+        </div>
+      </div>
+      <img src="https://filegator.adtika.com/?r=/download&path=L1BpYy96ZWJyYS5wbmc%3D" alt="Zebra illustration" class="zebra" />
+    </div>
+  </section>
+
+  <section id="links" class="grid">
+
+    <article class="card">
+      <div class="card-head zebra-style"><h3>Приветственное письмо</h3></div>
+      <p class="muted">Первое сообщение от ZebraCall: что тебя ждёт и с чего начать.</p>
+      <div class="actions">
+        <a class="btn btn--open btn--sm" href="/onboarding-landing/welcome-letter.html">Открыть</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head zebra-style"><h3>Welcome-презентация</h3></div>
+      <p class="muted">Кто мы, наши принципы и что делает команду особенной.</p>
+      <div class="actions">
+        <a class="btn btn--open btn--sm" href="/onboarding-landing/welcome-presentation.html">Открыть</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head zebra-style"><h3>Глоссарий терминов</h3></div>
+      <p class="muted">Короткие объяснения: РГП, СВ, ВП, РСВ и т.д.</p>
+      <div class="actions">
+        <a class="btn btn--open btn--sm" href="/onboarding-landing/glossary.html">Открыть</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head zebra-style"><h3>Часто задаваемые вопросы</h3></div>
+      <p class="muted">Оплата, график, отпуск, переход на проект, обучение — всё в одном месте.</p>
+      <div class="actions">
+        <a class="btn btn--open btn--sm" href="/onboarding-landing/faq.html">Открыть</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head zebra-style"><h3>Настройка VPN / CRM</h3></div>
+      <p class="muted">OpenConnect + вход в <b>crm.adtika.com</b> (код через Telegram). Пошаговые инструкции.</p>
+      <div class="actions">
+        <a class="btn btn--open btn--sm" href="/onboarding-landing/vpn-setup.html">Открыть</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head zebra-style"><h3>Наши продукты</h3></div>
+      <p class="muted">Коротко о ключевых решениях и сервисах ZebraCall.</p>
+      <div class="actions">
+        <a class="btn btn--open btn--sm" href="/onboarding-landing/products.html">Открыть</a>
+      </div>
+    </article>
+
+  </section>
+
+  <footer>© 2025 ZebraCall · Ваша адаптация — наша забота</footer>
+</div>
+
+<a class="fab" href="mailto:hr@zebracall.com?subject=%F0%9F%91%8B%20Новый%20сотрудник%20ZebraCall&body=Привет!%20Мне%20нужна%20поддержка%20по%20онбордингу." aria-label="Написать HR">
+  <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+  Написать HR <span class="badge">online</span>
+</a>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{
+      const id=a.getAttribute('href'); if(id==="#")return;
+      const el=document.querySelector(id); if(!el) return;
+      e.preventDefault(); el.scrollIntoView({behavior:"smooth",block:"start"});
+    });
+  });
+</script>
+</body>
+</html>

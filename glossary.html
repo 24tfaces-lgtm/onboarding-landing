@@ -3,94 +3,301 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Глоссарий — ZebraCall</title>
-  <link rel="stylesheet" href="style-glossary.css" />
-  <script defer src="glossary.js"></script>
+  <title>📚 Глоссарий — ZebraCall</title>
+  <meta name="theme-color" content="#0a3dff">
+  <style>
+    /* ===== Design tokens (light blue) ===== */
+    :root{
+      --bg:#f5f8ff;
+      --bg2:#eef3ff;
+      --card:#ffffff;
+      --ink:#0a1b3f;
+      --muted:#5b6b8a;
+      --line:#e6ecff;
+      --brand:#0a3dff;
+      --brand-900:#072bbb;
+      --accent:#2dd4bf;
+      --radius:18px;
+      --shadow-1:0 10px 28px rgba(6,32,120,.06);
+      --shadow-2:0 18px 44px rgba(6,32,120,.10);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font:16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(1100px 580px at 85% -10%, #fff 0%, var(--bg2) 55%, #eaf0ff 100%),
+        var(--bg);
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    a{color:inherit}
+
+    /* ===== Scroll progress (top) ===== */
+    .scroll-progress{
+      position:fixed; inset:0 0 auto 0; height:6px; z-index:1000;
+      background:linear-gradient(180deg,#ffffffcc,#ffffffaa);
+      backdrop-filter:saturate(130%) blur(6px);
+      border-bottom:1px solid var(--line);
+    }
+    .scroll-progress span{
+      display:block; height:100%; width:0%;
+      background:linear-gradient(90deg,var(--brand),var(--accent));
+      box-shadow:0 0 16px rgba(10,61,255,.25);
+      transition:width .08s linear;
+    }
+    @media (prefers-reduced-motion: reduce){
+      .scroll-progress span{transition:none}
+    }
+
+    .wrap{max-width:1120px;margin:0 auto;padding:26px 18px 64px}
+
+    /* ===== Header (compact, light, glass) ===== */
+    .hero{
+      position:relative; isolation:isolate; overflow:hidden;
+      background:linear-gradient(180deg,#ffffffcc,#ffffffcc), var(--card);
+      border:1px solid var(--line); border-radius:24px; padding:18px; box-shadow:var(--shadow-1);
+    }
+    .hero::before{
+      content:""; position:absolute; inset:-20% -10% -10% -10%; z-index:-1;
+      background:
+        radial-gradient(900px 420px at 90% -10%, #2f54ff22 0%, transparent 70%),
+        radial-gradient(720px 360px at -10% 110%, #00f0cf22 0%, transparent 60%);
+    }
+
+    .hero-grid{display:grid; grid-template-columns:1fr auto; gap:16px; align-items:center}
+    @media (max-width:840px){ .hero-grid{grid-template-columns:1fr} }
+
+    .brand{
+      display:flex; align-items:center; gap:12px; min-width:0;
+      background:linear-gradient(180deg,#fff,#f7faff);
+      border:1px solid var(--line); border-radius:16px; padding:10px 12px;
+      box-shadow:0 6px 18px rgba(10,61,255,.08);
+    }
+    .logo{
+      width:40px;height:40px;border-radius:12px; display:grid; place-items:center;
+      background:linear-gradient(180deg,var(--brand-900),var(--brand));
+      box-shadow:inset 0 0 0 2px #ffffff33;
+    }
+    .logo img{width:28px;height:auto;display:block;filter:drop-shadow(0 1px 2px rgba(0,0,0,.15))}
+    .titles h1{
+      margin:0; font-weight:900; letter-spacing:-.3px;
+      font-size:clamp(20px,3.6vw,32px); line-height:1.08; color:#0a1b3f;
+    }
+    .titles p{
+      margin:2px 0 0; color:var(--muted); font-size:13.5px;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
+
+    /* pretty CTA to home (new tab) */
+    .btn-home{
+      --bd:#d7e2ff;
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 14px; border-radius:999px;
+      background:
+        linear-gradient(180deg,#ffffff,#eaf0ff);
+      border:1px solid var(--bd);
+      color:#0a1b3f; font-weight:800; text-decoration:none;
+      box-shadow:0 10px 24px rgba(10,61,255,.14);
+      transition:transform .12s ease, box-shadow .14s ease, filter .14s ease;
+      min-width:160px; justify-content:center;
+    }
+    .btn-home .ic{font-size:16px; line-height:1}
+    .btn-home:hover{transform:translateY(-1px); box-shadow:0 16px 36px rgba(10,61,255,.18); filter:saturate(1.02)}
+    .btn-home:active{transform:translateY(0); box-shadow:0 10px 22px rgba(10,61,255,.18)}
+    .btn-home .sub{font-weight:700; opacity:.7; font-size:12px}
+
+    .hero-visual{display:flex; align-items:center; gap:12px}
+    .hero-visual .zebra{
+      width:min(260px,36vw); height:auto;
+      filter:grayscale(1) sepia(.25) saturate(6) hue-rotate(190deg) brightness(.98) contrast(1.08)
+              drop-shadow(0 8px 22px rgba(6,32,120,.18));
+      border-radius:16px; border:1px solid var(--line);
+      background:#fff;
+    }
+
+    /* subtle separator */
+    .wave{display:block; width:100%; height:40px; margin-top:10px}
+
+    /* ===== Glossary content ===== */
+    main.faq{max-width:980px; margin:20px auto 40px; padding:0 4px}
+    details.faq-item{
+      border:1px solid var(--line); background:linear-gradient(180deg,#fff,#f9fbff);
+      border-radius:14px; box-shadow:var(--shadow-1);
+      margin:12px 0; overflow:hidden;
+    }
+    details.faq-item[open]{box-shadow:var(--shadow-2)}
+    details.faq-item summary{
+      cursor:pointer; list-style:none; padding:14px 16px; font-weight:800; color:#0a1b3f;
+    }
+    details.faq-item summary::-webkit-details-marker{display:none}
+    .faq-answer{padding:0 16px 14px; color:#2c3d66}
+
+    footer.site-footer{max-width:980px; margin:28px auto 40px; color:#7d8db0; font-size:13px; text-align:center}
+
+    @media (max-width:560px){
+      .btn-home{min-width:0; padding:9px 12px}
+      .titles p{white-space:normal}
+      .hero-visual{justify-content:center}
+      .hero-visual .zebra{width:min(200px,70vw)}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *{transition:none!important}
+    }
+  </style>
 </head>
 <body>
-  <header class="hero hero--compact">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>📚 Глоссарий ZebraCall</h1>
-      <p>Собрали расшифровку всех сокращений и терминов, которые используются в работе</p>
-      <div class="hero-buttons">
-        <a href="index.html" class="btn light">⬅ На главную</a>
+  <!-- top scroll progress bar (accessible) -->
+  <div class="scroll-progress" role="progressbar"
+       aria-label="Прогресс прокрутки страницы"
+       aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+    <span></span>
+  </div>
+
+  <div class="wrap">
+    <!-- Header -->
+    <header class="hero" role="banner" aria-label="Глоссарий ZebraCall">
+      <div class="hero-grid">
+        <div class="brand">
+          <span class="logo" aria-hidden="true">
+            <img
+              src="https://filegator.adtika.com/?r=/download&path=L1BpYy96ZWJyYS5wbmc%3D"
+              alt="" decoding="async" width="28" height="28" />
+          </span>
+          <div class="titles">
+            <h1>📚 Глоссарий ZebraCall</h1>
+            <p>Расшифровки сокращений и терминов, которые используем в работе</p>
+          </div>
+        </div>
+
+        <!-- Кнопка "На главную" — новая вкладка -->
+        <a class="btn-home"
+           href="https://info.adtika.com/pages/viewpage.action?pageId=67240070"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Открыть главную ZebraCall в новой вкладке">
+          <span class="ic">↗</span>
+          На главную
+          <span class="sub">(новая вкладка)</span>
+        </a>
       </div>
-    </div>
-  </header>
 
-  <main class="faq">
-    <!-- Аббревиатуры -->
-    <details class="faq-item" id="term-ao">
-      <summary>АО — автоответчик</summary>
-      <div class="faq-answer">Состояние, когда на звонок отвечает автоматическая система, а не клиент.</div>
-    </details>
+      <div class="hero-visual">
+        <img class="zebra"
+             src="https://filegator.adtika.com/?r=/download&path=L1BpYy96ZWJyYS5wbmc%3D"
+             alt="Иллюстрация зебры в стиле бренда ZebraCall" decoding="async" />
+      </div>
 
-    <details class="faq-item" id="term-ssz">
-      <summary>ССЗ — служба сопровождения заказов</summary>
-      <div class="faq-answer">Подразделение, которое контролирует статус заказов, доставку и взаимодействие с клиентами после оформления.</div>
-    </details>
+      <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,50 C280,90 440,10 720,40 C1000,70 1200,20 1440,60 L1440,80 L0,80 Z" fill="#f5f8ff"></path>
+      </svg>
+    </header>
 
-    <details class="faq-item" id="term-rgp">
-      <summary>РГП — Руководитель Группы Продаж</summary>
-      <div class="faq-answer">Руководит операторами, следит за показателями, мотивацией и качеством звонков.</div>
-    </details>
+    <!-- Content -->
+    <main class="faq" id="main">
+      <!-- Аббревиатуры -->
+      <details class="faq-item" id="term-ao">
+        <summary>АО — автоответчик</summary>
+        <div class="faq-answer">Состояние, когда на звонок отвечает автоматическая система, а не клиент.</div>
+      </details>
 
-    <details class="faq-item" id="term-sv">
-      <summary>СВ — супервайзер</summary>
-      <div class="faq-answer">Контролирует дисциплину и оперативную работу команды в течение смены.</div>
-    </details>
+      <details class="faq-item" id="term-ssz">
+        <summary>ССЗ — служба сопровождения заказов</summary>
+        <div class="faq-answer">Подразделение, которое контролирует статус заказов, доставку и взаимодействие с клиентами после оформления.</div>
+      </details>
 
-    <details class="faq-item" id="term-om">
-      <summary>ОМ — специалист отдела мониторинга</summary>
-      <div class="faq-answer">Следит за техническими показателями, корректной работой IP-телефонии и стабильностью систем.</div>
-    </details>
+      <details class="faq-item" id="term-rgp">
+        <summary>РГП — Руководитель Группы Продаж</summary>
+        <div class="faq-answer">Руководит операторами, следит за показателями, мотивацией и качеством звонков.</div>
+      </details>
 
-    <details class="faq-item" id="term-vp">
-      <summary>ВП — выявление потребностей</summary>
-      <div class="faq-answer">Этап разговора, когда оператор узнаёт, что именно нужно клиенту, чтобы сделать персональное предложение.</div>
-    </details>
+      <details class="faq-item" id="term-sv">
+        <summary>СВ — супервайзер</summary>
+        <div class="faq-answer">Контролирует дисциплину и оперативную работу команды в течение смены.</div>
+      </details>
 
-    <details class="faq-item" id="term-rsv">
-      <summary>РСВ — работа с возражениями</summary>
-      <div class="faq-answer">Приёмы и фразы, которые помогают ответить на сомнения клиента и довести разговор до продажи.</div>
-    </details>
+      <details class="faq-item" id="term-om">
+        <summary>ОМ — специалист отдела мониторинга</summary>
+        <div class="faq-answer">Следит за техническими показателями, корректной работой IP-телефонии и стабильностью систем.</div>
+      </details>
 
-    <!-- Термины -->
-    <details class="faq-item" id="term-approve">
-      <summary>Апрув</summary>
-      <div class="faq-answer">Процент подтверждённых заказов от общего количества заказов с отказами.</div>
-    </details>
+      <details class="faq-item" id="term-vp">
+        <summary>ВП — выявление потребностей</summary>
+        <div class="faq-answer">Этап разговора, когда оператор узнаёт, что именно нужно клиенту, чтобы сделать персональное предложение.</div>
+      </details>
 
-    <details class="faq-item" id="term-margin">
-      <summary>Маржа</summary>
-      <div class="faq-answer">Показатель доходности: разница между выручкой и затратами.</div>
-    </details>
+      <details class="faq-item" id="term-rsv">
+        <summary>РСВ — работа с возражениями</summary>
+        <div class="faq-answer">Приёмы и фразы, которые помогают ответить на сомнения клиента и довести разговор до продажи.</div>
+      </details>
 
-    <details class="faq-item" id="term-landing">
-      <summary>Ленд</summary>
-      <div class="faq-answer">Одностраничный сайт (landing page), где рассказывается о конкретном продукте и его преимуществах.</div>
-    </details>
+      <!-- Термины -->
+      <details class="faq-item" id="term-approve">
+        <summary>Апрув</summary>
+        <div class="faq-answer">Процент подтверждённых заказов от общего количества заказов с отказами.</div>
+      </details>
 
-    <details class="faq-item" id="term-buyout">
-      <summary>Выкуп</summary>
-      <div class="faq-answer">Завершённые, оплаченные клиентом заказы.</div>
-    </details>
+      <details class="faq-item" id="term-margin">
+        <summary>Маржа</summary>
+        <div class="faq-answer">Показатель доходности: разница между выручкой и затратами.</div>
+      </details>
 
-    <details class="faq-item" id="term-pp">
-      <summary>ПП — прямые продажи</summary>
-      <div class="faq-answer">Звонки новым клиентам с целью первичной продажи товара или услуги.</div>
-    </details>
+      <details class="faq-item" id="term-landing">
+        <summary>Ленд</summary>
+        <div class="faq-answer">Одностраничный сайт (landing page), где рассказывается о конкретном продукте и его преимуществах.</div>
+      </details>
 
-    <details class="faq-item" id="term-pm">
-      <summary>ПМ — партнёрский маркетинг</summary>
-      <div class="faq-answer">Продажи и продвижение товаров через партнёрские каналы и сторонние источники трафика.</div>
-    </details>
-  </main>
+      <details class="faq-item" id="term-buyout">
+        <summary>Выкуп</summary>
+        <div class="faq-answer">Завершённые, оплаченные клиентом заказы.</div>
+      </details>
 
-  <footer class="site-footer">
-    <p>© 2025 ZebraCall · Глоссарий</p>
-  </footer>
+      <details class="faq-item" id="term-pp">
+        <summary>ПП — прямые продажи</summary>
+        <div class="faq-answer">Звонки новым клиентам с целью первичной продажи товара или услуги.</div>
+      </details>
+
+      <details class="faq-item" id="term-pm">
+        <summary>ПМ — партнёрский маркетинг</summary>
+        <div class="faq-answer">Продажи и продвижение товаров через партнёрские каналы и сторонние источники трафика.</div>
+      </details>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2025 ZebraCall · Глоссарий</p>
+    </footer>
+  </div>
+
+  <script>
+    // ===== Scroll progress (rAF + ARIA) =====
+    (function(){
+      const bar = document.querySelector('.scroll-progress span');
+      const wrapper = document.documentElement; // whole page
+      const widget = document.querySelector('.scroll-progress');
+      if(!bar || !widget) return;
+
+      let ticking = false;
+      function setProgress(){
+        const scrollTop = window.scrollY || wrapper.scrollTop || 0;
+        const docH = wrapper.scrollHeight - window.innerHeight;
+        const pct = docH > 0 ? Math.min(100, Math.max(0, (scrollTop / docH) * 100)) : 0;
+        bar.style.width = pct + '%';
+        widget.setAttribute('aria-valuenow', String(Math.round(pct)));
+        ticking = false;
+      }
+      function onScroll(){
+        if(!ticking){
+          ticking = true;
+          requestAnimationFrame(setProgress);
+        }
+      }
+      window.addEventListener('scroll', onScroll, {passive:true});
+      window.addEventListener('resize', onScroll);
+      setProgress();
+    })();
+  </script>
 </body>
 </html>
-

@@ -3,33 +3,32 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ZebraCall — Добро пожаловать в команду (Blue, clean headings)</title>
+<title>ZebraCall — Добро пожаловать в команду</title>
 <meta name="theme-color" content="#0a3dff">
 <style>
+  /* ====== tokens ====== */
   :root{
     --bg:#f5f8ff; --card:#ffffff; --ink:#0a1b3f; --muted:#5b6b8a; --line:#e6ecff;
-    --brand:#0a3dff; --brand-900:#072bbb; --btn-r:14px; --radius:18px;
+    --brand:#0a3dff; --brand-900:#072bbb;
+    --btn-r:14px; --radius:18px;
   }
-  *{box-sizing:border-box}
-  html,body{height:100%}
+  *{box-sizing:border-box} html,body{height:100%}
   body{
-    margin:0;
+    margin:0; color:var(--ink);
     font:16px/1.5 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-    color:var(--ink);
-    background:
-      radial-gradient(1100px 580px at 85% -10%, #fff 0%, #eef3ff 55%, #eaf0ff 100%),
-      var(--bg);
+    background: radial-gradient(1100px 580px at 85% -10%, #fff 0%, #eef3ff 55%, #eaf0ff 100%), var(--bg);
   }
   .wrap{max-width:1120px;margin:0 auto;padding:28px 18px 88px}
 
-  /* HERO */
+  /* ====== hero ====== */
   .hero{position:relative;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:40px 28px;overflow:hidden;box-shadow:0 20px 50px rgba(6,32,120,.08);}
   .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;}
   .title{font-weight:900;letter-spacing:-.5px;font-size:clamp(28px,4.2vw,56px);line-height:1.02;margin:0 0 14px;color:#0a1b3f;}
   .subtitle{color:var(--muted);font-size:15px;margin:0 0 20px}
   .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+  .zebra{max-width:440px;width:100%;margin:auto;filter:grayscale(1) sepia(.4) saturate(8) hue-rotate(190deg) brightness(.95) contrast(1.08) drop-shadow(0 8px 22px rgba(6,32,120,.18));}
 
-  /* Buttons */
+  /* ====== buttons ====== */
   .btn{
     appearance:none; display:inline-flex; align-items:center; justify-content:center; gap:.55rem;
     padding:.8rem 1.05rem; min-height:48px; width:240px;
@@ -42,9 +41,7 @@
   .btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(10,61,255,.22)}
   .btn:active{transform:translateY(0);box-shadow:0 6px 14px rgba(10,61,255,.22)}
 
-  .zebra{max-width:440px;width:100%;margin:auto;filter:grayscale(1) sepia(.4) saturate(8) hue-rotate(190deg) brightness(0.9) contrast(1.1) drop-shadow(0 8px 22px rgba(6,32,120,.18));}
-
-  /* GRID */
+  /* ====== grid ====== */
   .grid{margin-top:28px;display:grid;grid-template-columns:repeat(12,1fr);gap:18px;}
   .card{
     grid-column:span 12;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
@@ -55,7 +52,6 @@
   @media (min-width:760px){.card{grid-column:span 6}} 
   @media (min-width:1080px){.card{grid-column:span 4} .card{min-height:280px}}
   .card:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(6,32,120,.1);border-color:#dbe6ff}
-
   .card-head{display:flex; align-items:center; gap:16px; margin:2px 0 10px}
   .card h3{margin:0;font-size:22px;letter-spacing:-.2px;color:#0a1b3f;flex:1}
 
@@ -134,5 +130,22 @@
 
   <footer>© 2025 ZebraCall · Ваша адаптация — наша забота</footer>
 </div>
+
+<!-- safety net: автоматически ставим target+rel всем внешним ссылкам -->
+<script>
+  (function () {
+    const scope = document.getElementById('links');
+    if (!scope) return;
+    scope.querySelectorAll('a[href]').forEach(a => {
+      try {
+        const u = new URL(a.href, location.href);
+        if (u.origin !== location.origin) {
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+        }
+      } catch(_) {}
+    });
+  })();
+</script>
 </body>
 </html>

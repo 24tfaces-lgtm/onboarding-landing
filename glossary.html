@@ -6,6 +6,7 @@
   <title>📚 Глоссарий — ZebraCall</title>
   <meta name="theme-color" content="#0a3dff">
   <style>
+    /* ===== Design tokens (light blue) ===== */
     :root{
       --bg:#f5f8ff; --bg2:#eef3ff; --card:#ffffff;
       --ink:#0a1b3f; --muted:#5b6b8a; --line:#e6ecff;
@@ -20,67 +21,122 @@
     }
     a{color:inherit; text-decoration:none}
 
-    /* Scroll progress */
-    .scroll-progress{position:fixed; inset:0 0 auto 0; height:6px; z-index:1000; background:linear-gradient(180deg,#ffffffcc,#ffffffaa); backdrop-filter:saturate(130%) blur(6px); border-bottom:1px solid var(--line)}
-    .scroll-progress span{display:block; height:100%; width:0%; background:linear-gradient(90deg,var(--brand),var(--accent)); box-shadow:0 0 16px rgba(10,61,255,.25); transition:width .08s linear}
+    /* ===== Scroll progress (SAME as FAQ) ===== */
+    .scroll-progress{
+      position:fixed; inset:0 0 auto 0; height:6px; z-index:1000;
+      background:linear-gradient(180deg,#ffffffcc,#ffffffaa);
+      backdrop-filter:saturate(130%) blur(6px);
+      border-bottom:1px solid var(--line);
+    }
+    .scroll-progress span{
+      display:block; height:100%; width:0%;
+      background:linear-gradient(90deg,var(--brand),var(--accent));
+      box-shadow:0 0 16px rgba(10,61,255,.25);
+      transition:width .08s linear;
+    }
     @media (prefers-reduced-motion: reduce){ .scroll-progress span{transition:none} }
 
     .wrap{max-width:1120px; margin:0 auto; padding:26px 18px 64px}
 
-    /* Header */
-    .hero{position:relative; isolation:isolate; overflow:hidden; background:linear-gradient(180deg,#ffffffcc,#ffffffcc), var(--card); border:1px solid var(--line); border-radius:24px; padding:12px 14px 16px; box-shadow:var(--shadow-1)}
-    .hero::before{content:""; position:absolute; inset:-20% -10% -10% -10%; z-index:-1;
-      background: radial-gradient(900px 420px at 90% -10%, #2f54ff22 0%, transparent 70%), radial-gradient(720px 360px at -10% 110%, #00f0cf22 0%, transparent 60%)}
-
-    /* grid: кнопка слева, центр — бренд, справа — «невидимый» спейсер */
+    /* ===== Header (same style as FAQ) ===== */
+    .hero{
+      position:relative; isolation:isolate; overflow:hidden;
+      background:linear-gradient(180deg,#ffffffcc,#ffffffcc), var(--card);
+      border:1px solid var(--line); border-radius:24px;
+      padding:12px 14px 16px; box-shadow:var(--shadow-1);
+    }
+    .hero::before{
+      content:""; position:absolute; inset:-20% -10% -10% -10%; z-index:-1;
+      background:
+        radial-gradient(900px 420px at 90% -10%, #2f54ff22 0%, transparent 70%),
+        radial-gradient(720px 360px at -10% 110%, #00f0cf22 0%, transparent 60%);
+    }
     .hero-grid{display:grid; grid-template-columns:auto 1fr auto; gap:12px; align-items:center}
     @media (max-width:740px){ .hero-grid{grid-template-columns:1fr} .brand{justify-self:stretch} }
 
+    /* кнопка слева */
     .btn-home{
-      --bd:#d7e2ff; display:inline-flex; align-items:center; gap:10px;
-      padding:8px 12px; border-radius:999px; background:linear-gradient(180deg,#ffffff,#eaf0ff);
-      border:1px solid var(--bd); color:#0a1b3f; font-weight:800; box-shadow:0 6px 18px rgba(10,61,255,.12);
+      --bd:#d7e2ff;
+      display:inline-flex; align-items:center; gap:10px;
+      padding:8px 12px; border-radius:999px;
+      background:linear-gradient(180deg,#ffffff,#eaf0ff);
+      border:1px solid var(--bd); color:#0a1b3f; font-weight:800;
+      box-shadow:0 6px 18px rgba(10,61,255,.12);
       transition:transform .12s ease, box-shadow .14s ease, filter .14s ease;
     }
     .btn-home:hover{transform:translateY(-1px); box-shadow:0 12px 26px rgba(10,61,255,.16); filter:saturate(1.02)}
     .btn-home:active{transform:translateY(0); box-shadow:0 8px 20px rgba(10,61,255,.16)}
 
+    /* бренд с маленькой ровной зеброй */
     .brand{
       display:flex; align-items:center; gap:12px; min-width:0;
-      background:linear-gradient(180deg,#fff,#f7faff); border:1px solid var(--line); border-radius:16px; padding:8px 10px;
+      background:linear-gradient(180deg,#fff,#f7faff);
+      border:1px solid var(--line); border-radius:16px; padding:8px 10px;
       box-shadow:0 6px 18px rgba(10,61,255,.08);
     }
-    .logo{width:36px; height:36px; border-radius:10px; display:grid; place-items:center; background:linear-gradient(180deg,var(--brand-900),var(--brand)); box-shadow:inset 0 0 0 2px #ffffff33}
+    .logo{
+      width:36px; height:36px; border-radius:10px; display:grid; place-items:center;
+      background:linear-gradient(180deg,var(--brand-900),var(--brand));
+      box-shadow:inset 0 0 0 2px #ffffff33;
+    }
     .logo img{width:24px; height:auto; display:block; filter:drop-shadow(0 1px 2px rgba(0,0,0,.15))}
-    .titles h1{margin:0; font-weight:900; letter-spacing:-.3px; font-size:clamp(18px,3.2vw,28px); line-height:1.08; color:#0a1b3f}
-    .titles p{margin:1px 0 0; color:var(--muted); font-size:13px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
-
-    .hero-spacer{width:1px; height:1px} /* держит сетку */
-
+    .titles h1{
+      margin:0; font-weight:900; letter-spacing:-.3px;
+      font-size:clamp(18px,3.2vw,28px); line-height:1.08; color:#0a1b3f;
+    }
+    .titles p{
+      margin:1px 0 0; color:var(--muted); font-size:13px;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
+    .hero-spacer{width:1px; height:1px}
     .wave{display:block; width:100%; height:32px; margin-top:6px}
 
-    /* FAQ */
+    /* ===== Glossary list ===== */
     main.faq{max-width:980px; margin:12px auto 40px; padding:0 4px}
-    details.faq-item{border:1px solid var(--line); background:linear-gradient(180deg,#fff,#f9fbff); border-radius:14px; box-shadow:var(--shadow-1); margin:12px 0; overflow:hidden; transition:box-shadow .18s ease, border-color .18s ease}
+    details.faq-item{
+      border:1px solid var(--line); background:linear-gradient(180deg,#fff,#f9fbff);
+      border-radius:14px; box-shadow:var(--shadow-1);
+      margin:12px 0; overflow:hidden;
+      transition:box-shadow .18s ease, border-color .18s ease;
+    }
     details.faq-item[open]{box-shadow:var(--shadow-2); border-color:#dbe6ff}
 
-    /* FLIP badge B ↔ S */
-    details.faq-item summary{cursor:pointer; list-style:none; padding:14px 16px 14px 52px; font-weight:800; color:#0a1b3f; position:relative}
+    /* FLIP badge B ↔ S (как на FAQ) */
+    details.faq-item summary{
+      cursor:pointer; list-style:none; padding:14px 16px 14px 52px;
+      font-weight:800; color:#0a1b3f; position:relative;
+    }
     details.faq-item summary::-webkit-details-marker{display:none}
-    .flip{position:absolute; left:16px; top:50%; transform:translateY(-50%); width:24px; height:24px; perspective:500px}
-    .flip .face{position:absolute; inset:0; display:grid; place-items:center; font:700 13px/1 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; color:#fff; border-radius:6px; background:linear-gradient(180deg, var(--brand-900), var(--brand)); border:1px solid #0a2cbb; box-shadow:0 6px 14px rgba(10,61,255,.25); backface-visibility:hidden; transform-style:preserve-3d; transition:transform .38s cubic-bezier(.2,.7,.2,1)}
-    .flip .back{background:linear-gradient(180deg, #05967a, #2dd4bf); border-color:#058c72; transform:rotateX(-180deg)}
-    .flip .front{transform:rotateX(0)}
-    details[open] .flip .front{transform:rotateX(180deg)}
-    details[open] .flip .back{transform:rotateX(0)}
+    .flip{
+      position:absolute; left:16px; top:50%; transform:translateY(-50%);
+      width:24px; height:24px; perspective:500px;
+    }
+    .flip .face{
+      position:absolute; inset:0; display:grid; place-items:center;
+      font:700 13px/1 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+      color:#fff; border-radius:6px;
+      background:linear-gradient(180deg, var(--brand-900), var(--brand));
+      border:1px solid #0a2cbb; box-shadow:0 6px 14px rgba(10,61,255,.25);
+      backface-visibility:hidden; transform-style:preserve-3d;
+      transition:transform .38s cubic-bezier(.2,.7,.2,1);
+    }
+    .flip .back{
+      background:linear-gradient(180deg, #05967a, #2dd4bf);
+      border-color:#058c72; transform:rotateX(-180deg);
+    }
+    .flip .front{ transform:rotateX(0) }
+    details[open] .flip .front{ transform:rotateX(180deg) }
+    details[open] .flip .back{ transform:rotateX(0) }
 
     .faq-answer{padding:0 16px 14px; color:#2c3d66}
     footer.site-footer{max-width:980px; margin:28px auto 40px; color:#7d8db0; font-size:13px; text-align:center}
   </style>
 </head>
 <body>
-  <!-- Progress -->
-  <div class="scroll-progress" role="progressbar" aria-label="Прогресс прокрутки страницы" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+  <!-- Top scroll progress (identical to FAQ) -->
+  <div class="scroll-progress" role="progressbar"
+       aria-label="Прогресс прокрутки страницы"
+       aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
     <span></span>
   </div>
 
@@ -88,15 +144,17 @@
     <!-- Header -->
     <header class="hero" role="banner" aria-label="Глоссарий ZebraCall">
       <div class="hero-grid">
-        <!-- слева простая, аккуратная кнопка -->
+        <!-- слева: простая кнопка -->
         <a class="btn-home"
            href="https://info.adtika.com/pages/viewpage.action?pageId=67240070"
            target="_blank" rel="noopener noreferrer">На главную</a>
 
-        <!-- центр — бренд с маленькой РОВНОЙ зеброй -->
+        <!-- центр: бренд с маленькой, ровной зеброй -->
         <div class="brand" aria-label="ZebraCall">
           <span class="logo" aria-hidden="true">
-            <img src="https://filegator.adtika.com/?r=/download&path=L1BpYy96ZWJyYS5wbmc%3D" alt="" decoding="async" width="24" height="24" />
+            <img
+              src="https://filegator.adtika.com/?r=/download&path=L1BpYy96ZWJyYS5wbmc%3D"
+              alt="" decoding="async" width="24" height="24" />
           </span>
           <div class="titles">
             <h1>📚 Глоссарий ZebraCall</h1>
@@ -104,7 +162,7 @@
           </div>
         </div>
 
-        <!-- справа — тонкий спейсер для сетки -->
+        <!-- справа: спейсер для сетки -->
         <div class="hero-spacer" aria-hidden="true"></div>
       </div>
 
@@ -128,63 +186,135 @@
       </details>
 
       <details class="faq-item" id="term-ssz">
-        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> ССЗ — служба сопровождения заказов</summary>
+        <summary>
+          <span class="flip" aria-hidden="true">
+            <span class="face front">B</span>
+            <span class="face back">S</span>
+          </span>
+          ССЗ — служба сопровождения заказов
+        </summary>
         <div class="faq-answer">Подразделение, которое контролирует статус заказов, доставку и взаимодействие с клиентами после оформления.</div>
       </details>
 
       <details class="faq-item" id="term-rgp">
-        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> РГП — Руководитель Группы Продаж</summary>
+        <summary>
+          <span class="flip" aria-hidden="true">
+            <span class="face front">B</span>
+            <span class="face back">S</span>
+          </span>
+          РГП — Руководитель Группы Продаж
+        </summary>
         <div class="faq-answer">Руководит операторами, следит за показателями, мотивацией и качеством звонков.</div>
       </details>
 
       <details class="faq-item" id="term-sv">
-        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> СВ — супервайзер</summary>
+        <summary>
+          <span class="flip" aria-hidden="true">
+            <span class="face front">B</span>
+            <span class="face back">S</span>
+          </span>
+          СВ — супервайзер
+        </summary>
         <div class="faq-answer">Контролирует дисциплину и оперативную работу команды в течение смены.</div>
       </details>
 
       <details class="faq-item" id="term-om">
-        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> ОМ — специалист отдела мониторинга</summary>
+        <summary>
+          <span class="flip" aria-hidden="true">
+            <span class="face front">B</span>
+            <span class="face back">S</span>
+          </span>
+          ОМ — специалист отдела мониторинга
+        </summary>
         <div class="faq-answer">Следит за техническими показателями, корректной работой IP-телефонии и стабильностью систем.</div>
       </details>
 
       <details class="faq-item" id="term-vp">
-        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> ВП — выявление потребностей</summary>
+        <summary>
+          <span class="flip" aria-hidden="true">
+            <span class="face front">B</span>
+            <span class="face back">S</span>
+          </span>
+          ВП — выявление потребностей
+        </summary>
         <div class="faq-answer">Этап разговора, когда оператор узнаёт, что именно нужно клиенту, чтобы сделать персональное предложение.</div>
       </details>
 
       <details class="faq-item" id="term-rsv">
-        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> РСВ — работа с возражениями</summary>
+        <summary>
+          <span class="flip" aria-hidden="true">
+            <span class="face front">B</span>
+            <span class="face back">S</span>
+          </span>
+          РСВ — работа с возражениями
+        </summary>
         <div class="faq-answer">Приёмы и фразы, которые помогают ответить на сомнения клиента и довести разговор до продажи.</div>
       </details>
 
       <!-- Термины -->
       <details class="faq-item" id="term-approve">
-        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Апрув</summary>
+        <summary>
+          <span class="flip" aria-hidden="true">
+            <span class="face front">B</span>
+            <span class="face back">S</span>
+          </span>
+          Апрув
+        </summary>
         <div class="faq-answer">Процент подтверждённых заказов от общего количества заказов с отказами.</div>
       </details>
 
       <details class="faq-item" id="term-margin">
-        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Маржа</summary>
+        <summary>
+          <span class="flip" aria-hidden="true">
+            <span class="face front">B</span>
+            <span class="face back">S</span>
+          </span>
+          Маржа
+        </summary>
         <div class="faq-answer">Показатель доходности: разница между выручкой и затратами.</div>
       </details>
 
       <details class="faq-item" id="term-landing">
-        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Ленд</summary>
+        <summary>
+          <span class="flip" aria-hidden="true">
+            <span class="face front">B</span>
+            <span class="face back">S</span>
+          </span>
+          Ленд
+        </summary>
         <div class="faq-answer">Одностраничный сайт (landing page), где рассказывается о конкретном продукте и его преимуществах.</div>
       </details>
 
       <details class="faq-item" id="term-buyout">
-        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Выкуп</summary>
+        <summary>
+          <span class="flip" aria-hidden="true">
+            <span class="face front">B</span>
+            <span class="face back">S</span>
+          </span>
+          Выкуп
+        </summary>
         <div class="faq-answer">Завершённые, оплаченные клиентом заказы.</div>
       </details>
 
       <details class="faq-item" id="term-pp">
-        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> ПП — прямые продажи</summary>
+        <summary>
+          <span class="flip" aria-hidden="true">
+            <span class="face front">B</span>
+            <span class="face back">S</span>
+          </span>
+          ПП — прямые продажи
+        </summary>
         <div class="faq-answer">Звонки новым клиентам с целью первичной продажи товара или услуги.</div>
       </details>
 
       <details class="faq-item" id="term-pm">
-        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> ПМ — партнёрский маркетинг</summary>
+        <summary>
+          <span class="flip" aria-hidden="true">
+            <span class="face front">B</span>
+            <span class="face back">S</span>
+          </span>
+          ПМ — партнёрский маркетинг
+        </summary>
         <div class="faq-answer">Продажи и продвижение товаров через партнёрские каналы и сторонние источники трафика.</div>
       </details>
     </main>
@@ -195,7 +325,7 @@
   </div>
 
   <script>
-    // Scroll progress (rAF + ARIA)
+    // Scroll progress (IDENTICAL to FAQ)
     (function(){
       const bar = document.querySelector('.scroll-progress span');
       const root = document.documentElement, widget = document.querySelector('.scroll-progress');

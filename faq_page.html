@@ -1,323 +1,371 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FAQ — ZebraCall</title>
-  <link rel="stylesheet" href="faq_style.css" />
-  <script defer src="faq_script.js"></script>
+  <title>❓ FAQ — ZebraCall</title>
+  <meta name="theme-color" content="#0a3dff">
+  <style>
+    /* ===== Design tokens (light blue) ===== */
+    :root{
+      --bg:#f5f8ff; --bg2:#eef3ff; --card:#ffffff;
+      --ink:#0a1b3f; --muted:#5b6b8a; --line:#e6ecff;
+      --brand:#0a3dff; --brand-900:#072bbb; --accent:#2dd4bf;
+      --radius:18px; --shadow-1:0 10px 28px rgba(6,32,120,.06); --shadow-2:0 18px 44px rgba(6,32,120,.10);
+    }
+    *{box-sizing:border-box} html,body{height:100%}
+    body{
+      margin:0; font:16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; color:var(--ink);
+      background: radial-gradient(1100px 580px at 85% -10%, #fff 0%, var(--bg2) 55%, #eaf0ff 100%), var(--bg);
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    a{color:inherit; text-decoration:none}
+
+    /* ===== Scroll progress (top) ===== */
+    .scroll-progress{position:fixed; inset:0 0 auto 0; height:6px; z-index:1000; background:linear-gradient(180deg,#ffffffcc,#ffffffaa); backdrop-filter:saturate(130%) blur(6px); border-bottom:1px solid var(--line)}
+    .scroll-progress span{display:block; height:100%; width:0%; background:linear-gradient(90deg,var(--brand),var(--accent)); box-shadow:0 0 16px rgba(10,61,255,.25); transition:width .08s linear}
+    @media (prefers-reduced-motion: reduce){ .scroll-progress span{transition:none} }
+
+    .wrap{max-width:1120px; margin:0 auto; padding:26px 18px 64px}
+
+    /* ===== Header (same as Glossary) ===== */
+    .hero{position:relative; isolation:isolate; overflow:hidden; background:linear-gradient(180deg,#ffffffcc,#ffffffcc), var(--card); border:1px solid var(--line); border-radius:24px; padding:12px 14px 16px; box-shadow:var(--shadow-1)}
+    .hero::before{content:""; position:absolute; inset:-20% -10% -10% -10%; z-index:-1;
+      background: radial-gradient(900px 420px at 90% -10%, #2f54ff22 0%, transparent 70%), radial-gradient(720px 360px at -10% 110%, #00f0cf22 0%, transparent 60%)}
+
+    .hero-grid{display:grid; grid-template-columns:auto 1fr auto; gap:12px; align-items:center}
+    @media (max-width:740px){ .hero-grid{grid-template-columns:1fr} .brand{justify-self:stretch} }
+
+    .btn-home{
+      --bd:#d7e2ff; display:inline-flex; align-items:center; gap:10px;
+      padding:8px 12px; border-radius:999px; background:linear-gradient(180deg,#ffffff,#eaf0ff);
+      border:1px solid var(--bd); color:#0a1b3f; font-weight:800; box-shadow:0 6px 18px rgba(10,61,255,.12);
+      transition:transform .12s ease, box-shadow .14s ease, filter .14s ease;
+    }
+    .btn-home:hover{transform:translateY(-1px); box-shadow:0 12px 26px rgba(10,61,255,.16); filter:saturate(1.02)}
+    .btn-home:active{transform:translateY(0); box-shadow:0 8px 20px rgba(10,61,255,.16)}
+
+    .brand{
+      display:flex; align-items:center; gap:12px; min-width:0;
+      background:linear-gradient(180deg,#fff,#f7faff); border:1px solid var(--line); border-radius:16px; padding:8px 10px;
+      box-shadow:0 6px 18px rgba(10,61,255,.08);
+    }
+    .logo{width:36px; height:36px; border-radius:10px; display:grid; place-items:center; background:linear-gradient(180deg,var(--brand-900),var(--brand)); box-shadow:inset 0 0 0 2px #ffffff33}
+    .logo img{width:24px; height:auto; display:block; filter:drop-shadow(0 1px 2px rgba(0,0,0,.15))}
+    .titles h1{margin:0; font-weight:900; letter-spacing:-.3px; font-size:clamp(18px,3.2vw,28px); line-height:1.08; color:#0a1b3f}
+    .titles p{margin:1px 0 0; color:var(--muted); font-size:13px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+    .hero-spacer{width:1px; height:1px} /* держит сетку */
+    .wave{display:block; width:100%; height:32px; margin-top:6px}
+
+    /* ===== FAQ list ===== */
+    main.faq{max-width:980px; margin:12px auto 40px; padding:0 4px}
+    details.faq-item{border:1px solid var(--line); background:linear-gradient(180deg,#fff,#f9fbff); border-radius:14px; box-shadow:var(--shadow-1); margin:12px 0; overflow:hidden; transition:box-shadow .18s ease, border-color .18s ease}
+    details.faq-item[open]{box-shadow:var(--shadow-2); border-color:#dbe6ff}
+
+    /* FLIP badge B ↔ S (как на глоссарии) */
+    details.faq-item summary{cursor:pointer; list-style:none; padding:14px 16px 14px 52px; font-weight:800; color:#0a1b3f; position:relative}
+    details.faq-item summary::-webkit-details-marker{display:none}
+    .flip{position:absolute; left:16px; top:50%; transform:translateY(-50%); width:24px; height:24px; perspective:500px}
+    .flip .face{position:absolute; inset:0; display:grid; place-items:center; font:700 13px/1 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; color:#fff; border-radius:6px; background:linear-gradient(180deg, var(--brand-900), var(--brand)); border:1px solid #0a2cbb; box-shadow:0 6px 14px rgba(10,61,255,.25); backface-visibility:hidden; transform-style:preserve-3d; transition:transform .38s cubic-bezier(.2,.7,.2,1)}
+    .flip .back{background:linear-gradient(180deg, #05967a, #2dd4bf); border-color:#058c72; transform:rotateX(-180deg)}
+    .flip .front{transform:rotateX(0)}
+    details[open] .flip .front{transform:rotateX(180deg)}
+    details[open] .flip .back{transform:rotateX(0)}
+
+    .faq-answer{padding:0 16px 14px; color:#2c3d66}
+
+    footer.site-footer{max-width:980px; margin:28px auto 40px; color:#7d8db0; font-size:13px; text-align:center}
+  </style>
 </head>
 <body>
-  <header class="hero hero--compact">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>❓ Часто задаваемые вопросы</h1>
-      <p>Собрали ответы на самые частые вопросы сотрудников ZebraCall</p>
-      <div class="hero-buttons">
-        <a href="index.html" class="btn light">⬅ На главную</a>
-      </div>
-    </div>
-  </header>
+  <!-- Top progress -->
+  <div class="scroll-progress" role="progressbar" aria-label="Прогресс прокрутки" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+    <span></span>
+  </div>
 
-  <main class="faq">
-    <!-- О компании -->
-    <details class="faq-item" id="q-what-is">
-      <summary>Что делает ZebraCall?</summary>
-      <div class="faq-answer">
-        ZebraCall — это компания, которая занимается телефонными продажами товаров и услуг. Мы помогаем клиентам выбрать нужный продукт, оформить заказ и строим доверительные отношения с постоянными покупателями.
-      </div>
-    </details>
+  <div class="wrap">
+    <!-- Header (same look as Glossary) -->
+    <header class="hero" role="banner" aria-label="FAQ ZebraCall">
+      <div class="hero-grid">
+        <!-- слева: простая кнопка -->
+        <a class="btn-home"
+           href="index.html"
+           target="_blank" rel="noopener noreferrer">На главную</a>
 
-    <details class="faq-item" id="q-directions">
-      <summary>Какие направления есть в компании?</summary>
-      <div class="faq-answer">
-        У нас два основных направления: <b>ПП (прямые продажи)</b> — работа с новыми клиентами, и <b>ПМ (повторные продажи)</b> — звонки клиентам, которые уже что-то покупали.
-      </div>
-    </details>
+        <!-- центр: бренд с маленькой, ровной зеброй -->
+        <div class="brand" aria-label="ZebraCall">
+          <span class="logo" aria-hidden="true">
+            <img
+              src="https://filegator.adtika.com/?r=/download&path=L1BpYy96ZWJyYS5wbmc%3D"
+              alt="" decoding="async" width="24" height="24" />
+          </span>
+          <div class="titles">
+            <h1>❓ Часто задаваемые вопросы</h1>
+            <p>Собрали ответы на самые частые вопросы сотрудников ZebraCall</p>
+          </div>
+        </div>
 
-    <!-- Трудоустройство и график -->
-    <details class="faq-item" id="q-unofficial">
-      <summary>Можно работать неофициально?</summary>
-      <div class="faq-answer">
-        Да. Многие сотрудники получают меры соцподдержки, поэтому мы предлагаем удобный формат без официального оформления.
+        <div class="hero-spacer" aria-hidden="true"></div>
       </div>
-    </details>
 
-    <details class="faq-item" id="q-why-no-official">
-      <summary>Почему нет официального трудоустройства?</summary>
-      <div class="faq-answer">
-        Из-за удалённого формата и разных законодательств в странах СНГ. Мы работаем напрямую — без бюрократии и с полной прозрачностью условий.
-      </div>
-    </details>
+      <svg class="wave" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,40 C280,64 440,8 720,28 C1000,48 1200,16 1440,48 L1440,64 L0,64 Z" fill="#f5f8ff"></path>
+      </svg>
+    </header>
 
-    <details class="faq-item" id="q-vacation">
-      <summary>Есть ли отпуск?</summary>
-      <div class="faq-answer">
-        Да. После 6 месяцев работы можно взять <b>14 календарных дней</b> оплачиваемого отпуска с оплатой <b>50% от среднемесячной зарплаты</b>.
-      </div>
-    </details>
+    <!-- Content -->
+    <main class="faq">
+      <!-- О компании -->
+      <details class="faq-item" id="q-what-is">
+        <summary>
+          <span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span>
+          Что делает ZebraCall?
+        </summary>
+        <div class="faq-answer">
+          ZebraCall — это компания, которая занимается телефонными продажами товаров и услуг. Мы помогаем клиентам выбрать нужный продукт, оформить заказ и строим доверительные отношения с постоянными покупателями.
+        </div>
+      </details>
 
-    <details class="faq-item" id="q-schedule">
-      <summary>Какой график у операторов?</summary>
-      <div class="faq-answer">
-        Два формата: <b>5/2</b> (с плавающими выходными) или <b>2/2</b>. Главное — не менее <b>8 часов</b> работы в день.
-      </div>
-    </details>
+      <details class="faq-item" id="q-directions">
+        <summary>
+          <span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span>
+          Какие направления есть в компании?
+        </summary>
+        <div class="faq-answer">
+          У нас два основных направления: <b>ПП (прямые продажи)</b> — работа с новыми клиентами, и <b>ПМ (повторные продажи)</b> — звонки клиентам, которые уже что-то покупали.
+        </div>
+      </details>
 
-    <details class="faq-item" id="q-change-schedule">
-      <summary>Можно ли менять график?</summary>
-      <div class="faq-answer">
-        Да, по согласованию с руководителем группы продаж (РГП). Мы гибко подстраиваемся под сотрудников.
-      </div>
-    </details>
+      <!-- Трудоустройство и график -->
+      <details class="faq-item" id="q-unofficial">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Можно работать неофициально?</summary>
+        <div class="faq-answer">Да. Многие сотрудники получают меры соцподдержки, поэтому мы предлагаем удобный формат без официального оформления.</div>
+      </details>
 
-    <details class="faq-item" id="q-extra-shifts">
-      <summary>Можно ли брать дополнительные смены?</summary>
-      <div class="faq-answer">
-        Да, если есть производственная необходимость и согласование с руководителем.
-      </div>
-    </details>
+      <details class="faq-item" id="q-why-no-official">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Почему нет официального трудоустройства?</summary>
+        <div class="faq-answer">Из-за удалённого формата и разных законодательств в странах СНГ. Мы работаем напрямую — без бюрократии и с полной прозрачностью условий.</div>
+      </details>
 
-    <details class="faq-item" id="q-holidays-work">
-      <summary>Работаете ли вы в праздники?</summary>
-      <div class="faq-answer">
-        Да. Мы работаем посменно, поэтому у каждого свой индивидуальный график. В праздники смены обычно оплачиваются по повышенным тарифам.
-      </div>
-    </details>
+      <details class="faq-item" id="q-vacation">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Есть ли отпуск?</summary>
+        <div class="faq-answer">Да. После 6 месяцев работы можно взять <b>14 календарных дней</b> оплачиваемого отпуска с оплатой <b>50% от среднемесячной зарплаты</b>.</div>
+      </details>
 
-    <details class="faq-item" id="q-holidays-double">
-      <summary>Оплачиваются ли смены в праздники по двойному тарифу?</summary>
-      <div class="faq-answer">
-        В отдельные государственные праздники действуют <b>повышающие коэффициенты</b> — о них сообщается заранее.
-      </div>
-    </details>
+      <details class="faq-item" id="q-schedule">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Какой график у операторов?</summary>
+        <div class="faq-answer">Два формата: <b>5/2</b> (с плавающими выходными) или <b>2/2</b>. Главное — не менее <b>8 часов</b> работы в день.</div>
+      </details>
 
-    <!-- Оплата -->
-    <details class="faq-item" id="q-pay-dates">
-      <summary>Когда выплачивается зарплата?</summary>
-      <div class="faq-answer">
-        Два раза в месяц: аванс и итог за период. Точные даты могут отличаться по проектам.
-      </div>
-    </details>
+      <details class="faq-item" id="q-change-schedule">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Можно ли менять график?</summary>
+        <div class="faq-answer">Да, по согласованию с руководителем группы продаж (РГП). Мы гибко подстраиваемся под сотрудников.</div>
+      </details>
 
-    <details class="faq-item" id="q-pay-card">
-      <summary>На какую карту приходит зарплата?</summary>
-      <div class="faq-answer">
-        На карту любого банка и любой страны. Комиссию за перевод компания берёт на себя.
-      </div>
-    </details>
+      <details class="faq-item" id="q-extra-shifts">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Можно ли брать дополнительные смены?</summary>
+        <div class="faq-answer">Да, если есть производственная необходимость и согласование с руководителем.</div>
+      </details>
 
-    <details class="faq-item" id="q-mir">
-      <summary>Нужно ли оформлять карту МИР?</summary>
-      <div class="faq-answer">
-        Не обязательно, но переводы наиболее стабильно проходят именно на карты <b>МИР</b>. В некоторых странах (например, Беларусь) возможны выплаты на Visa или MasterCard.
-      </div>
-    </details>
+      <details class="faq-item" id="q-holidays-work">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Работаете ли вы в праздники?</summary>
+        <div class="faq-answer">Да. Мы работаем посменно, поэтому у каждого свой индивидуальный график. В праздники смены обычно оплачиваются по повышенным тарифам.</div>
+      </details>
 
-    <details class="faq-item" id="q-min-sales-pay">
-      <summary>Если я сделаю всего 2 продажи за месяц, зарплату всё равно заплатят?</summary>
-      <div class="faq-answer">
-        Конечно. Ты получаешь проценты за продажи и выкуп всегда.
-      </div>
-    </details>
+      <details class="faq-item" id="q-holidays-double">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Оплачиваются ли смены в праздники по двойному тарифу?</summary>
+        <div class="faq-answer">В отдельные государственные праздники действуют <b>повышающие коэффициенты</b> — о них сообщается заранее.</div>
+      </details>
 
-    <details class="faq-item" id="q-bonuses">
-      <summary>Есть ли премии и бонусы?</summary>
-      <div class="faq-answer">
-        Да. За перевыполнение планов, инициативу, участие в проектах и высокий результат, за лояльность к компании. Также мы оплачиваем интернет, дарим подарки на день рождения, и часто проводим акции и конкурсы.
-      </div>
-    </details>
+      <!-- Оплата -->
+      <details class="faq-item" id="q-pay-dates">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Когда выплачивается зарплата?</summary>
+        <div class="faq-answer">Два раза в месяц: аванс и итог за период. Точные даты могут отличаться по проектам.</div>
+      </details>
 
-    <!-- Обучение -->
-    <details class="faq-item" id="q-training-duration">
-      <summary>Сколько длится обучение?</summary>
-      <div class="faq-answer">
-        Обучение длится <b>3 дня</b> (10:00–18:00): теория, практика, тестовый звонок.
-      </div>
-    </details>
+      <details class="faq-item" id="q-pay-card">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> На какую карту приходит зарплата?</summary>
+        <div class="faq-answer">На карту любого банка и любой страны. Комиссию за перевод компания берёт на себя.</div>
+      </details>
 
-    <details class="faq-item" id="q-training-paid">
-      <summary>Оплачивается ли обучение?</summary>
-      <div class="faq-answer">
-        Да. После <b>200 часов</b> работы в основной группе выплачивается бонус <b>3000 ₽</b>.
-      </div>
-    </details>
+      <details class="faq-item" id="q-mir">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Нужно ли оформлять карту МИР?</summary>
+        <div class="faq-answer">Не обязательно, но переводы наиболее стабильно проходят именно на карты <b>МИР</b>. В некоторых странах возможны выплаты на Visa или MasterCard.</div>
+      </details>
 
-    <details class="faq-item" id="q-test-call">
-      <summary>Что, если не сдам тестовый звонок?</summary>
-      <div class="faq-answer">
-        Можно пересдать. Тренер поможет разобрать ошибки и подготовиться.
-      </div>
-    </details>
+      <details class="faq-item" id="q-min-sales-pay">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Если я сделаю всего 2 продажи за месяц, зарплату всё равно заплатят?</summary>
+        <div class="faq-answer">Конечно. Ты получаешь проценты за продажи и выкуп всегда.</div>
+      </details>
 
-    <details class="faq-item" id="q-extra-education">
-      <summary>Можно ли попросить дополнительное обучение?</summary>
-      <div class="faq-answer">
-        Конечно. Мы поддерживаем инициативу и подбираем индивидуальные блоки по запросу.
-      </div>
-    </details>
+      <details class="faq-item" id="q-bonuses">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Есть ли премии и бонусы?</summary>
+        <div class="faq-answer">Да. За перевыполнение планов, инициативу, участие в проектах и высокий результат, за лояльность. Оплачиваем интернет, дарим подарки, проводим акции.</div>
+      </details>
 
-    <details class="faq-item" id="q-script-flex">
-      <summary>Можно ли отходить от скрипта?</summary>
-      <div class="faq-answer">
-        На старте — нет: важно освоить продукт и логику. Когда появится уверенность, можно работать свободнее, сохраняя структуру.
-      </div>
-    </details>
+      <!-- Обучение -->
+      <details class="faq-item" id="q-training-duration">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Сколько длится обучение?</summary>
+        <div class="faq-answer">Обучение длится <b>3 дня</b> (10:00–18:00): теория, практика, тестовый звонок.</div>
+      </details>
 
-    <!-- Работа и процессы -->
-    <details class="faq-item" id="q-tracking">
-      <summary>Как отслеживается моя работа?</summary>
-      <div class="faq-answer">
-        В CRM отображаются все действия: звонки, заказы, результаты. РГП и тренеры прослушивают звонки, чтобы помочь улучшить качество.
-      </div>
-    </details>
+      <details class="faq-item" id="q-training-paid">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Оплачивается ли обучение?</summary>
+        <div class="faq-answer">Да. После <b>200 часов</b> работы в основной группе выплачивается бонус <b>3000 ₽</b>.</div>
+      </details>
 
-    <details class="faq-item" id="q-calls-per-day">
-      <summary>Сколько звонков в день я принимаю?</summary>
-      <div class="faq-answer">
-        Зависит от проекта и продолжительности смены — в среднем <b>от 15 до 30 звонков</b>.
-      </div>
-    </details>
+      <details class="faq-item" id="q-test-call">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Что, если не сдам тестовый звонок?</summary>
+        <div class="faq-answer">Можно пересдать. Тренер поможет разобрать ошибки и подготовиться.</div>
+      </details>
 
-    <details class="faq-item" id="q-products">
-      <summary>Какие продукты я продаю?</summary>
-      <div class="faq-answer">
-        Ассортимент широкий: товары для здоровья, дома и сада, красоты, детские товары, продукты для мужчин. Всё изучается на обучении.
-      </div>
-    </details>
+      <details class="faq-item" id="q-extra-education">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Можно ли попросить дополнительное обучение?</summary>
+        <div class="faq-answer">Конечно. Мы поддерживаем инициативу и подбираем индивидуальные блоки по запросу.</div>
+      </details>
 
-    <details class="faq-item" id="q-no-photo">
-      <summary>Почему клиенту нельзя отправить фото товара?</summary>
-      <div class="faq-answer">
-        IP-телефония не поддерживает MMS, а у клиентов не всегда есть возможность принимать файлы.
-      </div>
-    </details>
+      <details class="faq-item" id="q-script-flex">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Можно ли отходить от скрипта?</summary>
+        <div class="faq-answer">На старте — нет. Когда появится уверенность, можно работать свободнее, сохраняя структуру.</div>
+      </details>
 
-    <details class="faq-item" id="q-marketplaces">
-      <summary>Почему на маркетплейсах товары дешевле?</summary>
-      <div class="faq-answer">
-        Там часто встречаются подделки. Мы работаем только с производителями, поэтому гарантируем оригинальность и лицензии.
-      </div>
-    </details>
+      <!-- Работа и процессы -->
+      <details class="faq-item" id="q-tracking">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Как отслеживается моя работа?</summary>
+        <div class="faq-answer">В CRM фиксируются звонки, заказы, результаты. РГП и тренеры прослушивают звонки и помогают улучшать качество.</div>
+      </details>
 
-    <details class="faq-item" id="q-outage">
-      <summary>Что делать, если отключили свет или интернет во время смены?</summary>
-      <div class="faq-answer">
-        Если есть мобильный интернет — предупреди РГП и узнай, когда восстановят связь. Если связи нет — сообщи после восстановления и отработай смену в свой выходной.
-      </div>
-    </details>
+      <details class="faq-item" id="q-calls-per-day">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Сколько звонков в день я принимаю?</summary>
+        <div class="faq-answer">Зависит от проекта и смены — в среднем <b>15–30</b> звонков.</div>
+      </details>
 
-    <details class="faq-item" id="q-compatibility">
-      <summary>Можно ли совмещать работу с учёбой или другой деятельностью?</summary>
-      <div class="faq-answer">
-        Да. Работа гибкая и удалённая, главное — соблюдать график и выполнять план.
-      </div>
-    </details>
+      <details class="faq-item" id="q-products">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Какие продукты я продаю?</summary>
+        <div class="faq-answer">Товары для здоровья, дома и сада, красоты, детские товары и др. Всё изучается на обучении.</div>
+      </details>
 
-    <!-- Политика и дисциплина -->
-    <details class="faq-item" id="q-fines-policy">
-      <summary>Есть ли штрафы?</summary>
-      <div class="faq-answer">
-        Мы не штрафуем за мелочи, но есть серьёзные нарушения, за которые возможны санкции:
-        <ul>
-          <li>фальсификация данных;</li>
-          <li>нецензурная лексика;</li>
-          <li>работа в состоянии опьянения.</li>
-        </ul>
-      </div>
-    </details>
+      <details class="faq-item" id="q-no-photo">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Почему клиенту нельзя отправить фото?</summary>
+        <div class="faq-answer">IP-телефония не поддерживает MMS, а у клиентов не всегда есть возможность принимать файлы.</div>
+      </details>
 
-    <details class="faq-item" id="q-qc-process">
-      <summary>Как проходит контроль качества?</summary>
-      <div class="faq-answer">
-        РГП и тренеры прослушивают звонки, чтобы выявить сильные стороны и точки роста. Цель — развитие, а не наказание.
-      </div>
-    </details>
+      <details class="faq-item" id="q-marketplaces">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Почему на маркетплейсах дешевле?</summary>
+        <div class="faq-answer">Часто встречаются подделки. Мы работаем с производителями и гарантируем оригинальность и лицензии.</div>
+      </details>
 
-    <!-- Рост и развитие -->
-    <details class="faq-item" id="q-career-growth">
-      <summary>Есть ли карьерный рост?</summary>
-      <div class="faq-answer">
-        Да. Можно вырасти до наставника, старшего оператора, РГП, тренера или HR. Всё зависит от твоих результатов и вовлечённости.
-      </div>
-    </details>
+      <details class="faq-item" id="q-outage">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Что делать при отключении света/интернета?</summary>
+        <div class="faq-answer">Если есть мобильный интернет — предупреди РГП. Если связи нет — сообщи после восстановления и отработай смену в выходной.</div>
+      </details>
 
-    <details class="faq-item" id="q-how-to-grow">
-      <summary>Как понять, что я расту?</summary>
-      <div class="faq-answer">
-        Мы используем систему грейдов — уровней развития, которые оценивают качество работы, коммуникацию и стабильность.
-      </div>
-    </details>
+      <details class="faq-item" id="q-compatibility">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Можно ли совмещать с учёбой/работой?</summary>
+        <div class="faq-answer">Да. Работа гибкая и удалённая, главное — соблюдать график и выполнять план.</div>
+      </details>
 
-    <details class="faq-item" id="q-change-project">
-      <summary>Можно ли перейти на другой проект?</summary>
-      <div class="faq-answer">
-        Да, если есть открытые направления и согласование с текущим руководителем.
-      </div>
-    </details>
+      <!-- Политика и дисциплина -->
+      <details class="faq-item" id="q-fines-policy">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Есть ли штрафы?</summary>
+        <div class="faq-answer">
+          Мы не штрафуем за мелочи, но есть серьёзные нарушения, за которые возможны санкции:
+          <ul>
+            <li>фальсификация данных;</li>
+            <li>нецензурная лексика;</li>
+            <li>работа в состоянии опьянения.</li>
+          </ul>
+        </div>
+      </details>
 
-    <details class="faq-item" id="q-turnover2">
-      <summary>Есть ли текучка кадров?</summary>
-      <div class="faq-answer">
-        В колл-центрах она естественна: многие начинают здесь карьеру. Но в ZebraCall есть стабильная команда, которая работает годами.
-      </div>
-    </details>
+      <details class="faq-item" id="q-qc-process">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Как проходит контроль качества?</summary>
+        <div class="faq-answer">РГП и тренеры прослушивают звонки, чтобы найти сильные стороны и точки роста. Цель — развитие.</div>
+      </details>
 
-    <details class="faq-item" id="q-remote-abroad">
-      <summary>Можно ли работать из другой страны?</summary>
-      <div class="faq-answer">
-        Да, если есть стабильный интернет и возможность получать оплату на карту.
-      </div>
-    </details>
+      <!-- Рост и развитие -->
+      <details class="faq-item" id="q-career-growth">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Есть ли карьерный рост?</summary>
+        <div class="faq-answer">Да. Можно вырасти до наставника, старшего оператора, РГП, тренера или HR — всё зависит от результатов и вовлечённости.</div>
+      </details>
 
-    <!-- Поддержка -->
-    <details class="faq-item" id="q-leave-request">
-      <summary>Как подать заявку на выходной или отпуск?</summary>
-      <div class="faq-answer">
-        Через HR или РГП, не позднее чем за <b>7 дней</b>.
-      </div>
-    </details>
+      <details class="faq-item" id="q-how-to-grow">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Как понять, что я расту?</summary>
+        <div class="faq-answer">Используем систему грейдов — уровни развития по качеству работы, коммуникации и стабильности.</div>
+      </details>
 
-    <details class="faq-item" id="q-burnout-help">
-      <summary>Что делать, если чувствую усталость или выгорание?</summary>
-      <div class="faq-answer">
-        Обратись к HR — мы проводим внутренние встречи поддержки и обучающие сессии по ресурсности.
-      </div>
-    </details>
+      <details class="faq-item" id="q-change-project">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Можно ли перейти на другой проект?</summary>
+        <div class="faq-answer">Да, при наличии открытых направлений и согласовании с текущим руководителем.</div>
+      </details>
 
-    <details class="faq-item" id="q-whom-to-ask">
-      <summary>К кому обращаться, если есть вопрос или проблема?</summary>
-      <div class="faq-answer">
-        Сначала к своему РГП или HR. Технические вопросы — в чат техподдержки.
-      </div>
-    </details>
+      <details class="faq-item" id="q-turnover2">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Есть ли текучка кадров?</summary>
+        <div class="faq-answer">В колл-центрах она естественна. У ZebraCall есть стабильная команда, которая работает годами.</div>
+      </details>
 
-    <details class="faq-item" id="q-knowledge-base">
-      <summary>Где найти инструкции и регламенты?</summary>
-      <div class="faq-answer">
-        Во внутренней <b>Базе знаний ZebraCall</b>. Там всё собрано по темам: обучение, продажи, графики, оплата.
-      </div>
-    </details>
+      <details class="faq-item" id="q-remote-abroad">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Можно ли работать из другой страны?</summary>
+        <div class="faq-answer">Да, если есть стабильный интернет и возможность получать оплату на карту.</div>
+      </details>
 
-    <details class="faq-item" id="q-ideas-propose">
-      <summary>Можно ли предлагать идеи по улучшению?</summary>
-      <div class="faq-answer">
-        Да! Инициатива поощряется. Делись идеями с HR или на командных встречах.
-      </div>
-    </details>
+      <!-- Поддержка -->
+      <details class="faq-item" id="q-leave-request">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Как подать заявку на выходной/отпуск?</summary>
+        <div class="faq-answer">Через HR или РГП, не позднее чем за <b>7 дней</b>.</div>
+      </details>
 
-    <details class="faq-item" id="q-why-zebracall">
-      <summary>Что делает компанию привлекательной для сотрудников?</summary>
-      <div class="faq-answer">
-        Гибкий график, свобода действий, возможность развиваться и достойно зарабатывать, обучение и поддержка на всех этапах.
-      </div>
-    </details>
-  </main>
+      <details class="faq-item" id="q-burnout-help">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Что делать при усталости/выгорании?</summary>
+        <div class="faq-answer">Обратись к HR: у нас есть встречи поддержки и обучающие сессии по ресурсности.</div>
+      </details>
 
-  <footer class="site-footer">
-    <p>© 2025 ZebraCall · FAQ для сотрудников</p>
-  </footer>
+      <details class="faq-item" id="q-whom-to-ask">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> К кому обращаться с вопросами?</summary>
+        <div class="faq-answer">Сначала к своему РГП или HR. Техвопросы — в чат техподдержки.</div>
+      </details>
+
+      <details class="faq-item" id="q-knowledge-base">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Где найти инструкции и регламенты?</summary>
+        <div class="faq-answer">Во внутренней <b>Базе знаний ZebraCall</b>: обучение, продажи, графики, оплата — всё по темам.</div>
+      </details>
+
+      <details class="faq-item" id="q-ideas-propose">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Можно ли предлагать идеи?</summary>
+        <div class="faq-answer">Да! Инициатива поощряется — делись с HR или на командных встречах.</div>
+      </details>
+
+      <details class="faq-item" id="q-why-zebracall">
+        <summary><span class="flip" aria-hidden="true"><span class="face front">B</span><span class="face back">S</span></span> Почему ZebraCall — это классно?</summary>
+        <div class="faq-answer">Гибкий график, свобода действий, развитие и достойный доход, обучение и поддержка на всех этапах.</div>
+      </details>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2025 ZebraCall · FAQ для сотрудников</p>
+    </footer>
+  </div>
+
+  <script>
+    // Scroll progress (rAF + ARIA)
+    (function(){
+      const bar = document.querySelector('.scroll-progress span');
+      const root = document.documentElement, widget = document.querySelector('.scroll-progress');
+      if(!bar || !widget) return;
+      let ticking = false;
+      function setProgress(){
+        const scrollTop = window.scrollY || root.scrollTop || 0;
+        const docH = root.scrollHeight - window.innerHeight;
+        const pct = docH > 0 ? Math.min(100, Math.max(0, (scrollTop / docH) * 100)) : 0;
+        bar.style.width = pct + '%';
+        widget.setAttribute('aria-valuenow', String(Math.round(pct)));
+        ticking = false;
+      }
+      function onScroll(){ if(!ticking){ ticking = true; requestAnimationFrame(setProgress); } }
+      window.addEventListener('scroll', onScroll, {passive:true});
+      window.addEventListener('resize', onScroll);
+      setProgress();
+    })();
+  </script>
 </body>
 </html>
-

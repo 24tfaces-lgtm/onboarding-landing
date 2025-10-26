@@ -26,123 +26,57 @@
     a{color:inherit; text-decoration:none}
 
     /* ===== Scroll progress (top) ===== */
-    .scroll-progress{
-      position:fixed; inset:0 0 auto 0; height:6px; z-index:1000;
-      background:linear-gradient(180deg,#ffffffcc,#ffffffaa);
-      backdrop-filter:saturate(130%) blur(6px);
-      border-bottom:1px solid var(--line);
-    }
-    .scroll-progress span{
-      display:block; height:100%; width:0%;
-      background:linear-gradient(90deg,var(--brand),var(--accent));
-      box-shadow:0 0 16px rgba(10,61,255,.25);
-      transition:width .08s linear;
-    }
+    .scroll-progress{ position:fixed; inset:0 0 auto 0; height:6px; z-index:1000; background:linear-gradient(180deg,#ffffffcc,#ffffffaa); backdrop-filter:saturate(130%) blur(6px); border-bottom:1px solid var(--line) }
+    .scroll-progress span{ display:block; height:100%; width:0%; background:linear-gradient(90deg,var(--brand),var(--accent)); box-shadow:0 0 16px rgba(10,61,255,.25); transition:width .08s linear }
     @media (prefers-reduced-motion: reduce){ .scroll-progress span{transition:none} }
 
     .wrap{max-width:1120px; margin:0 auto; padding:26px 18px 64px}
 
     /* ===== Header (унифицировано) ===== */
-    .hero{
-      position:relative; isolation:isolate; overflow:hidden;
-      background:linear-gradient(180deg,#ffffffcc,#ffffffcc), var(--card);
-      border:1px solid var(--line); border-radius:24px;
-      padding:12px 14px 16px; box-shadow:var(--shadow-1);
-    }
-    .hero::before{
-      content:""; position:absolute; inset:-20% -10% -10% -10%; z-index:-1;
-      background:
+    .hero{ position:relative; isolation:isolate; overflow:hidden; background:linear-gradient(180deg,#ffffffcc,#ffffffcc), var(--card); border:1px solid var(--line); border-radius:24px; padding:12px 14px 16px; box-shadow:var(--shadow-1) }
+    .hero::before{ content:""; position:absolute; inset:-20% -10% -10% -10%; z-index:-1; background:
         radial-gradient(900px 420px at 90% -10%, #2f54ff22 0%, transparent 70%),
-        radial-gradient(720px 360px at -10% 110%, #00f0cf22 0%, transparent 60%);
-    }
+        radial-gradient(720px 360px at -10% 110%, #00f0cf22 0%, transparent 60%) }
     .hero-grid{display:grid; grid-template-columns:auto 1fr auto; gap:12px; align-items:center}
     @media (max-width:740px){ .hero-grid{grid-template-columns:1fr} .brand{justify-self:stretch} }
 
-    .btn-home{
-      --bd:#d7e2ff; display:inline-flex; align-items:center; gap:10px;
-      padding:8px 12px; border-radius:999px; background:linear-gradient(180deg,#ffffff,#eaf0ff);
-      border:1px solid var(--bd); color:#0a1b3f; font-weight:800; box-shadow:0 6px 18px rgba(10,61,255,.12);
-      transition:transform .12s ease, box-shadow .14s ease, filter .14s ease;
-    }
+    .btn-home{ --bd:#d7e2ff; display:inline-flex; align-items:center; gap:10px; padding:8px 12px; border-radius:999px; background:linear-gradient(180deg,#ffffff,#eaf0ff); border:1px solid var(--bd); color:#0a1b3f; font-weight:800; box-shadow:0 6px 18px rgba(10,61,255,.12); transition:transform .12s ease, box-shadow .14s ease, filter .14s ease }
     .btn-home:hover{transform:translateY(-1px); box-shadow:0 12px 26px rgba(10,61,255,.16); filter:saturate(1.02)}
     .btn-home:active{transform:translateY(0); box-shadow:0 8px 20px rgba(10,61,255,.16)}
 
-    .brand{
-      display:flex; align-items:center; gap:12px; min-width:0;
-      background:linear-gradient(180deg,#fff,#f7faff);
-      border:1px solid var(--line); border-radius:16px; padding:8px 10px;
-      box-shadow:0 6px 18px rgba(10,61,255,.08);
-    }
-    .logo{
-      width:36px; height:36px; border-radius:10px; display:grid; place-items:center;
-      background:linear-gradient(180deg,var(--brand-900),var(--brand));
-      box-shadow:inset 0 0 0 2px #ffffff33;
-    }
+    .brand{ display:flex; align-items:center; gap:12px; min-width:0; background:linear-gradient(180deg,#fff,#f7faff); border:1px solid var(--line); border-radius:16px; padding:8px 10px; box-shadow:0 6px 18px rgba(10,61,255,.08) }
+    .logo{ width:36px; height:36px; border-radius:10px; display:grid; place-items:center; background:linear-gradient(180deg,var(--brand-900),var(--brand)); box-shadow:inset 0 0 0 2px #ffffff33 }
     .logo img{width:24px; height:auto; display:block; filter:drop-shadow(0 1px 2px rgba(0,0,0,.15))}
-    .titles h1{
-      margin:0; font-weight:900; letter-spacing:-.3px;
-      font-size:clamp(18px,3.2vw,28px); line-height:1.08; color:#0a1b3f;
-    }
-    .titles p{
-      margin:1px 0 0; color:var(--muted); font-size:13px;
-      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
-    }
+    .titles h1{ margin:0; font-weight:900; letter-spacing:-.3px; font-size:clamp(18px,3.2vw,28px); line-height:1.08; color:#0a1b3f }
+    .titles p{ margin:1px 0 0; color:var(--muted); font-size:13px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis }
     .hero-spacer{width:1px; height:1px}
     .wave{display:block; width:100%; height:32px; margin-top:6px}
 
     /* ===== Content ===== */
     .container{max-width:1120px; margin:18px auto 0}
-    .intro{
-      margin:8px 0 18px; color:#2c3d66;
-      background:linear-gradient(180deg,#fff,#f9fbff);
-      border:1px solid var(--line); border-radius:14px; padding:12px 14px; box-shadow:var(--shadow-1);
-    }
+    .intro{ margin:8px 0 18px; color:#2c3d66; background:linear-gradient(180deg,#fff,#f9fbff); border:1px solid var(--line); border-radius:14px; padding:12px 14px; box-shadow:var(--shadow-1) }
 
     /* Steps */
     .steps{counter-reset:s; list-style:none; padding:0; margin:0}
-    .step{
-      background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
-      box-shadow:var(--shadow-1); margin:14px 0; overflow:hidden;
-      transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-    }
+    .step{ background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow-1); margin:14px 0; overflow:hidden; transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease }
     .step:hover{transform:translateY(-2px); box-shadow:var(--shadow-2); border-color:#dbe6ff}
-    .step h3{
-      margin:0; padding:14px 16px 8px; font-size:18px; letter-spacing:-.2px; color:#0a1b3f; position:relative;
-    }
-    .step h3::before{
-      counter-increment:s; content: counter(s) ".";
-      position:absolute; left:16px; top:-28px; font-weight:900; color:#c3cff7; font-size:42px; z-index:-1;
-    }
+    .step h3{ margin:0; padding:14px 16px 8px; font-size:18px; letter-spacing:-.2px; color:#0a1b3f; position:relative }
+    .step h3::before{ counter-increment:s; content: counter(s) "."; position:absolute; left:16px; top:-28px; font-weight:900; color:#c3cff7; font-size:42px; z-index:-1 }
     .step p{padding:0 16px; margin:8px 0 10px}
-    .step .btn.primary{
-      appearance:none; display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:10px 14px; min-height:42px; border-radius:12px; border:1px solid #0a2cbb;
-      background:linear-gradient(180deg,var(--brand-900),var(--brand)); color:#fff; font-weight:800;
-      box-shadow:0 8px 22px rgba(10,61,255,.18);
-      transition:transform .12s ease, box-shadow .14s ease;
-    }
+    .step ul{margin:8px 0 14px; padding:0 16px 10px 36px}
+    .kbd{ display:inline-block; padding:.1em .45em; border:1px solid #ccd6ff; border-bottom-width:2px; border-radius:8px; background:linear-gradient(180deg,#fff,#f4f7ff); font:600 12px/1 Inter,system-ui; color:#23315c }
+    .step .btn.primary{ appearance:none; display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:10px 14px; min-height:42px; border-radius:12px; border:1px solid #0a2cbb; background:linear-gradient(180deg,var(--brand-900),var(--brand)); color:#fff; font-weight:800; box-shadow:0 8px 22px rgba(10,61,255,.18); transition:transform .12s ease, box-shadow .14s ease }
     .step .btn.primary:hover{transform:translateY(-1px); box-shadow:0 12px 28px rgba(10,61,255,.22)}
     .step .btn.primary:active{transform:translateY(0)}
 
     /* Иллюстрации / место под скриншоты */
-    .illustration{
-      margin:8px 0 0; padding:12px 12px 16px; border-top:1px solid var(--line);
-      background:linear-gradient(180deg,#ffffff,#f7faff);
-    }
-    .shot{
-      width:100%; border:1px solid var(--line); border-radius:12px; overflow:hidden;
-      box-shadow:0 8px 22px rgba(6,32,120,.06); background:#fff;
-    }
+    .illustration{ margin:8px 0 0; padding:12px 12px 16px; border-top:1px solid var(--line); background:linear-gradient(180deg,#ffffff,#f7faff) }
+    .shot{ width:100%; border:1px solid var(--line); border-radius:12px; overflow:hidden; box-shadow:0 8px 22px rgba(6,32,120,.06); background:#fff }
     .shot img{width:100%; height:auto; display:block; object-fit:cover}
     .illustration figcaption{color:#5b6b8a; font-size:13px; margin-top:8px}
-
-    /* SVG демо блоки (оставлены из исходника) */
     .illustration svg{width:100%; height:auto; display:block}
 
-    .tips{
-      margin:18px 0 0; background:linear-gradient(180deg,#fff,#f9fbff);
-      border:1px solid var(--line); border-radius:14px; padding:12px 14px; box-shadow:var(--shadow-1);
-    }
+    .tips{ margin:18px 0 0; background:linear-gradient(180deg,#fff,#f9fbff); border:1px solid var(--line); border-radius:14px; padding:12px 14px; box-shadow:var(--shadow-1) }
     .tips h3{margin:0 0 6px}
     .tips ul{margin:6px 0 0 18px}
 
@@ -151,6 +85,10 @@
     /* reveal */
     [data-anim]{opacity:0; transform:translateY(12px); transition:opacity .4s ease, transform .4s ease}
     [data-anim].in{opacity:1; transform:none}
+
+    /* badges */
+    .badge{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border:1px solid var(--line); border-radius:999px; background:#fff}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
   </style>
 </head>
 <body>
@@ -163,27 +101,18 @@
     <!-- Header -->
     <header class="hero" role="banner" aria-label="Инструкция по установке и входу в CRM">
       <div class="hero-grid">
-        <!-- слева: простая кнопка на главную -->
-        <a class="btn-home"
-           href="https://info.adtika.com/pages/viewpage.action?pageId=67240070"
-           target="_blank" rel="noopener noreferrer">На главную</a>
-
-        <!-- центр: бренд с маленькой ровной зеброй -->
+        <a class="btn-home" href="https://info.adtika.com/pages/viewpage.action?pageId=67240070" target="_blank" rel="noopener noreferrer">На главную</a>
         <div class="brand" aria-label="ZebraCall">
           <span class="logo" aria-hidden="true">
-            <img
-              src="https://filegator.adtika.com/?r=/download&path=L1BpYy96ZWJyYS5wbmc%3D"
-              alt="" decoding="async" width="24" height="24" />
+            <img src="https://filegator.adtika.com/?r=/download&path=L1BpYy96ZWJyYS5wbmc%3D" alt="" decoding="async" width="24" height="24" />
           </span>
           <div class="titles">
             <h1>🛠 Инструкция по установке и входу в CRM</h1>
-            <p>Windows: VPN (OpenConnect) → вход в CRM через Telegram</p>
+            <p>Windows: OpenConnect → профиль VPN → вход в CRM → смена пароля → привязка Telegram</p>
           </div>
         </div>
-
         <div class="hero-spacer" aria-hidden="true"></div>
       </div>
-
       <svg class="wave" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true">
         <path d="M0,40 C280,64 440,8 720,28 C1000,48 1200,16 1440,48 L1440,64 L0,64 Z" fill="#f5f8ff"></path>
       </svg>
@@ -191,29 +120,23 @@
 
     <!-- CTA -->
     <section class="intro" data-anim>
-      <p>Следуй шагам ниже. Если что-то не получается — обратись к своему РГП.</p>
+      <p>Следуйте шагам ниже. Если что-то не получается — обратитесь к своему РГП или сис. администратору.</p>
       <p><a class="btn-home" href="#steps">Начать установку</a></p>
+      <p class="badge mono">Рекомендуемые браузеры: Google Chrome / Chromium. <span aria-hidden>•</span> Не используйте Яндекс.Браузер (заявки могут зависать).</p>
     </section>
 
     <!-- Steps -->
     <main class="container" id="steps">
       <ol class="steps">
 
+        <!-- 1: Скачать OpenConnect -->
         <li class="step" data-anim>
-          <h3>1. Скачай OpenConnect</h3>
-          <p>Нажми на кнопку ниже и скачай установщик OpenConnect для Windows.</p>
-          <p><a class="btn primary" href="#" target="_blank" rel="noopener">Скачать OpenConnect</a></p>
-
-          <figure class="illustration">
-            <!-- Место под реальный скриншот (по желанию) -->
-            <!-- <div class="shot"><img src="https://example.com/openconnect-download.png" alt="Скачать OpenConnect"/></div> -->
-            <!-- SVG-демо из исходника: -->
+          <h3>1. Скачайте OpenConnect GUI</h3>
+          <p>Получите установщик <b>openconnect-gui-1.6.2-win64</b> у РГП/сис. администратора и сохраните на компьютер.</p>
+          <p><a class="btn primary" href="#" target="_blank" rel="noopener" aria-disabled="true">Скачать OpenConnect (ссылка выдаётся РГП)</a></p>
+          <figure class="illustration" aria-labelledby="cap-1">
             <svg viewBox="0 0 600 240" role="img" aria-label="Скачивание OpenConnect">
-              <defs>
-                <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#0077ff"/><stop offset="1" stop-color="#00b8ff"/>
-                </linearGradient>
-              </defs>
+              <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0077ff"/><stop offset="1" stop-color="#00b8ff"/></linearGradient></defs>
               <rect x="12" y="20" width="576" height="160" rx="16" fill="#ffffff" stroke="#e6eaff"/>
               <rect x="60" y="50" width="300" height="18" rx="9" fill="#eef4ff"/>
               <rect x="60" y="78" width="220" height="18" rx="9" fill="#eef4ff"/>
@@ -224,16 +147,16 @@
               <path d="M300 136 v-40" stroke="#0077ff" stroke-width="6" stroke-linecap="round"/>
               <path d="M300 136 l-12 -12 M300 136 l12 -12" stroke="#0077ff" stroke-width="6" stroke-linecap="round"/>
             </svg>
-            <figcaption>Жми «Download», чтобы сохранить установщик.</figcaption>
+            <figcaption id="cap-1">Сохраните файл установщика на диск (версия 1.6.2 x64).</figcaption>
           </figure>
         </li>
 
+        <!-- 2: Установка OpenConnect -->
         <li class="step" data-anim>
-          <h3>2. Установи OpenConnect</h3>
-          <p>Запусти скачанный файл <code>.exe</code> и следуй инструкциям мастера установки. По завершении запусти программу.</p>
+          <h3>2. Установите OpenConnect</h3>
+          <p>Запустите файл <code class="mono">.exe</code> → нажимайте <span class="kbd">Далее</span> → <span class="kbd">Принимаю</span> → обязательно поставьте галочку <b>Create openconnect-gui Desktop Icon</b> → далее → установить → готово.</p>
           <figure class="illustration">
-            <!-- <div class="shot"><img src="https://example.com/openconnect-install.png" alt="Установка OpenConnect"/></div> -->
-            <svg viewBox="0 0 600 240" role="img" aria-label="Установка OpenConnect">
+            <svg viewBox="0 0 600 240" role="img" aria-label="Мастер установки">
               <rect x="12" y="20" width="576" height="160" rx="12" fill="#fff" stroke="#e6eaff"/>
               <rect x="12" y="20" width="576" height="32" rx="12" fill="#f5f7ff" />
               <circle cx="36" cy="36" r="5" fill="#ff6b6b"/>
@@ -245,15 +168,37 @@
               <rect x="40" y="154" width="180" height="28" rx="8" fill="#0077ff"/>
               <text x="130" y="172" text-anchor="middle" font-size="13" fill="#fff" font-family="Inter, Arial">Install</text>
             </svg>
-            <figcaption>Следуй мастеру установки → «Install».</figcaption>
+            <figcaption>Следуйте мастеру установки. Иконка на рабочем столе пригодится.</figcaption>
           </figure>
         </li>
 
+        <!-- 3: Создать профиль VPN -->
         <li class="step" data-anim>
-          <h3>3. Подключись к VPN</h3>
-          <p>Открой OpenConnect, введи адрес сервера (даёт РГП) → нажми <b>Connect</b> → дождись статуса «Connected».</p>
+          <h3>3. Создайте профиль VPN в OpenConnect</h3>
+          <p>Откройте OpenConnect → нажмите на <b>шестерёнку</b> → выберите <b>New profile (advanced)</b>.</p>
+          <ul>
+            <li><b>Name</b>: <code class="mono">oc.stwork.org/?starteamvpn</code></li>
+            <li><b>Gateway</b>: <code class="mono">oc.stwork.org/?starteamvpn</code></li>
+            <li><b>Username</b>: ваш личный логин из сообщения сис. админа в Telegram</li>
+            <li><b>Batch mode</b>: поставьте галочку</li>
+          </ul>
           <figure class="illustration">
-            <!-- <div class="shot"><img src="https://example.com/openconnect-connect.png" alt="Подключение к VPN"/></div> -->
+            <svg viewBox="0 0 600 240" role="img" aria-label="Создание профиля в OpenConnect">
+              <rect x="12" y="20" width="576" height="160" rx="12" fill="#fff" stroke="#e6eaff"/>
+              <rect x="40" y="64" width="360" height="26" rx="6" fill="#eef4ff"/>
+              <rect x="420" y="64" width="150" height="26" rx="6" fill="#00b8ff"/>
+              <text x="495" y="82" text-anchor="middle" font-size="13" fill="#fff" font-family="Inter, Arial">Save</text>
+              <rect x="40" y="104" width="530" height="10" rx="5" fill="#dbe6ff"/>
+            </svg>
+            <figcaption>Заполните поля, как указано выше, и сохраните профиль.</figcaption>
+          </figure>
+        </li>
+
+        <!-- 4: Подключиться к VPN -->
+        <li class="step" data-anim>
+          <h3>4. Подключитесь к VPN</h3>
+          <p>В OpenConnect выберите созданный профиль и нажмите <b>Connect</b>. Введите <b>первый пароль</b> из сообщения сис. админа в Telegram и нажмите <span class="kbd">OK</span>. Ждите статуса <b>Connected</b> и зелёного замка.</p>
+          <figure class="illustration">
             <svg viewBox="0 0 600 240" role="img" aria-label="Подключение к VPN">
               <rect x="12" y="20" width="576" height="160" rx="12" fill="#fff" stroke="#e6eaff"/>
               <rect x="40" y="64" width="360" height="26" rx="6" fill="#eef4ff"/>
@@ -264,15 +209,15 @@
               <rect x="72" y="150" width="16" height="10" rx="2" fill="#fff"/>
               <rect x="74" y="140" width="12" height="10" rx="6" fill="#fff"/>
             </svg>
-            <figcaption>Вводим адрес сервера → Connect → ждём статус «Connected».</figcaption>
+            <figcaption>Если не подключается — перепроверьте адрес, логин и пароль, перезапустите OpenConnect.</figcaption>
           </figure>
         </li>
 
+        <!-- 5: Открыть CRM -->
         <li class="step" data-anim>
-          <h3>4. Перейди на сайт CRM</h3>
-          <p>Открой CRM по ссылке: <a href="https://crm.adtika.com" target="_blank" rel="noopener">crm.adtika.com</a></p>
+          <h3>5. Откройте сайт CRM</h3>
+          <p>Перейдите в браузере на <a href="https://crm.adtika.com" target="_blank" rel="noopener" class="mono">https://crm.adtika.com</a>. Создайте ярлык на рабочем столе или добавьте сайт в избранное.</p>
           <figure class="illustration">
-            <!-- <div class="shot"><img src="https://example.com/crm-site.png" alt="Сайт CRM"/></div> -->
             <svg viewBox="0 0 600 240" role="img" aria-label="Сайт CRM в браузере">
               <rect x="12" y="20" width="576" height="160" rx="12" fill="#fff" stroke="#e6eaff"/>
               <rect x="12" y="20" width="576" height="32" rx="12" fill="#f5f7ff" />
@@ -283,33 +228,53 @@
               <rect x="40" y="142" width="160" height="28" rx="8" fill="#0077ff"/>
               <text x="120" y="160" text-anchor="middle" font-size="13" fill="#fff" font-family="Inter, Arial">Войти в CRM</text>
             </svg>
-            <figcaption>Открой в браузере и переходи к авторизации.</figcaption>
+            <figcaption>Используйте Chrome/Chromium. Яндекс.Браузер не рекомендуется.</figcaption>
           </figure>
         </li>
 
+        <!-- 6: Первый вход с логином/паролем -->
         <li class="step" data-anim>
-          <h3>5. Авторизуйся через Telegram</h3>
-          <p>Выбери вход через Telegram → укажи номер телефона → введи код из Telegram → подтверди вход.</p>
-          <figure class="illustration">
-            <!-- <div class="shot"><img src="https://example.com/crm-telegram.png" alt="Авторизация через Telegram"/></div> -->
-            <svg viewBox="0 0 600 240" role="img" aria-label="Авторизация через Telegram">
-              <rect x="12" y="20" width="576" height="160" rx="12" fill="#fff" stroke="#e6eaff"/>
-              <circle cx="80" cy="90" r="24" fill="#2CA5E0"/>
-              <polygon points="74,90 86,96 90,82" fill="#fff"/>
-              <rect x="140" y="70" width="320" height="20" rx="10" fill="#eef4ff"/>
-              <rect x="140" y="100" width="200" height="20" rx="10" fill="#eef4ff"/>
-              <rect x="350" y="100" width="110" height="20" rx="10" fill="#00b8ff"/>
-              <text x="405" y="115" text-anchor="middle" font-size="12" fill="#fff" font-family="Inter, Arial">Получить код</text>
-            </svg>
-            <figcaption>На телефон придёт код в Telegram — введи его для входа.</figcaption>
-          </figure>
+          <h3>6. Выполните первый вход по логину и паролю</h3>
+          <p>На странице входа введите:</p>
+          <ul>
+            <li><b>login</b>: ваш личный логин из сообщения сис. админа в Telegram</li>
+            <li><b>password</b>: <b>последний</b> пароль из того же сообщения</li>
+          </ul>
+          <p>Нажмите <span class="kbd">Сохранить</span>.</p>
         </li>
 
+        <!-- 7: Задать новый пароль -->
         <li class="step" data-anim>
-          <h3>6. Проверь звук и микрофон</h3>
-          <p>В настройках CRM выбери правильный микрофон/гарнитуру и сделай тестовый звонок.</p>
+          <h3>7. Задайте новый пароль</h3>
+          <p>Введите новый пароль <b>дважды</b> с соблюдением требований на экране и нажмите <span class="kbd">Сохранить</span>, затем — <span class="kbd">Обновить пароль</span>.</p>
+        </li>
+
+        <!-- 8: Привязать Telegram -->
+        <li class="step" data-anim>
+          <h3>8. Привяжите Telegram к учётной записи CRM</h3>
+          <p>На странице CRM нажмите ссылку для авторизации через Telegram.</p>
+          <ul>
+            <li>Если установлен Telegram Desktop — нажмите <span class="kbd">Открыть приложение</span>.</li>
+            <li>Если приложения нет, откройте <a href="https://web.telegram.org" target="_blank" rel="noopener" class="mono">web.telegram.org</a> в <b>том же браузере</b>, авторизуйтесь и снова нажмите ссылку для авторизации.</li>
+          </ul>
+          <p>В чате бота появится команда <span class="kbd">/start</span> (или кнопка <span class="kbd">Start</span>) — нажмите её.</p>
+        </li>
+
+        <!-- 9: Ввод кода из Telegram -->
+        <li class="step" data-anim>
+          <h3>9. Подтвердите вход кодом из Telegram</h3>
+          <p>Вернитесь на страницу <b>Привязка Telegram</b> (или снова откройте <a href="https://crm.adtika.com" target="_blank" rel="noopener" class="mono">crm.adtika.com</a>). В Telegram придёт код — введите его в CRM и нажмите <span class="kbd">Отправить</span>.</p>
+        </li>
+
+        <!-- 10: Настроить звук и статусы -->
+        <li class="step" data-anim>
+          <h3>10. Проверьте звук и выберите режим</h3>
+          <p>В настройках CRM выберите нужный микрофон/гарнитуру и выполните тест.</p>
+          <ul>
+            <li>Разрешите доступ к микрофону: <span class="kbd">Разрешить, когда я на сайте</span>.</li>
+            <li>Нажмите <span class="kbd">Оффлайн</span> → выберите <span class="kbd">Обучение</span> → <span class="kbd">Выбрать</span>.</li>
+          </ul>
           <figure class="illustration">
-            <!-- <div class="shot"><img src="https://example.com/crm-audio.png" alt="Проверка микрофона"/></div> -->
             <svg viewBox="0 0 600 240" role="img" aria-label="Проверка микрофона">
               <rect x="12" y="20" width="576" height="160" rx="12" fill="#fff" stroke="#e6eaff"/>
               <rect x="80" y="60" width="40" height="80" rx="20" fill="#0077ff"/>
@@ -321,19 +286,26 @@
               <circle cx="280" cy="104" r="10" fill="#00b8ff"/>
               <circle cx="260" cy="124" r="10" fill="#00b8ff"/>
             </svg>
-            <figcaption>Выбираем устройство и настраиваем уровни.</figcaption>
+            <figcaption>Выберите устройство и настройте уровни, затем сделайте тестовый звонок.</figcaption>
           </figure>
         </li>
 
+        <!-- 11: Завершение -->
         <li class="step" data-anim>
-          <h3>7. Если не получается</h3>
+          <h3>11. Готово</h3>
+          <p>Вы справились! Напишите сис. админу в Telegram: <b>«Готово»</b>. При желании добавьте ярлык CRM на рабочий стол.</p>
+          <p class="badge">P.S.: Для доступа к ресурсам компании сначала запускайте <b>OpenConnect</b>.</p>
+        </li>
+
+        <!-- 12: Если не получается -->
+        <li class="step" data-anim>
+          <h3>12. Если что-то не получается</h3>
           <ul>
-            <li>Не приходит код в Telegram — проверь Telegram Desktop и интернет, запроси код повторно.</li>
-            <li>VPN не подключается — перепроверь адрес сервера и учётные данные, перезапусти OpenConnect.</li>
-            <li>Обратись к своему РГП за доступами и проверкой настроек.</li>
+            <li>Не приходит код в Telegram — проверьте подключение и авторизацию Telegram Desktop/Web, запросите код повторно.</li>
+            <li>VPN не подключается — проверьте адрес <span class="mono">oc.stwork.org/?starteamvpn</span>, логин/пароль; перезапустите OpenConnect.</li>
+            <li>Обратитесь к своему РГП или сис. администратору за проверкой доступов и настроек.</li>
           </ul>
           <figure class="illustration">
-            <!-- <div class="shot"><img src="https://example.com/support.png" alt="Поддержка"/></div> -->
             <svg viewBox="0 0 600 240" role="img" aria-label="Поддержка">
               <rect x="12" y="20" width="576" height="160" rx="12" fill="#fff" stroke="#e6eaff"/>
               <circle cx="120" cy="96" r="24" fill="#0077ff"/>
@@ -344,7 +316,7 @@
               <rect x="180" y="100" width="260" height="12" rx="6" fill="#eef4ff"/>
               <rect x="180" y="120" width="160" height="12" rx="6" fill="#eef4ff"/>
             </svg>
-            <figcaption>Если возникли сложности — пиши своему РГП.</figcaption>
+            <figcaption>Если возникли сложности — напишите своему РГП/сис. админу.</figcaption>
           </figure>
         </li>
 
@@ -353,9 +325,9 @@
       <section class="tips" data-anim>
         <h3>Полезно знать</h3>
         <ul>
-          <li>Для стабильной работы рекомендуем проводной интернет или Wi-Fi 5 ГГц.</li>
-          <li>Обновляй Windows и драйверы гарнитуры.</li>
-          <li>При сбоях сначала отключи и заново подключи VPN.</li>
+          <li>Для стабильной работы используйте проводной интернет или Wi‑Fi 5 ГГц.</li>
+          <li>Держите Windows и драйверы гарнитуры в актуальном состоянии.</li>
+          <li>При сбоях сначала отключите и заново подключите VPN (OpenConnect).</li>
         </ul>
       </section>
     </main>

@@ -1,0 +1,10 @@
+Буклеты	ссылки на них
+Буклет РУ нутра	"https://script.adtika.com/script/dd18780a-f03f-4990-b4dc-f1b4eb04946c
+"
+Буклет РУ товарка	https://script.adtika.com/script/bba530ba-9deb-4dcf-ba44-93926d028f12
+Буклет РУ исходящий	https://script.adtika.com/script/d1d8de86-7948-4439-ae62-3986c61aafa3
+Купон РУ	https://script.adtika.com/script/994babca-dbd1-4892-9de1-906269a2aa83
+Буклет КЗ	http://script.adtika.com/script/1aba3d45-9f62-4fba-a6e0-885b382703dc
+Буклет КЗ исходящий	https://script.adtika.com/script/aeaf82de-817f-4460-a205-e3d6d25a76a6
+Купон УЗ	https://script.adtika.com/script/054973db-32e8-4027-bd7d-8414966e9f4c
+Купон КЗ	https://script.adtika.com/script/d29e74b8-e2be-4682-b194-5d13559331c4

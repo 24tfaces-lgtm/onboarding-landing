@@ -1,0 +1,186 @@
+Оффер	Гео	Цен. категория	Ссылка на скрипт
+28 Days Slim	КЗ	ВЗ	http://script.adtika.com/script/c012764d-f826-4da1-8b00-907bd204e904
+28 Days Slim	РУ	ВЗ	http://script.adtika.com/script/56f91896-8ec1-488b-8689-19a802b3cc55
+28 Days Slim	УЗ	ВЗ	http://script.adtika.com/script/606aa603-d91c-45f4-a66a-a348b08ab10c
+Агротенс	КЗ	ВЗ	http://script.adtika.com/script/b8d8e4e9-61cd-4a26-837b-dfcc19fe0d8a
+Агротенс	РУ	ВЗ	http://script.adtika.com/script/0c50dfa1-21a4-40a5-ae82-9988f9c1d0ae
+Звезда Эрцгаммы	РУ	ВЗ	http://script.adtika.com/script/1e598d0b-bcd3-49d2-9630-e5d4f7ad9290
+Афродита	РУ	ВЗ	http://script.adtika.com/script/7c16d736-d033-4c71-98fc-5db059652246
+Артродуал	КЗ	ВЗ	http://script.adtika.com/script/04dca8a7-0a7e-484f-abf5-1cac0ed726fe
+Артродуал	УЗ	ВЗ	http://script.adtika.com/script/fca5fd5e-cbca-4ec4-9d51-c17a2401e6f9
+Автонабор	РУ	ВЗ	http://script.adtika.com/script/6222471a-09e3-406b-b74f-29eea5d7c3df
+Бактериформ	КЗ	ВЗ	http://script.adtika.com/script/8cf25e64-ba6c-4e9e-971a-1cd2078c3a41
+Бактериформ	УЗ	ВЗ	http://script.adtika.com/script/4f790ce0-c02b-440d-97b3-aac901075f71
+Сочные ягоды 	РУ	ВЗ	http://script.adtika.com/script/87517ac9-a009-4557-b54d-e60eab844b6c
+Сочные ягоды 	КЗ	ВЗ	http://script.adtika.com/script/f4367192-90f2-4fbb-afdf-10f588022174
+Бронхикс	КЗ	ВЗ	http://script.adtika.com/script/48e14ef0-401b-4450-be95-bd3d5040d7d5
+Блокер алко	КЗ	ВЗ	http://script.adtika.com/script/d2db2b38-5a72-4dae-92be-65fe59c8ea9d
+Блокер нико	КЗ	ВЗ	http://script.adtika.com/script/cde818e6-774c-4003-889d-e5a169ec16fb
+Блокер алко	РУ	ВЗ	http://script.adtika.com/script/03f9b5e9-39e5-4a72-b63e-8052f955ef0a
+Блокер нико	РУ	ВЗ	http://script.adtika.com/script/1e7e1402-d9d0-4ea6-becb-a378682227e0
+Кардитенс 	КЗ	ВЗ	http://script.adtika.com/script/0ac7bba7-3cc9-45c1-a1b3-6824a420afb2
+Кардитенс 	УЗ	ВЗ	http://script.adtika.com/script/70d44dec-d792-43b2-a941-85b7c4772bd9
+Кардитенс 	РУ	ВЗ	https://script.adtika.com/script/788fe06c-4633-47ac-94d6-e101a82eb87d
+Фемовит	РУ	ВЗ	http://script.adtika.com/script/0c1f2ead-8005-4aa8-a488-f3c5c4b9ba1d
+Деревья	КЗ	ВЗ	http://script.adtika.com/script/872f28e9-1957-4029-8517-fc16fb7041e9
+Деревья	РУ	ВЗ	http://script.adtika.com/script/8619d161-2841-468d-85b7-cf8b7b88fb9d
+ГарденБокс 	РУ	ВЗ	http://script.adtika.com/script/61ad2082-8839-496e-8abe-e8b9fdf2a1ac
+Фунгуликс общий	КЗ	ВЗ	http://script.adtika.com/script/2b114650-c8b9-4047-bf63-3083da95215f
+Фунгуликс общий	РУ	ВЗ	http://script.adtika.com/script/fee3061e-734b-4bd3-b65a-c7adacce1f47
+Фунгуликс слух	КЗ	ВЗ	http://script.adtika.com/script/07d6ca77-e103-462e-99d2-ea0d0ab97984
+Фунгуликс слух	РУ	ВЗ	http://script.adtika.com/script/c8e04153-8bc4-4576-9cf2-b57ce3436355
+Фунгуликс паразиты	КЗ	ВЗ	http://script.adtika.com/script/dc50caba-82c0-4d35-b58e-f42e5f49b62e
+Фунгуликс паразиты	РУ	ВЗ	http://script.adtika.com/script/0bf40122-4a03-49fb-b56e-124df5dd7868
+Фунгуликс простатит	КЗ	ВЗ	http://script.adtika.com/script/e1c0c0fb-d36a-429b-80f4-01747dc4d18a
+Фунгуликс простатит	РУ	ВЗ	http://script.adtika.com/script/c73b9ae6-9db0-4d3c-81f9-1a89a595a87a
+Фунгуликс зрение	КЗ	ВЗ	http://script.adtika.com/script/007fb9ba-95d9-48b0-b542-6b11191653c8
+Фунгуликс зрение	РУ	ВЗ	http://script.adtika.com/script/530ce4d3-a20a-4bec-9033-6ffaf48d0931
+Голден Хан	РУ	ВЗ	http://script.adtika.com/script/e13bd42c-bf2e-4509-8672-563dc6c0a2f5
+Голден Хан	КЗ	ВЗ	http://script.adtika.com/script/7053b676-f23a-495a-a2d1-75d90ee61f2a
+Голден Хан	УЗ	ВЗ	http://script.adtika.com/script/160da1e2-e4e7-4e25-98ee-42188efcc96e
+Кардипал	КЗ	ВЗ	http://script.adtika.com/script/81d62878-39d8-47df-8c36-931f699c37f8
+Кардипал	УЗ	ВЗ	http://script.adtika.com/script/63a1f138-91f6-4721-8246-de23cbd93596
+Ливерфорт	КЗ	ВЗ	http://script.adtika.com/script/6bb07783-2a74-411a-b71f-bdd21fea89ab
+Ливерфорт	РУ	ВЗ	http://script.adtika.com/script/3cd08647-6e3f-4bec-9709-93c5dc4b22c6
+Лоропакс	КЗ	ВЗ	http://script.adtika.com/script/6a79612a-1a8a-4e87-8fe2-e7bc2f598ed0
+Лоропакс	УЗ	ВЗ	http://script.adtika.com/script/f751f286-3197-4dc8-be24-ddb32e437832
+Орсофит	КЗ	ВЗ	http://script.adtika.com/script/781e8d1d-9cf5-40dc-8467-71266d70a48e
+Орсофит	РУ	ВЗ	http://script.adtika.com/script/7d765f0d-f786-4f82-b243-f516ee33c2fb
+Орсофит	УЗ	ВЗ	http://script.adtika.com/script/67c62563-2487-4ea3-aae3-e7ad33f6cbea
+Орсофит Кето+	РУ	ВЗ	http://script.adtika.com/script/b23dfbb7-f364-484f-b235-e441c344749f
+Отифлекс 	КЗ	ВЗ	http://script.adtika.com/script/2d746653-c44c-490a-99d0-539f8bed3bcc
+Отифлекс 	РУ	ВЗ	"https://script.adtika.com/script/dacd523c-9e44-43ef-b4b7-a0b48f2c666e
+"
+Простабиотик 	РУ	ВЗ	http://script.adtika.com/script/7be6882e-1b18-4033-b950-17609e58b1e5
+Простабиотик 	УЗ	ВЗ	http://script.adtika.com/script/62b06acd-84e9-4a07-9495-abc597c87888
+Королевские розы 	КЗ	ВЗ	http://script.adtika.com/script/0dcf20c9-1148-418b-9bb3-271db8f08600
+Королевские розы 	РУ	ВЗ	http://script.adtika.com/script/66e91da2-a186-42c2-b24d-53505e21f56c
+Королевский камень	РУ	ВЗ	http://script.adtika.com/script/521bdc4a-9dec-4738-bb35-b5988815444e
+Королевский камень	КЗ	ВЗ	http://script.adtika.com/script/cd3b6aa2-4cc7-4dfe-9a2f-b37c0ddfb282
+Королевский камень	УЗ	ВЗ	http://script.adtika.com/script/dd18d7a7-c793-4599-8c3e-f36eaf34fb08
+Скорпионикс	КЗ	ВЗ	http://script.adtika.com/script/a9b91a1f-38ce-4e55-b382-465da8438b9b
+Скорпионикс	РУ	ВЗ	"https://script.adtika.com/script/227a6eff-a74e-4798-8980-29735bf972a3
+"
+Скорпионикс	УЗ	ВЗ	http://script.adtika.com/script/0966be7a-b7e6-4c1e-ac39-2df9d19c9873
+Сила Султана 	КЗ	ВЗ	http://script.adtika.com/script/eca961c8-d1c5-42c2-bb5a-4546843072ff
+Сила Султана 	УЗ	ВЗ	http://script.adtika.com/script/d09232a0-3442-4abf-bd07-49057ae65841
+СС спрей	РУ	ВЗ	http://script.adtika.com/script/b96335c0-39ee-4417-995c-066fa59ddae1
+Тундра 	КЗ	ВЗ	http://script.adtika.com/script/559157fe-2271-48b1-947d-868a45599d2b
+Тундра 	РУ	ВЗ	http://script.adtika.com/script/09e67a21-f3a2-4a37-bcff-f0cc23690d4f
+Тундра 	УЗ	ВЗ	http://script.adtika.com/script/842f11a3-6b3c-45a5-9112-1a7ec318601c
+Урофлексен	РУ	ВЗ	http://script.adtika.com/script/c9c13633-3d47-41d6-8736-b6f4b7d5a8be
+Урофлексен	КЗ	ВЗ	http://script.adtika.com/script/3b1b8e70-4a23-4014-976f-d31f4f89fe22
+Урофлексен	УЗ	ВЗ	http://script.adtika.com/script/1a60f60c-0e1c-4320-8b6b-2690dd2b0b52
+Уролаб	КЗ	ВЗ	http://script.adtika.com/script/49332f3c-b74a-4b04-9817-ab82445a22a3
+Визоплекс	КЗ	ВЗ	http://script.adtika.com/script/bb36a5ad-f275-42ce-837f-6e6fdbf2a85e
+Визоплекс	РУ	ВЗ	http://script.adtika.com/script/0164ae85-2bfc-4e2e-ad2e-f56c4b386498
+Визоплекс	УЗ	ВЗ	http://script.adtika.com/script/9d5a115d-9ec1-4ab4-8bf1-f07b7c9fa6ca
+Сила Султана спрей	КЗ	ВЗ	http://script.adtika.com/script/d8fa4226-21d8-4709-b7d3-d3c39c9cc3ac
+Простабиотик 	КЗ	ВЗ	http://script.adtika.com/script/f28d35dc-3b53-47d7-876e-100b9e414d12
+ГарденБокс 	КЗ	ВЗ	http://script.adtika.com/script/bf437c2e-fbc7-4986-bf8b-a315dd1e3ebd
+Черный кохош ЖКТ	РУ	ВЗ	http://script.adtika.com/script/390be92a-0208-47b9-b228-e43f524442b0
+Черный кохош потенция	РУ	ВЗ	http://script.adtika.com/script/a2778d06-61b3-4065-b97e-3051ba421847
+Черный кохош общий	РУ	ВЗ	http://script.adtika.com/script/743151c6-1bd3-4382-b070-5ba440d81096
+Черный кохош суставы	РУ	ВЗ	http://script.adtika.com/script/168bfb2b-1ea1-487a-8194-8debe0c9efd1
+Черный кохош паразиты	РУ	ВЗ	http://script.adtika.com/script/17a3e926-4100-461d-b823-421a324c0443
+Черный кохош менопауза	РУ	ВЗ	http://script.adtika.com/script/55192e0f-adc5-47cc-853d-8b79c26fa93a
+Блокер алко 	УЗ	ВЗ	http://script.adtika.com/script/41adb85d-743a-46f9-8647-ce385b7f4131
+Блокер нико	УЗ	ВЗ	http://script.adtika.com/script/99b141f6-7ee5-4152-aae7-3d4eced70dc1
+Фунгуликс слух	УЗ	ВЗ	http://script.adtika.com/script/82dfa347-4551-44fc-b572-a3d83571450e
+Фунгуликс цистит	РУ	ВЗ	http://script.adtika.com/script/18cab9b9-b6c0-4861-a4f8-3c7b395bbcbf
+Черный кохош простатит	РУ	ВЗ	http://script.adtika.com/script/2055aa12-3b27-4e14-890f-9df3631a9052
+Фунгуликс простатит	УЗ	ВЗ	http://script.adtika.com/script/a19b937c-b064-411f-950b-826b45d7e4f9
+Фунгуликс зрение	УЗ	ВЗ	http://script.adtika.com/script/83958100-0966-41bb-acc2-468430fbd043
+Фунгуликс паразиты	УЗ	ВЗ	http://script.adtika.com/script/eb7fbe45-d78f-47ed-89d2-a3a31fcfd41f
+Фемовит	КЗ	ВЗ	http://script.adtika.com/script/112d4219-a14a-453d-965e-5db25979cc09
+Кетиш Диетиш	РУ	ВЗ	http://script.adtika.com/script/b1b59029-b3d8-40f8-a8d6-db44d26130ea
+Фитограном 7 в 1	РУ	ВЗ	http://script.adtika.com/script/fb519ffb-5345-4a5e-be6c-7a6ac3d9cb23
+Амулет Арканто	РУ	ВЗ	http://script.adtika.com/script/861f5a0c-4723-478d-a18b-f86a8f76166c
+Чаванпраш зрение	РУ	ВЗ	http://script.adtika.com/script/7184c406-6afd-4bf9-a557-59539e372ff4
+Чаванпраш слух	РУ	ВЗ	http://script.adtika.com/script/7184c406-6afd-4bf9-a557-59539e372ff4
+Чаванпраш похудение	РУ	ВЗ	http://script.adtika.com/script/116deceb-441c-46ca-aa33-4c4c17ac5bb1
+Чаванпраш паразиты	РУ	ВЗ	http://script.adtika.com/script/1a39fece-b538-46de-bdd4-52c4d28c2a08
+Черный Кохош простатит	УЗ	ВЗ	http://script.adtika.com/script/3ae1deda-99bd-4580-9226-c8a5a96e8dc2
+Черный Кохош паразиты	УЗ	ВЗ	http://script.adtika.com/script/a3bb0392-9929-4c37-b8f3-ab4c761d6928
+Черный Кохош ЖКТ	УЗ	ВЗ	http://script.adtika.com/script/861fe810-4c0e-49b0-b8b9-9697c3e9f655
+Черный Кохош менопауза	УЗ	ВЗ	http://script.adtika.com/script/03b0ae14-1ed3-4794-9579-abadef12ff13
+Черный Кохош потенция	УЗ	ВЗ	http://script.adtika.com/script/c76ba377-d431-43e4-9106-679a8fde664e
+Черный Кохош суставы	УЗ	ВЗ	http://script.adtika.com/script/a3528c2b-305f-48c8-b03e-ffdd361cbda7
+Черный Кохош общий	УЗ	ВЗ	http://script.adtika.com/script/a7bc3406-6514-46fc-8535-2fc41255c3b5
+Арес	РУ	ВЗ	https://script.adtika.com/script/54445e89-92dc-4e19-89df-6056fc36c615
+Кетиш Диетиш	УЗ	ВЗ	http://script.adtika.com/script/4ff6b1a2-cee3-4499-8318-35090da80000
+Кетиш Диетиш	КЗ	ВЗ	http://script.adtika.com/script/c3d92fe1-8b19-4131-9510-1045fe581c8c
+Фитограном 7 в 1	КЗ	ВЗ	http://script.adtika.com/script/81c110a8-fca2-46ca-858b-e3e82108d9de
+Фитограном 7 в 1	УЗ	ВЗ	https://script.adtika.com/script/0160c7b5-21b2-4bb4-8ba2-83c488a8f7df
+Черный Кохош грибок	УЗ	ВЗ	http://script.adtika.com/script/4e56cb9e-4b2e-4c43-9c27-53ec5ff380c6
+Черный Кохош грибок	РУ	ВЗ	http://script.adtika.com/script/f1c063c8-13bd-4927-8ad4-9d96a285abc8
+Фунгуликс грибок	УЗ	ВЗ	" http://script.adtika.com/script/535c3fed-5b4e-49d1-827e-37d3a257608a
+"
+Фунгуликс грибок	КЗ	ВЗ	http://script.adtika.com/script/453484cd-7ef5-4b0e-8655-b8dc5cd5bc50
+Черный Кохош (геморрой)	УЗ	ВЗ	"http://script.adtika.com/script/5b33501d-dfa6-42e9-a329-c622f38fc044
+"
+Черный Кохош (геморрой)	КЗ	ВЗ	http://script.adtika.com/script/95ebe76b-35d4-4b63-9ab1-753329a70006
+Черный кохош (недержание)	УЗ	ВЗ	"http://script.adtika.com/script/e30dd446-da33-43c7-a32b-2c4e380cfdb0
+"
+Черный кохош (недержание)	КЗ	ВЗ	http://script.adtika.com/script/c7d6e724-917b-431c-9bb9-af619e888799
+Черный Кошош (простатит)	КЗ	ВЗ	" http://script.adtika.com/script/7781fb45-cb7e-4fff-9c59-1064b7412622
+"
+Черный Кошош (паразиты)	КЗ	ВЗ	http://script.adtika.com/script/a5c2d914-ecf2-4edb-92a6-43545d54b74b
+Черный Кошош (ЖКТ)	КЗ	ВЗ	http://script.adtika.com/script/22053cef-01e3-4a62-adfc-bd0ac2ccf2ad
+Черный Кошош (менопауза)	КЗ	ВЗ	http://script.adtika.com/script/ddbc1b4b-2d5d-48ca-b372-9f909e816475
+Черный Кошош (потенция)	КЗ	ВЗ	http://script.adtika.com/script/e4005ed4-e8b3-4382-8d6d-3562cb88a889
+Черный Кошош (суставы)	КЗ	ВЗ	http://script.adtika.com/script/967f5b84-cc1a-4126-8ea8-fb8f001054e8
+Черный Кошош (общий)	КЗ	ВЗ	http://script.adtika.com/script/05563558-fde0-4d35-9c93-2cb755a9a368
+Черный Кошош (грибок)	КЗ	ВЗ	http://script.adtika.com/script/05599807-1d0a-48a4-bb92-8f51366dc07d
+Ливиоптик 	УЗ	ВЗ	http://script.adtika.com/script/a7a87272-10eb-4029-9057-bf08586d7613
+Ливиоптик 	РУ	ВЗ	"http://script.adtika.com/script/a2ce11a5-ce07-4d37-b877-39d46d2b61ed
+"
+Ливиоптик 	КЗ	ВЗ	http://script.adtika.com/script/a0991048-cd51-447b-a5ab-3aca10d7a65a
+Арес	КЗ	ВЗ	http://script.adtika.com/script/938a68d6-c614-4c2c-99c5-a8641ecc941b
+Арес	УЗ	ВЗ	http://script.adtika.com/script/b1fdd147-67e9-417e-930c-4d4741641606
+Арканто	КЗ	ВЗ	"http://script.adtika.com/script/1b9dae3f-7422-4b3b-b136-e3451a9513b9
+"
+БактериФорм	РУ	ВЗ	https://script.adtika.com/script/9441d9d7-20a2-470c-bf4b-63a4ed66845b
+Эрвита универсал	РУ	ВЗ	"https://script.adtika.com/script/ed17d565-42b3-4491-ad82-6d3343b0c9fd
+"
+Эрвита цветы	РУ	ВЗ	https://script.adtika.com/script/2da7b1ab-f7be-44af-98ec-9d0fa259cfdd
+Фунгуликс (геморрой)	КЗ	ВЗ	" https://script.adtika.com/script/5de9286f-9247-43eb-a762-829eb2273d0b
+"
+Фунгуликс (геморрой)	УЗ	ВЗ	https://script.adtika.com/script/c6dcd89a-062e-43ae-908a-27473e5b0507
+Трисустал	РУ	ВЗ	https://script.adtika.com/script/e0c11518-a757-4803-bdd0-60ca9be7ef20
+Трисустал	УЗ	ВЗ	https://script.adtika.com/script/8b3cb143-f1e5-45a3-9f49-ce63a4546af3
+Трисустал	КЗ	ВЗ	https://script.adtika.com/script/297bdf3b-1a5e-483c-b25e-cb3274be615a
+Миконурил	РУ	ВЗ	"https://script.adtika.com/script/9bc204c5-5dc7-46e4-868a-b2c3d72d1905
+"
+Минакардин	КЗ	ВЗ	"https://script.adtika.com/script/5c433cb4-1b82-4a44-8d68-734042c9f83e
+"
+Минакардин	УЗ	ВЗ	https://script.adtika.com/script/aa3bcd54-0a99-42da-8a11-1833f524135d
+Минакардин	РУ	ВЗ	"https://script.adtika.com/script/9ee42e17-922b-475b-ba7c-d6aef3b85541
+"
+Фемовит	УЗ	ВЗ	https://script.adtika.com/script/201a4fb8-f2b3-4c36-9131-f9cd37655381
+Эконейро	КЗ	ВЗ	"https://script.adtika.com/script/66c56121-cf23-4f8c-8319-f3687345170d
+"
+Эконейро	УЗ	ВЗ	https://script.adtika.com/script/bcb46bbe-c60b-4178-8cdb-acde643709bd
+Эконейро	РУ	ВЗ	https://script.adtika.com/script/1ebd73e1-3c0e-462a-b655-b4722829f1b3
+Хуан Хун	РУ	ВЗ	"https://script.adtika.com/script/b39fc488-baa1-441e-a151-9e7bc23acb6e
+"
+Эконейро стресс и тревога	РУ	ВЗ	https://script.adtika.com/script/4dec87cc-3f25-4165-9b01-fc016afe41d8
+Фунгуликс алко	КЗ	ВЗ	https://script.adtika.com/script/392ba993-e0c5-43b5-b491-678dd2d071f5
+Фунгуликс алко	УЗ	ВЗ	https://script.adtika.com/script/ee039d78-818c-482c-94b5-f8b113f7a103
+Фунгуликс нико	КЗ	ВЗ	"https://script.adtika.com/script/262d0fa1-b760-4dd7-9812-baafd4decca3
+"
+Фунгуликс нико	УЗ	ВЗ	https://script.adtika.com/script/5405ba65-c829-447c-b66b-62182dd89a68
+ЧК недержание	РУ	ВЗ	https://script.adtika.com/script/1cfdfeb0-174d-4972-b47e-6a2ac6c8601a
+Чакры	РУ	ВЗ	https://script.adtika.com/script/ca151c2f-2c13-4e43-a4f1-0bd73c3ea50e
+Чакры	КЗ	ВЗ	https://script.adtika.com/script/6dd2ee77-7e89-42a8-8af6-520fba4d6a54
+Дао Слим	РУ	ВЗ	"https://script.adtika.com/script/a7491fdd-bed8-4068-869d-e9f2135a224f
+"
+Фунгуликс грибок	РУ	ВЗ	https://script.adtika.com/script/276ec0d5-19b6-4327-870b-f74a17a5e15d
+Гезде	РУ	ВЗ	"https://script.adtika.com/script/1021098c-7eee-4021-bb7a-89dde9c22234
+"
+Дегликин	РУ	ВЗ	https://script.adtika.com/script/844a42eb-d62d-42cc-953b-39bda2ad8acd
+Миконурил	УЗ	ВЗ	https://script.adtika.com/script/32ba1b4f-c62c-4907-8f21-176168ea6c74
+Синбиобаланс	РУ	ВЗ	https://script.adtika.com/script/f82f4813-6b35-48e1-b21e-eaec6dd3c806
+Фунгуликс цистит	КЗ	ВЗ	https://script.adtika.com/script/a5c11e03-cb30-405e-9157-408078fb59c2
+Отифлекс	УЗ	ВЗ	https://script.adtika.com/script/de64cc74-84c3-4d5c-be2e-bea32d04219a
+Фунгуликс цистит	УЗ	ВЗ	https://script.adtika.com/script/4c40e1f7-57cd-4607-8334-9e07190c440c

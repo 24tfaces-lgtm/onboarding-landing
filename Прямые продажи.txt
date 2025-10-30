@@ -1,0 +1,528 @@
+Оффер	Гео	Цен. категория	Ссылка на скрипт
+Тундра	РФ	Фри	" http://script.adtika.com/script/8a7a8508-6a8b-4bf3-9e01-21cadd62d0e4
+"
+Тундра	РФ	168	"https://script.adtika.com/script/60e9735c-411c-492d-a8d1-7e151d954c61
+"
+Тундра	РФ	Фри Люкс	"http://script.adtika.com/script/ee9097ed-41d7-4e4e-81fd-b612039e0594
+"
+Тундра	КЗ	Фри	"http://script.adtika.com/script/96dba09e-5361-4a8e-a8c9-09c177cfbbff
+"
+Тундра	КЗ	990	https://script.adtika.com/script/b30e0c67-c586-48c7-87bc-cb46f45928ab
+Тундра	УЗ	Фри	"http://script.adtika.com/script/d1dde6c3-4578-4714-a6c0-1b1f278641ef
+"
+Тундра	УЗ	29990	https://script.adtika.com/script/726de486-dc9c-4a77-ae0a-4e8476e505b5
+Королевский камень	РФ	фри	http://script.adtika.com/script/8f30f29d-25ee-45c6-a634-5ac37b892af7
+Королевский камень	РФ	168	http://script.adtika.com/script/9b247f42-67b7-48df-8fac-1831b442f833
+Королевский камень	РФ	Фри Люкс	http://script.adtika.com/script/f4b904e9-4617-4de6-9b47-6d3b75520bc6
+Королевский камень	КЗ	Фри	http://script.adtika.com/script/74ef4aca-1d6b-432f-9e49-3e5e3c5e9f1c
+Королевский камень	КЗ	990	http://script.adtika.com/script/ebf68411-c2df-4d0a-a246-35031f7f75fe
+Королевский камень	УЗ	Фри	http://script.adtika.com/script/fc1f1df6-d2d9-4c85-b545-9bc6c38b3360
+Королевский камень	УЗ	29990	http://script.adtika.com/script/287e83e0-f5aa-4cad-8645-44f4b12af3c3
+Орсофит Кето+	РФ	Фри	http://script.adtika.com/script/1d00c287-1799-4393-9a00-e46e0e088f66
+Орсофит Кето+	РФ	168	http://script.adtika.com/script/5b325fa1-7a88-4a28-b0a8-ac44634cae01
+Орсофит Кето+	РФ	Фри Люкс	http://script.adtika.com/script/3195cd77-ff63-40f8-a74d-5b56d35eea0b
+Орсофит	РФ	Фри	http://script.adtika.com/script/e07bb6e2-3199-4242-ad0b-4f5767c48c02
+Орсофит	РФ	168	http://script.adtika.com/script/20e8389c-312c-47d9-b497-045b1c1f51dd
+Орсофит	КЗ	Фри	http://script.adtika.com/script/2781f285-0bf9-4717-93bf-e42981519bbd
+Орсофит	КЗ	990	http://script.adtika.com/script/5ddaa4ad-f773-407e-8fdb-26d726d01b81
+Орсофит	УЗ	Фри	http://script.adtika.com/script/ed5de943-2f30-4882-b33f-4f41ff1c912c
+Орсофит	УЗ	29990	http://script.adtika.com/script/f990cd4b-2864-4267-bff7-83f020ee011f
+Сила Султана	КЗ	Фри	http://script.adtika.com/script/69f7cdce-c623-4b84-8d41-73c8358420ae
+Сила Султана	КЗ	990	http://script.adtika.com/script/15b7e167-a6b4-4846-99b7-e951bc823355
+Сила Султана	УЗ	Фри	http://script.adtika.com/script/61cdbdc8-895c-4031-bccc-bb31969f0c5a
+Сила Султана	УЗ	29990	http://script.adtika.com/script/62a9663e-70be-4271-8e51-cabe7e40507d
+28 DAYS SLIM	РФ	Фри	http://script.adtika.com/script/b52790c8-14db-4e02-99c3-8a7088f621d2
+28 DAYS SLIM	РФ	168	http://script.adtika.com/script/2c04c4ce-cdfa-4b24-a08a-901cbaf29eeb
+28 DAYS SLIM	КЗ	Фри	http://script.adtika.com/script/451d1031-1f03-4b76-a330-c8826a8d78a0
+28 DAYS SLIM	КЗ	990	http://script.adtika.com/script/5af10d02-7155-476a-b72e-07b85c51c0de
+28 DAYS SLIM	УЗ	Фри	http://script.adtika.com/script/592ff098-44e0-4c46-8278-9a21c5df7cd4
+28 DAYS SLIM	УЗ	29990	http://script.adtika.com/script/0f342f6c-9fe6-4da6-8013-27146111e176
+Голден Хан	РФ	Фри	"http://script.adtika.com/script/8f848749-ef8e-40ad-a0eb-29761917a462
+"
+Голден Хан	РФ	168	"http://script.adtika.com/script/58015fa2-5dcb-4cad-9021-021448f22b65
+"
+Голден Хан	РФ	Фри Люкс	http://script.adtika.com/script/1a25ab05-1f00-4a76-b6dc-6f142857cd85
+Голден Хан	КЗ	Фри	"http://script.adtika.com/script/5fbdf2a6-a6b8-4783-9412-62d01557640b
+"
+Голден Хан	КЗ	990	"http://script.adtika.com/script/b09d7fc6-aab8-4269-82d2-a06c5c7d337e
+"
+Голден Хан	УЗ	Фри	"http://script.adtika.com/script/bcfd82dd-293e-4c88-931c-c4e1f15e440a
+"
+Голден Хан	УЗ	29990	"http://script.adtika.com/script/2483e0b5-3c62-44c7-b939-0ea7d438681c
+"
+Звезда Эрцгаммы	РФ	Фри	http://script.adtika.com/script/b778cb95-5c5f-4d29-8921-becb7d01513e
+Звезда Эрцгаммы	РФ	168	http://script.adtika.com/script/8fa08a54-acef-4882-93e9-5cb4139af681
+Сила Султана Спрей	РФ	Фри	http://script.adtika.com/script/e57b791b-bd85-4bda-8a3c-73600ff72acd
+Сила Султана Спрей	РФ	168	http://script.adtika.com/script/e6901eac-187c-4e82-8b67-4447d1d69221
+Агротенс	РФ	Фри	http://script.adtika.com/script/0cdd82bb-a29b-44a7-9901-7ccca232c7b4
+Агротенс	РФ	168	http://script.adtika.com/script/af940ae9-bbf4-4da0-aee5-fcb85c991cd4
+Агротенс	РФ	Фри Люкс	http://script.adtika.com/script/c15c464d-4778-4e6f-9f9f-3e41d30d0452
+Агротенс	КЗ	Фри	http://script.adtika.com/script/25914012-9da3-458f-8d94-fe0e9d5b87f7
+Агротенс	КЗ	990	http://script.adtika.com/script/8331e086-644d-41c3-bf8d-a7566d5202bc
+Артродуал	КЗ	Фри	http://script.adtika.com/script/c482c3fb-6234-48d8-9325-8eb656ec5fae
+Артродуал	КЗ	990	http://script.adtika.com/script/797fb57f-4753-45d2-ba55-8d4caed3f8e6
+Артродуал	УЗ	Фри	http://script.adtika.com/script/e78ad3d4-51e3-4107-8a71-65442c94e07d
+Артродуал	УЗ	29990	http://script.adtika.com/script/9b5b5334-f014-4111-9848-b6a127b8afaa
+Автонабор	РФ	990	http://script.adtika.com/script/60cf85f0-9f00-4a56-9d30-10066b6302cd
+Афродита	РФ	Фри	http://script.adtika.com/script/e686f4dc-1608-4e61-b5e9-5022a3680c20
+Афродита	РФ	168	http://script.adtika.com/script/adb64bf8-10d7-474e-bcdc-961fb331fa3b
+Бактери форм free	КЗ	Фри	http://script.adtika.com/script/90ca7a2b-55ad-4e2d-936b-d52cb6218e87
+Бактери форм 168	КЗ	990	http://script.adtika.com/script/2a47a5a0-cabf-4be6-829e-91258f168e3e
+Бактери форм free	УЗ	Фри	http://script.adtika.com/script/f492920a-24ad-4c8a-9226-43bc26224887
+Бактери форм 168	УЗ	29990	http://script.adtika.com/script/ce9f882f-7693-4d27-b13a-ab9d5ed33ddf
+БактериФорм	РУ	фри	"https://script.adtika.com/script/1843f38b-f316-4557-9ce2-8335eef246fc
+"
+БактериФорм	РУ	168	https://script.adtika.com/script/303f7a50-bfd3-448b-99e3-c00e0403fcda
+Сочные ягоды 168	РФ	168	http://script.adtika.com/script/cab8ff37-8d2f-489f-8628-19d2dea82c2f
+Сочные ягоды 168	КЗ	990	http://script.adtika.com/script/f18597a3-ba38-490d-b534-a62dcb15c7ee
+Блокер (алко)	КЗ	Фри	http://script.adtika.com/script/2f0fbf9e-c019-4fbd-9572-a5dfda207f8d
+Блокер (алко)	КЗ	990	http://script.adtika.com/script/a1ebaa6d-24a7-4d51-9f55-ff388c63cf65
+Блокер (алко)	РФ	Фри	http://script.adtika.com/script/68a1e049-ea3f-40d5-8e1c-fad6fb924aba
+Блокер (алко)	РФ	168	http://script.adtika.com/script/12b5bfe6-70a0-452e-a3e0-2079136a977c
+Блокер (никотин)	КЗ	Фри	http://script.adtika.com/script/1797c0f4-4b8b-4739-b1e4-aa33cf95af30
+Блокер (никотин)	КЗ	990	http://script.adtika.com/script/e1789b79-3927-4ef1-ace3-a09222141bee
+Блокер (никотин)	РФ	Фри	http://script.adtika.com/script/2ff7aa08-6265-47cc-b5db-046a427f4d48
+Блокер (никотин)	РФ	168	http://script.adtika.com/script/0acb1da1-6da4-422c-81dd-5d40e28582e1
+Блокер алко 	УЗ	фри	"http://script.adtika.com/script/eeb63eb5-67cd-4065-b578-1c216a2a3752
+"
+Блокер алко 	УЗ	29 990	http://script.adtika.com/script/0baf2bc7-1de8-468f-99b3-512e8ed8cf1d
+Блокер нико	УЗ	фри	"http://script.adtika.com/script/902eeec6-a298-4317-9fe7-cee2c9cbe147
+"
+Блокер нико	УЗ	29 990	http://script.adtika.com/script/9ddd4571-36e7-47c7-9f88-23740564dc39
+Бронхикс	КЗ	Фри	http://script.adtika.com/script/6fdcbf50-54fb-4d71-88f9-8a486e576f4a
+Бронхикс	КЗ	990	http://script.adtika.com/script/4b164888-88c6-4941-a35d-180f2204f736
+Кардитенс	КЗ	Фри	"https://script.adtika.com/script/2397bc47-0cf6-41dc-933c-c4257111cf83
+"
+Кардитенс	КЗ	990	"https://script.adtika.com/script/6e123af5-415d-45f9-8e78-2eed881bf3c5
+"
+Кардитенс	УЗ	Фри	"https://script.adtika.com/script/8664dfa4-93a9-4a50-ad31-a42b446f1ff1
+"
+Кардитенс	УЗ	29990	"https://script.adtika.com/script/31f6ec95-a63c-435c-8b42-da31c8833f5f
+"
+Кардитенс	РУ	фри	https://script.adtika.com/script/f696d5bb-a02b-4438-b5ef-68414b21d5a7
+Кардитенс	РУ	168	"https://script.adtika.com/script/6e6a692b-5e42-479a-aeb5-7e91cffe153c
+"
+Фруктовые деревья	РФ	Фри	http://script.adtika.com/script/37d29d71-283a-4801-b9a6-d7bb94e3af7b
+Фруктовые деревья	РФ	168	http://script.adtika.com/script/012dfa07-7929-4518-a604-c1a85cedb19a
+Фруктовые деревья	КЗ	Фри	http://script.adtika.com/script/017e598c-73c3-4e5e-9ef2-1aa68e43ebed
+Фруктовые деревья	КЗ	990	http://script.adtika.com/script/47b1a2fb-21f4-4efa-97b5-c98b8b917533
+ГарденБокс	РФ	Фри	http://script.adtika.com/script/622350e9-f50d-4f6a-bc71-ca312f01dcaf
+ГарденБокс	РФ	168	http://script.adtika.com/script/f397235b-ad8d-4b0d-a193-4883b82ece42
+Кардипал	КЗ	Фри	http://script.adtika.com/script/12ee9c85-7ae2-48cc-9063-8cead306bb61
+Кардипал	КЗ	990	http://script.adtika.com/script/7ea75f24-5408-4a76-b64e-dc50a4c9fcc9
+Кардипал	УЗ	29990	http://script.adtika.com/script/0491c4b0-c64b-473f-8dba-fc6a814669e0
+Кардипал	УЗ	Фри	http://script.adtika.com/script/dfafda76-5e37-4b93-9942-b0fa8a80cec8
+Ливерфорт	РФ	Фри	http://script.adtika.com/script/ad64e591-a5e3-4679-9aa4-11342b3f767b
+Ливерфорт	РФ	168	http://script.adtika.com/script/63083b2f-79af-4a78-8815-2cb07c4f2c4b
+Ливерфорт	КЗ	Фри	http://script.adtika.com/script/4f45a453-3847-4594-b409-03460caaa8fe
+Ливерфорт	КЗ	990	http://script.adtika.com/script/e7bbade4-f87a-4195-80f1-2eb53007f7c4
+Лоропакс	КЗ	Фри	http://script.adtika.com/script/550afbcf-0c36-4290-a5b5-108040f5137a
+Лоропакс	КЗ	990	http://script.adtika.com/script/b44c118d-6f1b-4ea4-b30f-65f40723dd83
+Лоропакс	УЗ	Фри	http://script.adtika.com/script/595bfb31-e5dc-451d-b199-0531ad45ec25
+Лоропакс	УЗ	29990	http://script.adtika.com/script/ca58ad71-e90a-44d7-8379-f55339fdd6ff
+Отифлекс	РФ	Фри	"http://script.adtika.com/script/5e0682eb-2ba8-4c80-a2e6-91879bd14e9b
+"
+Отифлекс	РФ	168	http://script.adtika.com/script/a19a3ded-3d06-4750-aef1-429161bd44f4
+Отифлекс	КЗ	Фри	"http://script.adtika.com/script/f2c1ecc3-a481-48f5-be7c-903c5b0b2308
+"
+Отифлекс	КЗ	990	"http://script.adtika.com/script/2ff525b5-07ea-4b27-b381-c4404f908565
+"
+Простабиотик	РФ	Фри	"http://script.adtika.com/script/f24d7971-dd80-4439-9301-bc780a6edcda
+"
+Простабиотик	РУ	ЛЮКС	"http://script.adtika.com/script/9f2c8b28-f764-4811-98fd-d3b4051160be
+"
+Простабиотик	РФ	168	"http://script.adtika.com/script/1e8f4999-a572-40e4-95ca-37b3a7afdd7d
+"
+Простабиотик	УЗ	Фри	"http://script.adtika.com/script/975e6936-3198-47a8-982d-fbe85ae743f9
+"
+Простабиотик	УЗ	29990	"http://script.adtika.com/script/7cb98cfe-c48e-4d1b-9f74-fb0bdda41e49
+"
+Простабиотик	КЗ	фри	"http://script.adtika.com/script/023afb46-2a4e-44f4-b9ae-761182691d80
+"
+Простабиотик	КЗ	990	" http://script.adtika.com/script/ed8cec1c-c380-43e5-a00d-5bac281dba00
+"
+Королевские розы	РФ	Фри	http://script.adtika.com/script/c66608f4-6a52-4144-a25c-8a65bbf000a6
+Королевские розы	РФ	168	http://script.adtika.com/script/c3cce135-1885-4510-bea7-9673428e2730
+Королевские розы	КЗ	Фри	http://script.adtika.com/script/f89c75f1-f13e-422d-84cb-b7a9b549af56
+Королевские розы	КЗ	990	http://script.adtika.com/script/cf8b537f-985e-466f-a554-80e86fd68d02
+Скорпионикс 	УЗ	Фри	https://script.adtika.com/script/5b027a24-8eb5-4fe9-81c8-9be02518676b
+Скорпионикс	УЗ	29 990	https://script.adtika.com/script/c0c88b66-3a9c-4c5b-85dc-7a3fcc0c2895
+Скорпионикс	РФ	Фри	"https://script.adtika.com/script/9df8f2ec-9df4-4311-af62-90996109b887
+"
+Скорпионикс	РФ	168	"https://script.adtika.com/script/22b8a55c-10bf-4a93-b9f6-6326958c669e
+"
+Скорпионикс	КЗ	990	https://script.adtika.com/script/4428b4e4-eb41-4fed-8914-b1129c7403ac
+Скорпионикс	КЗ	Фри	"http://script.adtika.com/script/998a76b8-8bac-45bf-9987-57e9d67694ab
+"
+Скорпионикс	КЗ	990	"http://script.adtika.com/script/024a6b53-1fe5-4200-8f49-8080a46cdbfe
+"
+Скорпионикс	УЗ	Фри	"http://script.adtika.com/script/64145f64-bcc4-4008-97e1-82683ec8ba30
+"
+Скорпионикс	УЗ	29990	"http://script.adtika.com/script/4c0e2cf7-ff3f-4b53-9cef-5ce4f5fb4b92
+"
+Фемовит	РФ	Фри	http://script.adtika.com/script/7af64a5d-6726-4e64-9d6e-141b9627adbc
+Фемовит	РФ	168	http://script.adtika.com/script/17a86e3c-49a5-4d8c-91e9-ea4a48357858
+Уролаб	КЗ	Фри	http://script.adtika.com/script/92ea6bcd-6ab4-4927-aa0f-ba908a6f5ffb
+Уролаб	КЗ	990	http://script.adtika.com/script/daec1ba6-fa8f-407c-bc8c-c9636437dc04
+Урофлексен	РФ	Фри	http://script.adtika.com/script/f4f1909f-40cd-41d5-bcc1-160599dc09a0
+Урофлексен	РФ	168	http://script.adtika.com/script/89f5239d-88c7-4f2e-ac4b-333740a1a9bd
+Урофлексен	РФ	Фри ЛЮКС	http://script.adtika.com/script/74943fa8-cc60-49a7-b6e5-90d9d6cf6c69
+Урофлексен	КЗ	Фри	http://script.adtika.com/script/01620be3-ab5a-408e-af0b-e118f16fbf80
+Урофлексен	КЗ	990	http://script.adtika.com/script/0fe8b7a7-d2f5-47a5-b0fc-0188eaeb1b35
+Урофлексен	УЗ	Фри	http://script.adtika.com/script/b22febcf-9199-418a-afc4-5aa3a01ee7ad
+Урофлексен	УЗ	29990	http://script.adtika.com/script/2eedbaca-b654-4305-8025-7c4233b39c48
+Визоплекс free	РФ	Фри	http://script.adtika.com/script/d5ebf5a5-efe6-4f8f-8ff0-227fd513236d
+Визоплекс free	КЗ	Фри	" http://script.adtika.com/script/42750180-7728-4ef0-9e59-3d1cb56cf152
+"
+Визоплекс free	УЗ	Фри	"http://script.adtika.com/script/1433d06c-1dee-47a9-838d-bcd577a49ebb
+"
+Визоплекс 168	РФ	168	http://script.adtika.com/script/d8ea6b61-d088-461c-924e-e254847401fb
+Визоплекс 168	КЗ	990	"http://script.adtika.com/script/7b1388a3-8f23-44ec-9823-a274654ac0d7
+"
+Визоплекс 168	УЗ	29990	" http://script.adtika.com/script/a9873035-8b1b-4e52-b5d4-64cde88f5ec0
+"
+Визоплекс free LUXE	РФ	Фри ЛЮКС	http://script.adtika.com/script/7215164e-c94d-409f-9c30-74dc4fd5e6fd
+Фунгуликс (общий) free	РФ	Фри	http://script.adtika.com/script/8a599296-84c0-4077-ba01-63ecc58d3b12
+Фунгуликс (общий) 168	РФ	168	http://script.adtika.com/script/c77c06e0-83ca-41f9-a4b5-218ddcda335d
+Фунгуликс (общий) free	КЗ	Фри	http://script.adtika.com/script/fe62d3ef-3dd4-4ee3-a243-3c0075eeeb42
+Фунгуликс (общий) 168	КЗ	990	http://script.adtika.com/script/75cf6d27-9681-466e-b4dd-7ce61f8ad004
+Фунгуликс алко	КЗ	Фри	https://script.adtika.com/script/cbe229ac-f332-4d59-b791-74cd0db9026b
+Фунгуликс алко	КЗ	990	https://script.adtika.com/script/cf9e6d9d-308b-4d6b-8d8c-9ed87afc92ec
+Фунгуликс алко	УЗ	Фри	https://script.adtika.com/script/9aa6e9a0-92cd-4fa5-b1db-3bedca03e97f
+Фунгуликс алко	УЗ	29990	https://script.adtika.com/script/65b8190b-c279-436b-8a03-90e6495061a6
+Фунгуликс нико	КЗ	Фри	https://script.adtika.com/script/026373db-7715-4a86-a781-790b5069eabc
+Фунгуликс нико	КЗ	990	https://script.adtika.com/script/854b8eed-da75-4b4f-bde3-60e500f2e21a
+Фунгуликс нико	УЗ	Фри	https://script.adtika.com/script/59a1e627-3eaa-4689-bea7-ac15f675c1c6
+Фунгуликс нико	УЗ	29990	https://script.adtika.com/script/e424a556-26f3-4fcf-aeb1-fa99bbea5172
+Фунгуликс (слух)	РФ	Фри	"http://script.adtika.com/script/a376465c-bb7e-40c1-a594-181501edcab8
+"
+Фунгуликс (слух)	РФ	168	"http://script.adtika.com/script/5544f8b8-0db4-49f5-8491-de4aa29b6ec5
+"
+Фунгуликс (слух)	КЗ	Фри	"http://script.adtika.com/script/1cbefc57-0234-45c8-b920-cca31beba2d7
+"
+Фунгуликс (слух)	КЗ	990	"http://script.adtika.com/script/f254c260-7c7b-4511-a213-6cc95db87270
+"
+Фунгуликс зрение	УЗ	фри	"http://script.adtika.com/script/a1176f08-d7f8-4d39-9dca-20f9a3da4e53
+"
+Фунгуликс зрение	УЗ	29 990	" http://script.adtika.com/script/b28e9fc6-0ea4-4891-9a7b-5815036c4672
+"
+Фунгуликс (паразиты)	УЗ	фри	" http://script.adtika.com/script/ca15199b-6f07-4224-933b-307b4df3beab
+"
+Фунгуликс (паразиты)	УЗ	29990	http://script.adtika.com/script/edcb9f40-837a-4c79-a5a5-dd3af28bd493
+Фунгуликс (цистит)	РФ	Фри	http://script.adtika.com/script/d74578ca-419c-4b2c-944e-1dee7c8f9342
+Фунгуликс (цистит)	РФ	168	http://script.adtika.com/script/5fd11d30-2b18-4472-9103-28b60679e1b2
+Фунгуликс (паразиты)	РФ	Фри	http://script.adtika.com/script/99296464-d559-4239-a373-0a6503884433
+Фунгуликс (паразиты)	РФ	168	http://script.adtika.com/script/06d24e5e-ba31-4ef6-b0ba-bb8642aabd46
+Фунгуликс (паразиты)	КЗ	Фри	http://script.adtika.com/script/8295c654-77b2-41d9-b528-ff1afa1f421c
+Фунгуликс (паразиты)	КЗ	990	http://script.adtika.com/script/2c95ad38-dbed-41b6-a1ec-19bba71f3fd8
+Фунгуликс (простатит)	РФ	Фри	"http://script.adtika.com/script/174b06bc-a5af-42e5-900f-0460884c8e31
+"
+Фунгуликс (простатит)	РФ	168	"http://script.adtika.com/script/bdd2588f-02ad-4ae5-9465-0c5908a8b39d
+"
+Фунгуликс (простатит)	КЗ	Фри	" http://script.adtika.com/script/3a83409f-a467-460f-9d13-cde86d7eabb8
+"
+Фунгуликс (простатит)	КЗ	990	"http://script.adtika.com/script/01464fe9-e97d-4a7f-8eae-e3cb27beeda5
+"
+Фунгуликс (зрение)	РФ	Фри	"http://script.adtika.com/script/28335c4e-0997-4ae5-a24b-d421660317ca
+"
+Фунгуликс (зрение)	РФ	168	"http://script.adtika.com/script/97ca3478-c668-4908-ad3d-27103f065147
+"
+Фунгуликс (зрение)	КЗ	Фри	"http://script.adtika.com/script/ac2dde04-6834-4540-9275-6574e0237b34
+"
+Фунгуликс (зрение)	КЗ	990	"http://script.adtika.com/script/ef2eca39-80a1-4967-83d6-3cde23ecc76b
+"
+Фунгуликс (слух)	УЗ	фри	"http://script.adtika.com/script/ff9178c8-5bbd-4948-97ca-4f59078d6952
+"
+Фунгуликс (слух)	УЗ	29 990	" http://script.adtika.com/script/eaf84420-e382-4927-8db3-8e3dd2ea43da
+"
+Фунгуликс (геморрой)	КЗ	фри	"http://script.adtika.com/script/d2cd530b-b222-4b86-8faa-afa22fcd6e03
+"
+Фунгуликс (геморрой)	КЗ	990	http://script.adtika.com/script/b392667a-df1a-4b54-8cd8-8ea6a71b0397
+Фунгуликс (геморрой)	УЗ	фри	"https://script.adtika.com/script/2b02a8ec-89cc-4365-8772-a7a4fad1814c
+"
+Фунгуликс (геморрой)	УЗ	29 990	https://script.adtika.com/script/fbef1fe4-764d-4fc7-b5e8-5403f027aa3e
+Фунгуликс простатит	УЗ	фри	"http://script.adtika.com/script/feeb9613-524a-4199-b843-a77d40347466
+"
+Фунгуликс простатит	УЗ	29 990	"http://script.adtika.com/script/ed0dfa68-8e19-4a97-955e-4a34cf5eaa29
+"
+Фунгуликс грибок	УЗ	фри	"http://script.adtika.com/script/507eaadf-ef26-4e67-9f7c-4d154fcb9aa9
+"
+Фунгуликс грибок	УЗ	29 990	"http://script.adtika.com/script/c7101bdf-2bdf-4f77-a159-b95dbd842edb
+"
+Фунгуликс грибок	КЗ	фри	"http://script.adtika.com/script/22fe4dd7-99c4-4360-9678-cfe0a12b2ef2
+"
+Фунгуликс грибок	КЗ	990	"http://script.adtika.com/script/0fc27f0e-4492-4f73-854c-610f60df9380
+"
+Сила султана спрей	КЗ	фри	"http://script.adtika.com/script/c739d248-fd61-4767-8252-264dd06a9220
+"
+Сила султана спрей	КЗ	990	"http://script.adtika.com/script/033caf7e-08d9-46ea-bad7-21642461820b
+"
+Black Cohosh (Черный Кохош)	РУ	фри	"http://script.adtika.com/script/10958e59-6dfc-4c0c-95f3-cdf29a5131a9
+"
+Black Cohosh (Черный Кохош)	РУ	168	http://script.adtika.com/script/0b63bb54-d9b1-47f6-8031-a76509b1ceb2
+ГарденБокс	КЗ	фри	"http://script.adtika.com/script/7d49a549-c363-4ef9-8c12-3720fcc9536c
+"
+ГарденБокс	КЗ	990	http://script.adtika.com/script/af20c013-1eeb-4cc0-92bb-25a0c6fd00f6
+			
+Black Cohosh (Черный Кохош) ЖКТ	РУ	фри	http://script.adtika.com/script/7f0ea49a-ba5e-4957-a145-5221fa165bb9
+Black Cohosh (Черный Кохош) ЖКТ	РУ	168	http://script.adtika.com/script/f7d0cedd-478a-4b35-b78a-250a0619b42f
+Black Cohosh (Черный Кохош) потенция	РУ	фри	"http://script.adtika.com/script/f5b51cbf-04bb-4391-811c-3e092260fb72
+"
+Black Cohosh (Черный Кохош) потенция	РУ	168	"http://script.adtika.com/script/08fbc588-5040-4870-946b-8e4d3cb398bb
+"
+Black Cohosh (Черный Кохош) суставы	РУ	фри	"http://script.adtika.com/script/9137ddc1-d19c-45da-a002-a01c89479e64
+"
+Black Cohosh (Черный Кохош) суставы	РУ	168	http://script.adtika.com/script/727407e5-6d4f-4586-b839-07b870980062
+Black Cohosh (Черный Кохош) паразиты	РУ	фри	http://script.adtika.com/script/935e2a88-9fe5-4d03-899b-61108efc23d9
+Black Cohosh (Черный Кохош) паразиты	РУ	168	http://script.adtika.com/script/a3eeef93-1547-4033-9172-02011f828f90
+Black Cohosh (Черный Кохош) менопауза	РУ	фри	http://script.adtika.com/script/03918b06-4142-4718-bfde-88adfc00de21
+Black Cohosh (Черный Кохош) менопауза	РУ	168	http://script.adtika.com/script/0f46a1d0-2aaf-4ab6-a2b1-643d2a414fc3
+Black Cohosh (Черный Кохош) простатит	РУ	фри	"http://script.adtika.com/script/db812179-128c-4421-823a-dfc73eb68e9b
+"
+Black Cohosh (Черный Кохош) простатит	РУ	168	"http://script.adtika.com/script/aea362e7-23f9-480a-8fa7-ad0da5fd83d1
+"
+Амулет Арканто	РУ	фри	"http://script.adtika.com/script/30f81e75-91df-456b-a7cf-5c0b4789bedc
+"
+Амулет Арканто	РУ	168	"http://script.adtika.com/script/883b272d-f832-4f18-a9df-5c5419328b10
+"
+Black Cohosh (Черный Кохош) потенция	РУ	ЛЮКС	http://script.adtika.com/script/199b589f-5a29-4764-98d1-a863942d1083
+Black Cohosh (Черный Кохош) простатит	РУ	ЛЮКС	"http://script.adtika.com/script/45a60056-4e5b-4ea2-ac45-eaebc94a8770
+"
+Фунгуликс слух	РУ	ЛЮКС	http://script.adtika.com/script/19563b56-48e5-4986-96fe-43a4851ae288
+Кетиш Диетиш	РУ	фри	" http://script.adtika.com/script/76ccaf78-5998-4b40-b63d-f7e96ff4237e
+"
+Кетиш Диетиш	РУ	168	http://script.adtika.com/script/5860841e-4ec8-48fb-81a4-dda5659bbf80
+Фемовит	КЗ	фри	" http://script.adtika.com/script/b5143607-2a68-458e-9c8d-9640933c1fa5
+"
+Фемовит	КЗ	990	http://script.adtika.com/script/17a4e392-9890-4a18-b263-a534fba7517c
+Фитограном 7 в 1	РУ	фри	"http://script.adtika.com/script/eb97f530-5ad4-40ac-858b-dcb34888445e
+"
+Фитограном 7 в 1	РУ	168	http://script.adtika.com/script/3e76c912-6190-4167-964c-b656221ecc0e
+Чаванпраш зрение	РУ	фри	http://script.adtika.com/script/88a31e40-c70f-4eb3-a1c3-662b43ea2535
+Чаванпраш зрение	РУ	168	"http://script.adtika.com/script/050240bd-8801-4ca6-8580-17bd1bd6c272
+"
+Чаванпраш слух	РУ	фри	http://script.adtika.com/script/78c8df97-2aed-420e-9581-17d8b960df73
+Чаванпраш слух	РУ	168	" http://script.adtika.com/script/c3d11d2d-d0e2-4d0f-9c48-88024f936efa
+"
+Чаванпраш похудение	РУ	фри	http://script.adtika.com/script/0f9186e5-1752-42ab-b547-75e93b9d0565
+Чаванпраш похудение	РУ	168	"http://script.adtika.com/script/37113d85-3e34-4a51-8ae9-dd475b254dd3
+"
+Чаванпраш паразиты	РУ	фри	http://script.adtika.com/script/771d8ba5-6bdb-4412-a2fd-c40fef33ceca
+Чаванпраш паразиты	РУ	168	"http://script.adtika.com/script/a07c8ac4-5374-498e-97ea-e89d23897681
+"
+Черный Кохош простатит	УЗ	фри	"http://script.adtika.com/script/0949977e-29bb-4bfd-b302-8c1eb9d3fba7
+"
+Черный Кохош простатит	УЗ	29 990	"http://script.adtika.com/script/e2705721-03b5-4765-b053-3dd86ddc3d41
+"
+Черный Кохош паразиты	УЗ	фри	"http://script.adtika.com/script/5ea4c6b2-15d4-44d5-8dd4-4dd32ce22955
+"
+Черный Кохош паразиты	УЗ	29 990	http://script.adtika.com/script/8e9360ae-e6a2-4806-b636-5738a36332ef
+Черный Кохош ЖКТ	УЗ	фри	"http://script.adtika.com/script/0f26022b-df12-425c-89e8-9f2f2af7cf29
+"
+Черный Кохош ЖКТ	УЗ	29 990	http://script.adtika.com/script/4126d14a-3ec9-4989-82e1-5c2d19cd2b86
+Черный Кохош менопауза	УЗ	фри	"http://script.adtika.com/script/b307d286-bb0f-402a-8153-7b9573d15dd0
+"
+Черный Кохош менопауза	УЗ	29 990	http://script.adtika.com/script/1e1b4576-8e4f-46ff-862d-bdad9723b04f
+Черный Кохош потенция	УЗ	фри	"http://script.adtika.com/script/12e29bd3-752e-4aab-88e0-130bc327bc2a
+"
+Черный Кохош потенция	УЗ	29 990	"http://script.adtika.com/script/e0319ebc-8048-4086-81e3-2fce3e4a4846
+"
+Черный Кохош суставы	УЗ	фри	http://script.adtika.com/script/c8414bb0-0e98-4dfe-8757-8beeb30e5feb
+Черный Кохош суставы	УЗ	29 990	http://script.adtika.com/script/c6390891-4429-4329-925a-26db58717b1b
+Черный Кохош общий	УЗ	фри	"http://script.adtika.com/script/232275f6-254b-4a1f-adab-378aedfccd07
+"
+Черный Кохош общий	УЗ	29 990	http://script.adtika.com/script/55fadc76-917c-47c9-8764-adf4dee88007
+Черный Кохош грибок	УЗ	фри	"http://script.adtika.com/script/edd95829-4901-4ce6-a63e-1e8d1e3dd244
+"
+Черный Кохош грибок	УЗ	29 990	http://script.adtika.com/script/0aba66a4-c83d-4f29-9ac4-bf70cce89aee
+Черный Кохош грибок	РУ	фри	"http://script.adtika.com/script/8e4e2f39-88ad-416a-b67d-5ae60c059ca0
+"
+Черный Кохош грибок	РУ	168	http://script.adtika.com/script/b4d4fa00-4dc6-4c56-8fa9-8f339f947667
+Черный Кохош потенция	КЗ	фри	"http://script.adtika.com/script/5729c4d3-3370-47ed-8006-e4263eee1888
+"
+Черный Кохош потенция	КЗ	990	"http://script.adtika.com/script/e4af95e8-0330-48af-a9c1-b01e7550575d
+"
+Черный Кохош простатит	КЗ	фри	"http://script.adtika.com/script/2c45742f-e4de-4c8e-bb66-fcc6ae0255b3
+"
+Черный Кохош простатит	КЗ	990	"http://script.adtika.com/script/c659bf55-4484-489a-8822-2b34b299e934
+"
+Черный Кохош грибок	КЗ	фри	"http://script.adtika.com/script/90190970-515d-4115-88d8-e6447fb1ae9b
+"
+Черный Кохош грибок	КЗ	990	http://script.adtika.com/script/2edaeb81-5f43-40b5-b50f-6354c849e9b4
+Черный Кохош паразиты	КЗ	фри	"http://script.adtika.com/script/08859031-b1f2-4714-8a21-a5d7eab43822
+"
+Черный Кохош паразиты	КЗ	990	"http://script.adtika.com/script/20032495-2880-4ff3-9688-4254cef45730
+"
+Черный Кохош ЖКТ	КЗ	фри	" http://script.adtika.com/script/7966ecc0-7274-4201-a780-b37bff1aa1fb
+"
+Черный Кохош ЖКТ	КЗ	990	http://script.adtika.com/script/997f491b-f8d3-46b2-a6e9-e23d1be43a45
+Черный Кохош менопауза	КЗ	фри	" http://script.adtika.com/script/66116a80-2aa1-4730-bd0f-fb08e5c51613
+"
+Черный Кохош менопауза	КЗ	990	http://script.adtika.com/script/b5744315-815e-47fa-985d-e281aaf4545b
+Черный Кохош суставы	КЗ	фри	" http://script.adtika.com/script/f516b904-1bab-4a39-a621-4acbe7ff8dc7
+"
+Черный Кохош суставы	КЗ	990	http://script.adtika.com/script/1c7f40c6-1700-42c1-bf1b-6c5cbad5e802
+Черный Кохош общий	КЗ	фри	"http://script.adtika.com/script/a4dab3a5-9826-46b7-bfaf-ca95bcae8023
+"
+Черный Кохош общий	КЗ	990	http://script.adtika.com/script/c0bb5436-60f8-49d1-8e0a-981b79bd64a5
+Черный кохош (геморрой)	УЗ	фри	"http://script.adtika.com/script/ecf4d24b-01b8-4a5a-86b2-e34be0da39d9
+"
+Черный кохош (геморрой)	УЗ	29 990	"http://script.adtika.com/script/e047c300-23bf-4199-a655-bc025eb91680
+"
+Черный кохош (геморрой)	КЗ	фри	" http://script.adtika.com/script/6568c550-3c28-4d7d-8a10-a2e3e07b30f0
+"
+Черный кохош (геморрой)	КЗ	990	" http://script.adtika.com/script/f46da37f-a0e9-4c19-947f-7584e586cbf0
+"
+Черный кохош (недержание)	УЗ	фри	"http://script.adtika.com/script/3831d092-d7e0-44bd-987c-32438cdec52f
+"
+Черный кохош (недержание)	УЗ	29 990	"http://script.adtika.com/script/62617734-714a-4c73-a352-272692ca5759
+"
+Черный кохош (недержание)	КЗ	фри	"http://script.adtika.com/script/9256eff8-3c60-4ac3-b17c-e744093f4ca7
+"
+Черный кохош (недержание)	КЗ	990	"http://script.adtika.com/script/d1ada4d0-00a5-481b-9199-7efd58db3c4d
+"
+Черный кохош (недержание)	РУ	фри	https://script.adtika.com/script/5d31ae5c-4992-4d3f-8bb9-ff2d5076682a
+Черный кохош (недержание)	РУ	168	https://script.adtika.com/script/53bff1c7-fe6f-4fb5-ab86-26bfe0cdd4e2
+Арес	РУ	фри	"https://script.adtika.com/script/922bdbe6-1797-4c4b-92ed-9c5f116cb1f3
+"
+Арес	РУ	168	"https://script.adtika.com/script/11d70950-e43b-4afe-97f2-90d967bcda67
+"
+Арес	КЗ	фри	"http://script.adtika.com/script/8f955302-83e8-4592-91f8-8be4b3da29b6
+"
+Арес	КЗ	990	"http://script.adtika.com/script/61fc77f6-b586-48c8-8f0d-11d9dfe1c651
+"
+Арес	УЗ	фри	"https://script.adtika.com/script/831c852c-543c-40bf-b3d7-fc777543264f
+"
+Арес	УЗ	29 990	"http://script.adtika.com/script/b36a93e3-5b81-472e-b391-cf1aa6c11e53
+"
+Кетиш Диетиш	УЗ	фри	"http://script.adtika.com/script/acac9a1e-c78e-47ed-b7d7-31a2b2f4572d
+"
+Кетиш Диетиш	УЗ	29 990	http://script.adtika.com/script/2ca574ae-ce36-45b2-8dd7-08a90f245b9c
+Кетиш Диетиш	КЗ	фри	"http://script.adtika.com/script/4e265db5-2877-48bc-9687-d7a3a6a49f6a
+"
+Кетиш Диетиш	КЗ	990	http://script.adtika.com/script/e92c15f5-375c-40f8-b5f1-a022c074e63a
+Фитограном 7 в 1	КЗ	фри	"http://script.adtika.com/script/09cb8a3c-852b-4825-beae-fe2b9610ac3e
+"
+Фитограном 7 в 1	КЗ	990	http://script.adtika.com/script/3f616903-1251-47fc-857b-88994600e5c0
+Фитограном 7 в 1	РФ	168	https://script.adtika.com/script/3e76c912-6190-4167-964c-b656221ecc0e
+Фитограном 7 в 1	РФ	Фри	https://script.adtika.com/script/eb97f530-5ad4-40ac-858b-dcb34888445e
+Фитограном 7 в 1	УЗ	Фри	https://script.adtika.com/script/c3a2f15a-4631-4cb5-9498-4a1283883c96
+Фитограном 7 в 1	УЗ	29990	https://script.adtika.com/script/32c0f91c-cc10-4c6c-ac5f-f421a192d52b
+Ливиоптик	УЗ	фри	"http://script.adtika.com/script/dbbeadd8-e39a-49ad-8d97-9ef5318526b8
+"
+Ливиоптик	УЗ	29 990	http://script.adtika.com/script/a6f4d9a9-13e0-40e8-8ac1-a6e8ae88423a
+Ливиоптик	РУ	фри	"http://script.adtika.com/script/60f44a38-5b65-4a18-b2f7-5a6af8f4504a
+"
+Ливиоптик	РУ	168	"https://script.adtika.com/script/801cf687-951c-475e-8dde-5e68cd3379e8
+"
+Ливиоптик	КЗ	фри	"http://script.adtika.com/script/9384df19-8e77-4184-9aed-88332fc727c6
+"
+Ливиоптик	КЗ	990	http://script.adtika.com/script/119bbf1f-6218-459e-8c5a-ba985b8625f0
+Арканто	КЗ	фри	"https://script.adtika.com/script/8667f423-dec1-4170-9b01-5d3d189ca63e
+"
+Арканто	КЗ	990	https://script.adtika.com/script/661cbf18-8aef-4a94-bd5f-3a56c700cfe0
+Чакры	РУ	Фри	https://script.adtika.com/script/a8bc318a-2970-4b2f-9fea-d75c3de36631
+Чакры	РУ	168	https://script.adtika.com/script/355459dd-5dab-4a04-bfd3-9f67446bab3d
+Чакры	КЗ	Фри	https://script.adtika.com/script/22d1e042-bbe9-4484-bfe9-27c195765127
+Чакры	КЗ	990	https://script.adtika.com/script/76152a92-75cd-446d-bee0-d87906d72f59
+Эрвита универсал	РУ	фри	"http://script.adtika.com/script/414bf9f1-0cac-44ac-bfdc-bfcf19d7e133
+"
+Эрвита универсал	РУ	168	http://script.adtika.com/script/ef6d44c8-74cf-4f1d-9e19-4fdd06c22a45
+Эрвита цветы	РУ	фри	"http://script.adtika.com/script/cc949527-270b-4a59-98ed-eb1d17e1af3d
+"
+Эрвита цветы	РУ	168	http://script.adtika.com/script/b3221b8c-7e60-4116-8562-af35f6e5fbaa
+Тундра Увеличение	РУ	фри	"https://script.adtika.com/script/8891bc82-b678-4bdd-ac84-27615d911893
+"
+Тундра Увеличение	РУ	168	https://script.adtika.com/script/89741dc0-3e9b-482a-bff0-c444d4b2015a
+Тундра Увеличение	КЗ	фри	"https://script.adtika.com/script/13bfd6c1-d6e2-4b92-88d6-a92fb42006ba
+"
+Тундра Увеличение	КЗ	990	"https://script.adtika.com/script/9470a1a4-7158-47f1-8076-c39fe13eaeb5
+"
+Тундра Увеличение	УЗ	фри	"https://script.adtika.com/script/771338fa-716d-4150-8e96-5f1e8c6dc5ec
+"
+Тундра Увеличение	УЗ	29 990	"https://script.adtika.com/script/2ad215dd-32f7-4420-887b-be0108cea059
+"
+Визоплекс (тестовый)	КЗ	фри	"https://script.adtika.com/script/e86d9997-b2a7-4065-92df-13d1c840cd5f
+"
+Визоплекс (тестовый)	КЗ	830	https://script.adtika.com/script/5d0525bd-e286-4ce6-bffb-a35783760cf2
+Кетиш Диетиш (тестовый)	РУ	99	" https://script.adtika.com/script/255eb9e2-5c25-453e-bd5e-d350f3def51e
+"
+Кетиш Диетиш (тестовый)	УЗ	19 900	"https://script.adtika.com/script/329ef95c-06fe-450c-815c-13fa9f07efd7
+"
+Кетиш Диетиш (тестовый)	КЗ	790	https://script.adtika.com/script/17488e44-d2ae-4f2a-bdc2-0e685511a899
+Ливиоптик (тестовый)	УЗ	19 900	"https://script.adtika.com/script/c802b573-823c-4d45-80f3-4b4174a848e9
+"
+Ливиоптик (тестовый)	РУ	99	"https://script.adtika.com/script/92f57ad3-cb61-4594-bb50-d4cb77327ffd
+"
+Ливиоптик (тестовый)	КЗ	790	https://script.adtika.com/script/d3ad21b9-7ab4-4244-8ca1-e4279cab18ec
+Визоплекс (тестовый)	РУ	99	"https://script.adtika.com/script/1f8ebce0-4ba8-4d13-8e10-85094748f045
+"
+Визоплекс (тестовый)	РУ	88	https://script.adtika.com/script/56b9fcdd-c745-45d1-a503-bf51581b299e
+Визоплекс (тестовый)	УЗ	19 900	https://script.adtika.com/script/cb7ae9f1-9123-4b5a-a91b-40ce28369724
+Трисустал	РУ	фри	"https://script.adtika.com/script/1e3a6f46-3dd0-4016-b61e-a605e34ac473
+"
+Трисустал	РУ	168	https://script.adtika.com/script/c948acf6-86c5-4602-92d5-308f501054be
+Трисустал	УЗ	фри	"https://script.adtika.com/script/71f1746d-092a-4eda-a3da-71f3048a1217
+"
+Трисустал	УЗ	29 990	https://script.adtika.com/script/aa2a789d-858c-4fbb-b04a-f7fef6d3c49d
+Трисустал	КЗ	фри	"https://script.adtika.com/script/70780ed9-240b-4711-ae8d-a231b6166b0d
+"
+Трисустал	КЗ	990	"https://script.adtika.com/script/accd4d5d-6068-48b5-9ade-d4bfc99eebf2
+"
+Ливиоптик (тестовый с другим скриптом)	КЗ	фри	"https://script.adtika.com/script/179ff397-7955-4fba-8696-9f2c995d9f9d
+"
+Ливиоптик (тестовый с другим скриптом)	РУ	фри	"https://script.adtika.com/script/db0d5be3-f368-40e2-bba7-8347cb3b28be
+"
+Ливиоптик (тестовый с другим скриптом)	УЗ	фри	"https://script.adtika.com/script/0a6a696a-76e2-4d8c-9230-18a544689734
+"
+Хуан Хун	РУ	фри	"https://script.adtika.com/script/33a7f1c6-62ae-4d78-b12a-08521b3a8c4c
+"
+Хуан Хун	РУ	168	"https://script.adtika.com/script/f0ee9c83-d9f7-4814-90b6-369dcd133adc
+"
+Миконурил	РУ	фри	"https://script.adtika.com/script/d47950d1-a3b1-4b8a-aa6a-c9a2de203074
+"
+Миконурил	РУ	168	"https://script.adtika.com/script/a65e6116-487b-42c3-ac19-34ff13a5d9b7
+"
+Минакардин	КЗ	фри	"https://script.adtika.com/script/dd5f2e00-e3cc-4816-a5c6-bbd4bd223dc1
+"
+Минакардин	КЗ	990	https://script.adtika.com/script/284c7d08-e379-45d4-84b3-b895cef0c81d
+Минакардин	УЗ	фри	https://script.adtika.com/script/7182de0a-21ce-4bfc-a174-11dfb2754c8a
+Минакардин	УЗ	29 990	"https://script.adtika.com/script/efb1b0b1-4991-42fe-b3c2-598178a6d864
+"
+Минакардин	РУ	фри	https://script.adtika.com/script/7cb4ad19-b312-4a12-92b0-2434e6759a6f
+Минакардин	РУ	168	https://script.adtika.com/script/acc37af4-b804-46fb-81ec-a7acf7b22d76
+Фемовит	УЗ	фри	"https://script.adtika.com/script/0ff918ca-44d0-44f1-8db0-0c9b7f8136d0
+"
+Фемовит	УЗ	29 990	"https://script.adtika.com/script/1764c03b-83f3-47e0-87c5-80fcd47f716a
+"
+Фемовит 	РУ	фри ЛЮКС	"http://script.adtika.com/script/2e320683-fcdf-453c-aaf7-5ef5e110d67b
+"
+Эконейро	КЗ	фри	"https://script.adtika.com/script/2f7dff08-e04d-4382-bac2-7c893d9ed15f
+"
+Эконейро	КЗ	990	"https://script.adtika.com/script/b0c8145a-59b9-4a31-8f78-c81bbe2e3384
+"
+Эконейро	УЗ	фри	https://script.adtika.com/script/a043a033-e863-44aa-b836-3899489902e6
+Эконейро	УЗ	29 990	https://script.adtika.com/script/2d8f3e46-b180-428b-94e4-7deaef1fa803
+Эконейро	РУ	фри	https://script.adtika.com/script/5cc2a700-c703-44b3-9c31-dbac6231eaea
+Эконейро	РУ	168	https://script.adtika.com/script/4a233acc-540a-4b0a-b8b0-61cab3447810
+Эконейро стресс и тревога	РУ	фри	https://script.adtika.com/script/2ecdac4e-5e44-431f-82ac-d5ce5645e7c8
+Эконейро стресс и тревога	РУ	168	https://script.adtika.com/script/47a58a8c-761f-4558-8e60-7088b299331d
+Дао Слим	РУ	Фри	https://script.adtika.com/script/a19887c2-21e2-47b3-8559-8cd7b713a444
+Дао Слим	РУ	168	https://script.adtika.com/script/791cc5aa-28fd-4742-bf05-d44baf7f5f87
+Фунгуликс грибок	РУ	Фри	https://script.adtika.com/script/190aec6b-1fcc-4b17-9227-157674e92010
+Фунгуликс грибок	РУ	168	"https://script.adtika.com/script/23767ba2-21cc-4ba3-9f4f-2a93c50b6188
+"
+Гезде	РУ	Фри	"https://script.adtika.com/script/696808a8-e5ac-463f-8ffa-57c2b0cc6e48
+"
+Гезде	РУ	168	https://script.adtika.com/script/5a143dc0-80ea-45f9-888c-a1c6b4d8b4c0
+Дегликин	РУ	Фри	"https://script.adtika.com/script/fdb12322-b357-4c1c-ac79-f05e13658039
+"
+Дегликин	РУ	168	"https://script.adtika.com/script/2df0d8f5-b86e-4b97-80d4-7d800faa6a6e
+"
+Миконурил	УЗ	Фри	"https://script.adtika.com/script/8a413c87-f7ff-45fa-bb3a-008eef7b338c
+"
+Синбиобаланс	РУ	Фри	https://script.adtika.com/script/91672b1f-7535-4a7f-b411-0e8d7d68fcfc
+Фунгуликс цистит	КЗ	Фри	https://script.adtika.com/script/ce027d7b-94c4-4c73-92c7-ba87b7c10ff7
+Отифлекс 	УЗ	Фри	https://script.adtika.com/script/33c282dd-d551-4aa0-bcc6-8bad25124288
+Фунгуликс цистит	УЗ	Фри	"https://script.adtika.com/script/5d17d977-9af6-4f4c-ba17-5ef569c20754
+"

@@ -152,10 +152,10 @@
 Трисустал	КЗ	ВЗ	https://script.adtika.com/script/297bdf3b-1a5e-483c-b25e-cb3274be615a
 Миконурил	РУ	ВЗ	"https://script.adtika.com/script/9bc204c5-5dc7-46e4-868a-b2c3d72d1905
 "
-Минакардин	КЗ	ВЗ	"https://script.adtika.com/script/5c433cb4-1b82-4a44-8d68-734042c9f83e
+Минакардин	КЗ	ВЗ	"https://script.adtika.com/script/7053d495-c37b-47ab-bddd-863801750409
 "
-Минакардин	УЗ	ВЗ	https://script.adtika.com/script/aa3bcd54-0a99-42da-8a11-1833f524135d
-Минакардин	РУ	ВЗ	"https://script.adtika.com/script/9ee42e17-922b-475b-ba7c-d6aef3b85541
+Минакардин	УЗ	ВЗ	https://script.adtika.com/script/586649f1-0852-4b61-95ac-32d9d24bf33f
+Минакардин	РУ	ВЗ	"https://script.adtika.com/script/b8c2d44a-d639-4d31-853a-7e0b2dd97465
 "
 Фемовит	УЗ	ВЗ	https://script.adtika.com/script/201a4fb8-f2b3-4c36-9131-f9cd37655381
 Эконейро	КЗ	ВЗ	"https://script.adtika.com/script/66c56121-cf23-4f8c-8319-f3687345170d
@@ -183,4 +183,4 @@
 Синбиобаланс	РУ	ВЗ	https://script.adtika.com/script/f82f4813-6b35-48e1-b21e-eaec6dd3c806
 Фунгуликс цистит	КЗ	ВЗ	https://script.adtika.com/script/a5c11e03-cb30-405e-9157-408078fb59c2
 Отифлекс	УЗ	ВЗ	https://script.adtika.com/script/de64cc74-84c3-4d5c-be2e-bea32d04219a
-Фунгуликс цистит	УЗ	ВЗ	https://script.adtika.com/script/4c40e1f7-57cd-4607-8334-9e07190c440c
+Фунгуликс цистит	УЗ	ВЗ	https://script.adtika.com/script/4c40e1f7-57cd-4607-8334-9e07190c440c

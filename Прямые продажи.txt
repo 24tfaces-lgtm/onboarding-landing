@@ -156,9 +156,9 @@
 "
 Скорпионикс	КЗ	990	"http://script.adtika.com/script/024a6b53-1fe5-4200-8f49-8080a46cdbfe
 "
-Скорпионикс	УЗ	Фри	"http://script.adtika.com/script/64145f64-bcc4-4008-97e1-82683ec8ba30
+Скорпионикс	УЗ	Фри	"https://script.adtika.com/script/5b027a24-8eb5-4fe9-81c8-9be02518676b
 "
-Скорпионикс	УЗ	29990	"http://script.adtika.com/script/4c0e2cf7-ff3f-4b53-9cef-5ce4f5fb4b92
+Скорпионикс	УЗ	29990	"https://script.adtika.com/script/c0c88b66-3a9c-4c5b-85dc-7a3fcc0c2895
 "
 Фемовит	РФ	Фри	http://script.adtika.com/script/7af64a5d-6726-4e64-9d6e-141b9627adbc
 Фемовит	РФ	168	http://script.adtika.com/script/17a86e3c-49a5-4d8c-91e9-ea4a48357858
@@ -292,9 +292,9 @@ Black Cohosh (Черный Кохош) простатит	РУ	ЛЮКС	"http://
 Кетиш Диетиш	РУ	фри	" http://script.adtika.com/script/76ccaf78-5998-4b40-b63d-f7e96ff4237e
 "
 Кетиш Диетиш	РУ	168	http://script.adtika.com/script/5860841e-4ec8-48fb-81a4-dda5659bbf80
-Фемовит	КЗ	фри	" http://script.adtika.com/script/b5143607-2a68-458e-9c8d-9640933c1fa5
+Фемовит	КЗ	фри	" https://script.adtika.com/script/f1945743-9325-4d82-8aa0-81603f739243
 "
-Фемовит	КЗ	990	http://script.adtika.com/script/17a4e392-9890-4a18-b263-a534fba7517c
+Фемовит	КЗ	990	https://script.adtika.com/script/17a4e392-9890-4a18-b263-a534fba7517c
 Фитограном 7 в 1	РУ	фри	"http://script.adtika.com/script/eb97f530-5ad4-40ac-858b-dcb34888445e
 "
 Фитограном 7 в 1	РУ	168	http://script.adtika.com/script/3e76c912-6190-4167-964c-b656221ecc0e
@@ -475,9 +475,9 @@ Black Cohosh (Черный Кохош) простатит	РУ	ЛЮКС	"http://
 "
 Ливиоптик (тестовый с другим скриптом)	УЗ	фри	"https://script.adtika.com/script/0a6a696a-76e2-4d8c-9230-18a544689734
 "
-Хуан Хун	РУ	фри	"https://script.adtika.com/script/33a7f1c6-62ae-4d78-b12a-08521b3a8c4c
+Хуан Хун	РУ	фри	"https://script.adtika.com/script/9fa1a1be-bffc-4de5-9ee4-a153937efd8b
 "
-Хуан Хун	РУ	168	"https://script.adtika.com/script/f0ee9c83-d9f7-4814-90b6-369dcd133adc
+Хуан Хун	РУ	168	"https://script.adtika.com/script/156b2e72-8e2f-4437-9003-9eb44a2cf3c0
 "
 Миконурил	РУ	фри	"https://script.adtika.com/script/d47950d1-a3b1-4b8a-aa6a-c9a2de203074
 "
@@ -525,4 +525,5 @@ Black Cohosh (Черный Кохош) простатит	РУ	ЛЮКС	"http://
 Фунгуликс цистит	КЗ	Фри	https://script.adtika.com/script/ce027d7b-94c4-4c73-92c7-ba87b7c10ff7
 Отифлекс 	УЗ	Фри	https://script.adtika.com/script/33c282dd-d551-4aa0-bcc6-8bad25124288
 Фунгуликс цистит	УЗ	Фри	"https://script.adtika.com/script/5d17d977-9af6-4f4c-ba17-5ef569c20754
+
 "

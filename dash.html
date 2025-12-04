@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Дашборд заказов</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f3f4f6;
+      color: #111827;
+    }
+
+    header {
+      background: #111827;
+      color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3rem;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      align-items: flex-end;
+    }
+
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.9rem;
+    }
+
+    .filter-group label {
+      margin-bottom: 0.25rem;
+      color: #4b5563;
+    }
+
+    .filter-group input,
+    .filter-group select {
+      padding: 0.45rem 0.6rem;
+      border-radius: 0.5rem;
+      border: 1px solid #d1d5db;
+      min-width: 160px;
+      background: #fff;
+    }
+
+    .filter-group input:focus,
+    .filter-group select:focus {
+      outline: none;
+      border-color: #2563eb;
+      box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.3);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 0.9rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 90px;
+    }
+
+    .card-title {
+      font-size: 0.85rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .card-value {
+      margin-top: 0.5rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+
+    .card-sub {
+      font-size: 0.75rem;
+      color: #9ca3af;
+      margin-top: 0.25rem;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 2fr 1.3fr;
+      gap: 1rem;
+    }
+
+    .panel {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 0.9rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .panel-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+
+    canvas {
+      width: 100%;
+    }
+
+    #error {
+      color: #b91c1c;
+      margin: 0 0 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Дашборд заказов</h1>
+</header>
+
+<main class="container">
+  <!-- Фильтры -->
+  <section class="filters">
+    <div class="filter-group">
+      <label for="operatorFilter">Оператор</label>
+      <select id="operatorFilter">
+        <option value="">Все операторы</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="deliveryTypeFilter">Тип доставки</label>
+      <select id="deliveryTypeFilter">
+        <option value="">ПД + КД</option>
+        <option value="ПД">ПД</option>
+        <option value="КД">КД</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="orderFrom">Дата оформления с</label>
+      <input type="date" id="orderFrom">
+    </div>
+
+    <div class="filter-group">
+      <label for="orderTo">Дата оформления по</label>
+      <input type="date" id="orderTo">
+    </div>
+
+    <div class="filter-group">
+      <label for="deliveryDate">Дата доставки</label>
+      <input type="date" id="deliveryDate">
+    </div>
+  </section>
+
+  <div id="error"></div>
+
+  <!-- Карточки -->
+  <section class="cards">
+    <div class="card">
+      <div>
+        <div class="card-title">Всего оформлено (по фильтрам)</div>
+        <div class="card-value" id="totalOrders">–</div>
+      </div>
+      <div class="card-sub">По дате оформления, оператору и типу доставки</div>
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="card-title">В очереди</div>
+        <div class="card-value" id="queueOrders">–</div>
+      </div>
+      <div class="card-sub">Все статусы кроме «Отмена» и «Выкуплен»</div>
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="card-title">Выкупленные</div>
+        <div class="card-value" id="purchasedOrders">–</div>
+      </div>
+      <div class="card-sub">Статус «Выкуплен»</div>
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="card-title">Отменённые</div>
+        <div class="card-value" id="canceledOrders">–</div>
+      </div>
+      <div class="card-sub">Статус «Отмена»</div>
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="card-title">Заказов на дату доставки</div>
+        <div class="card-value" id="deliveryTotal">–</div>
+      </div>
+      <div class="card-sub">Фильтр по дате доставки + оператор + тип</div>
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="card-title">В очереди на дату доставки</div>
+        <div class="card-value" id="deliveryQueue">–</div>
+      </div>
+      <div class="card-sub">Те же заказы, но не «Отмена» и не «Выкуплен»</div>
+    </div>
+  </section>
+
+  <!-- Графики -->
+  <section class="layout">
+    <div class="panel">
+      <div class="panel-title">Динамика заказов по датам оформления</div>
+      <canvas id="timelineChart" height="130"></canvas>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">Распределение по статусам</div>
+      <canvas id="statusChart" height="130"></canvas>
+    </div>
+  </section>
+</main>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // Ссылка на CSV твоей таблицы
+  const SHEET_CSV_URL =
+    'https://docs.google.com/spreadsheets/d/1sqZf-kcNcBu4wDIPgfSOQVfO7GIURHD7Z7bw0eXB8s4/export?format=csv&gid=0';
+
+  // Все статусы, которые хотим видеть на круговой диаграмме
+  const STATUS_LABELS = ['Отправлен', 'Дожим', 'Готов', 'Дубль', 'Отмена', 'Выкуплен'];
+
+  let rawData = [];
+  let statusChart = null;
+  let timelineChart = null;
+
+  // ---- ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ----
+
+  // Парсер CSV с поддержкой кавычек и запятых внутри ячеек
+  function parseCSV(text) {
+    const rows = [];
+    let current = '';
+    let row = [];
+    let inQuotes = false;
+
+    for (let i = 0; i < text.length; i++) {
+      const ch = text[i];
+
+      if (ch === '"') {
+        if (inQuotes && text[i + 1] === '"') {
+          current += '"';
+          i++;
+        } else {
+          inQuotes = !inQuotes;
+        }
+      } else if (ch === ',' && !inQuotes) {
+        row.push(current);
+        current = '';
+      } else if ((ch === '\n' || ch === '\r') && !inQuotes) {
+        if (current !== '' || row.length) {
+          row.push(current);
+          rows.push(row);
+          row = [];
+          current = '';
+        }
+      } else {
+        current += ch;
+      }
+    }
+
+    if (current !== '' || row.length) {
+      row.push(current);
+      rows.push(row);
+    }
+    return rows;
+  }
+
+  // Разбор русской даты вида 01.12.2025 или 01,12,2025 -> объект Date
+  function parseRuDate(str) {
+    if (!str) return null;
+    const cleaned = str.toString().trim().replace(/\s/g, '').replace(/,/g, '.');
+    const m = cleaned.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/);
+    if (!m) return null;
+    const day = parseInt(m[1], 10);
+    const month = parseInt(m[2], 10) - 1;
+    const year = parseInt(m[3], 10);
+    return new Date(year, month, day);
+  }
+
+  function dateToKey(d) {
+    const dd = String(d.getDate()).padStart(2, '0');
+    const mm = String(d.getMonth() + 1).padStart(2, '0');
+    const yy = d.getFullYear();
+    return `${dd}.${mm}.${yy}`;
+  }
+
+  // ---- ЗАГРУЗКА И ПОДГОТОВКА ДАННЫХ ----
+
+  async function loadData() {
+    const response = await fetch(SHEET_CSV_URL);
+    if (!response.ok) {
+      throw new Error('Не удалось загрузить CSV');
+    }
+    const text = await response.text();
+
+    const rows = parseCSV(text);
+    const dataRows = rows.slice(1); // пропускаем заголовок
+
+    rawData = dataRows.map(cols => {
+      const orderDate    = (cols[0] || '').trim(); // Дата
+      const orderNumber  = (cols[1] || '').trim(); // ID
+      const operator     = (cols[2] || '').trim(); // Оператор
+      const deliveryDate = (cols[3] || '').trim(); // Дата доставки
+      const deliveryType = (cols[4] || '').trim(); // Тип доставки (ПД/КД)
+      const status       = (cols[5] || '').trim(); // Статус
+
+      return {
+        orderDate,
+        orderDateObj: parseRuDate(orderDate),
+        orderNumber,
+        operator,
+        deliveryDate,
+        deliveryDateObj: parseRuDate(deliveryDate),
+        deliveryType,
+        status
+      };
+    });
+
+    fillOperatorSelect();
+    recalc();
+  }
+
+  function fillOperatorSelect() {
+    const select = document.getElementById('operatorFilter');
+    const operators = Array.from(new Set(rawData.map(r => r.operator).filter(Boolean))).sort();
+    operators.forEach(op => {
+      const opt = document.createElement('option');
+      opt.value = op;
+      opt.textContent = op;
+      select.appendChild(opt);
+    });
+  }
+
+  // ---- ПЕРЕСЧЁТ ПОКАЗАТЕЛЕЙ ----
+
+  function recalc() {
+    if (!rawData.length) return;
+
+    const op = document.getElementById('operatorFilter').value;
+    const deliveryTypeFilter = document.getElementById('deliveryTypeFilter').value;
+    const orderFromStr = document.getElementById('orderFrom').value;
+    const orderToStr   = document.getElementById('orderTo').value;
+    const deliveryDateStr = document.getElementById('deliveryDate').value;
+
+    const orderFrom = orderFromStr ? new Date(orderFromStr) : null;
+    const orderTo   = orderToStr ? new Date(orderToStr) : null;
+    const deliveryDateFilter = deliveryDateStr ? new Date(deliveryDateStr) : null;
+
+    // Фильтр по оператору, типу доставки и датам оформления
+    const filtered = rawData.filter(r => {
+      if (op && r.operator !== op) return false;
+      if (deliveryTypeFilter && r.deliveryType !== deliveryTypeFilter) return false;
+
+      if (orderFrom || orderTo) {
+        const d = r.orderDateObj;
+        if (!d) return false;
+        if (orderFrom && d < orderFrom) return false;
+        if (orderTo && d > orderTo) return false;
+      }
+      return true;
+    });
+
+    // Статусы для карточек
+    const total = filtered.length;
+    const purchased = filtered.filter(r => r.status === 'Выкуплен').length;
+    const canceled  = filtered.filter(r => r.status === 'Отмена').length;
+    const inQueue   = filtered.length - purchased - canceled; // всё остальное
+
+    document.getElementById('totalOrders').textContent = total;
+    document.getElementById('queueOrders').textContent = inQueue;
+    document.getElementById('purchasedOrders').textContent = purchased;
+    document.getElementById('canceledOrders').textContent = canceled;
+
+    // Показатели по выбранной дате доставки
+    let byDeliveryDate = [];
+    if (deliveryDateFilter) {
+      byDeliveryDate = rawData.filter(r => {
+        if (op && r.operator !== op) return false;
+        if (deliveryTypeFilter && r.deliveryType !== deliveryTypeFilter) return false;
+        const d = r.deliveryDateObj;
+        if (!d) return false;
+        return d.getFullYear() === deliveryDateFilter.getFullYear() &&
+               d.getMonth() === deliveryDateFilter.getMonth() &&
+               d.getDate() === deliveryDateFilter.getDate();
+      });
+    }
+
+    const deliveryTotal = byDeliveryDate.length;
+    const deliveryPurchased = byDeliveryDate.filter(r => r.status === 'Выкуплен').length;
+    const deliveryCanceled  = byDeliveryDate.filter(r => r.status === 'Отмена').length;
+    const deliveryQueue     = deliveryTotal - deliveryPurchased - deliveryCanceled;
+
+    document.getElementById('deliveryTotal').textContent = deliveryTotal;
+    document.getElementById('deliveryQueue').textContent = deliveryQueue;
+
+    updateStatusChart(filtered);
+    updateTimelineChart(filtered);
+  }
+
+  // ---- ГРАФИКИ ----
+
+  function updateStatusChart(data) {
+    const counts = {};
+    STATUS_LABELS.forEach(label => counts[label] = 0);
+
+    data.forEach(r => {
+      if (counts.hasOwnProperty(r.status)) {
+        counts[r.status]++;
+      }
+    });
+
+    const labels = STATUS_LABELS;
+    const values = labels.map(l => counts[l] || 0);
+
+    const ctx = document.getElementById('statusChart').getContext('2d');
+
+    if (statusChart) statusChart.destroy();
+
+    statusChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels,
+        datasets: [{
+          data: values
+        }]
+      },
+      options: {
+        plugins: {
+          legend: { position: 'bottom' }
+        }
+      }
+    });
+  }
+
+  function updateTimelineChart(data) {
+    const countsByDate = new Map();
+
+    data.forEach(r => {
+      const d = r.orderDateObj;
+      if (!d) return;
+      const key = dateToKey(d);
+      countsByDate.set(key, (countsByDate.get(key) || 0) + 1);
+    });
+
+    const dates = Array.from(countsByDate.keys()).sort((a, b) => {
+      const [da, ma, ya] = a.split('.').map(Number);
+      const [db, mb, yb] = b.split('.').map(Number);
+      const ta = new Date(ya, ma - 1, da).getTime();
+      const tb = new Date(yb, mb - 1, db).getTime();
+      return ta - tb;
+    });
+    const values = dates.map(d => countsByDate.get(d));
+
+    const ctx = document.getElementById('timelineChart').getContext('2d');
+
+    if (timelineChart) timelineChart.destroy();
+
+    timelineChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: dates,
+        datasets: [{
+          label: 'Заказы',
+          data: values,
+          tension: 0.25
+        }]
+      },
+      options: {
+        scales: {
+          x: {
+            ticks: { autoSkip: true, maxTicksLimit: 8 }
+          }
+        },
+        plugins: {
+          legend: { display: false }
+        }
+      }
+    });
+  }
+
+  // ---- ИНИЦИАЛИЗАЦИЯ ----
+
+  document.addEventListener('DOMContentLoaded', () => {
+    ['operatorFilter', 'deliveryTypeFilter', 'orderFrom', 'orderTo', 'deliveryDate']
+      .forEach(id => {
+        document.getElementById(id).addEventListener('change', recalc);
+      });
+
+    loadData().catch(err => {
+      console.error(err);
+      document.getElementById('error').textContent =
+        'Ошибка загрузки данных. Проверь права доступа к таблице и ссылку SHEET_CSV_URL.';
+    });
+  });
+</script>
+</body>
+</html>
